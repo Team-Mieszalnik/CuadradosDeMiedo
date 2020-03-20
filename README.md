@@ -1,2 +1,3 @@
 # kwadraty
-gk projekt
+Malos triángulos y cuadrados de miedo ( ͡° ͜ʖ ͡°)
+
