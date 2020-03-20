@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1664
     height: 931
-  m_MinSize: {x: 677, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 54
+  controlID: 100
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 337
     height: 931
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 329
     height: 563
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -216,10 +216,10 @@ MonoBehaviour:
     y: 0
     width: 1327
     height: 931
-  m_MinSize: {x: 402, y: 492}
+  m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 55
+  controlID: 62
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -241,10 +241,10 @@ MonoBehaviour:
     y: 0
     width: 1327
     height: 563
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 56
+  controlID: 37
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -344,14 +344,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Images
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\micha\Documents\GitHub\kwadraty\kwadraty
+  m_LastProjectPath: C:\MojFolder\uczelnia\GK\projekt\kwadraty\kwadraty
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d8350000
-    m_LastClickedID: 13784
-    m_ExpandedIDs: 000000003a34000000ca9a3b
+    m_SelectedIDs: 22340000
+    m_LastClickedID: 13346
+    m_ExpandedIDs: 000000001e34000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -379,7 +379,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003a340000
+    m_ExpandedIDs: 000000001e340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -502,23 +502,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 22340000
       m_LastClickedID: 0
-      m_ExpandedIDs: 6aebffff36efffffc8f2ffffdaf5ffffcaf7ffff5efbffff
+      m_ExpandedIDs: d8faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: GameObject
-        m_OriginalName: GameObject
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -5270
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -564,9 +564,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.644753, y: 1.7531738, z: -1.9763322}
+    m_Target: {x: -0.56437135, y: 1.5404055, z: -3.4266553}
     speed: 2
-    m_Value: {x: 0.644753, y: 1.7531738, z: -1.9763322}
+    m_Value: {x: -0.011796415, y: 1.6332483, z: -3.3746946}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -616,9 +616,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.784242
+    m_Target: 13.79
     speed: 2
-    m_Value: 10.784242
+    m_Value: 14.439791
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -691,8 +691,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -498
     m_HBaseRangeMax: 498
-    m_VBaseRangeMin: -260.5
-    m_VBaseRangeMax: 260.5
+    m_VBaseRangeMin: -271
+    m_VBaseRangeMax: 271
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -709,11 +709,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 996
-      height: 521
+      height: 542
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 498, y: 260.5}
+    m_Translation: {x: 498, y: 271}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -721,9 +721,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -498
-      y: -260.5
+      y: -271
       width: 996
-      height: 521
+      height: 542
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 996, y: 542}
