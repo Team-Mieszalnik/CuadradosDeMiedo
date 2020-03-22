@@ -41,9 +41,8 @@ GameObject:
   - component: {fileID: 1343430424340621990}
   - component: {fileID: 1343430424340621991}
   - component: {fileID: 1343430424340622040}
-  - component: {fileID: 1343430424340621989}
   m_Layer: 0
-  m_Name: Shotgun
+  m_Name: SampleWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,26 +129,3 @@ MonoBehaviour:
   firePoint: {fileID: 1343430424215957567}
   bulletPrefab: {fileID: 6878982044772593513, guid: e852d2e47586e9946a2174e37df3d7dc,
     type: 3}
-  cam: {fileID: 0}
-  rb: {fileID: 1343430424340621989}
---- !u!50 &1343430424340621989
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1343430424340622041}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4

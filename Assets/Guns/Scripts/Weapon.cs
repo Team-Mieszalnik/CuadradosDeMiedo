@@ -7,16 +7,18 @@ public class Weapon : MonoBehaviour
     public float attackSpeed;
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public Camera cam;
-    public Rigidbody2D rb;
+    //public Rigidbody2D rb;
 
+    Camera cam;
+    Transform tf;
     Vector2 mousePosition;
     float time;
-  
+
     // Start is called before the first frame update
     void Start()
     {
-
+        tf = this.GetComponent<Transform>();
+        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -36,11 +38,10 @@ public class Weapon : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 lookDirection = mousePosition - rb.position;
+        Vector2 lookDirection = mousePosition - new Vector2(tf.position.x, tf.position.y);
         float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
         //Debug.Log(angle);
-
-        rb.rotation = angle;
+        tf.rotation = Quaternion.Euler(0, 0, angle);
     }
 
     public virtual void Shoot()
