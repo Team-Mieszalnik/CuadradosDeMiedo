@@ -20,9 +20,11 @@ public class DamageTest : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name == hero.name) 
+        IGetDamaged target = collision.GetComponent<IGetDamaged>();
+
+        if (target != null)  
         {
-            StartCoroutine(hero.GetDamage(10));
+            target.GetDamage(10);
         }
     }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8214266213647809694}
   - component: {fileID: 8214266213647809682}
   - component: {fileID: 8214266213647809685}
-  - component: {fileID: 8214266213647809683}
+  - component: {fileID: 2029025050}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -185,7 +185,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8214266213647809683
+--- !u!114 &2029025050
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,14 +194,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8214266213647809695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c8ce50fcd5cbb44a815da676f73daae, type: 3}
+  m_Script: {fileID: 11500000, guid: 4375ea7510f6c1443a3070898eb83481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
   healthMax: 100
   health: 50
   healthChargeRate: 0.1
-  energyMax: 100
-  energy: 50
+  energyMax: 50
+  energy: 100
   energyChargeRate: 1
-  hero: {fileID: 0}
+  rb: {fileID: 0}

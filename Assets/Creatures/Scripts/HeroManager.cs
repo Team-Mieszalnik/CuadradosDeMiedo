@@ -16,15 +16,23 @@ public class HeroManager : MonoBehaviour
 
     private bool energyIsUsed = false;
 
-    public Rigidbody2D hero;
 
+
+    public Rigidbody2D hero;
     private Animator animator;
+    //private Transform tf;
+
+    //private Ray ray;
+
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         hero = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        //tf = GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -63,6 +71,16 @@ public class HeroManager : MonoBehaviour
         {
             StartCoroutine(UseEnergy());
         }
+
+        //ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //if (ray.origin.x > tf.position.x)
+        //{
+        //    tf.localRotation = new Quaternion(tf.localRotation.x, 0, tf.localRotation.z, tf.localRotation.w);
+        //}
+        //else
+        //{
+        //    tf.localRotation = new Quaternion(tf.localRotation.x, 1f, tf.localRotation.z, tf.localRotation.w);
+        //}
     }
 
     private void ChargingEnergy()

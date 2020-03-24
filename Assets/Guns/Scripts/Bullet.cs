@@ -29,7 +29,13 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if collision == enemy zadaj obrazenia
+        IGetDamaged target = collision.GetComponent<IGetDamaged>();
+
+        if (target != null)
+        {
+            target.GetDamage(damage);
+        }
+
 
         //tak czy siak jak trafi na jakakolwiek przeszkode to sie dezintegruje
         if (collision.GetComponent<Bullet>() == null)

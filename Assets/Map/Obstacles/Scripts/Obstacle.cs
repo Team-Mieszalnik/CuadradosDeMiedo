@@ -2,9 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour
+public class Obstacle : MonoBehaviour, IGetDamaged
 {
-    public int hp;
+    public float hp;
+
+    public void GetDamage(float damage)
+    {
+        hp -= damage;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<Bullet>() != null)
