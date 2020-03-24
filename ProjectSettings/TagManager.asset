@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Gun
   - Bullet
+  - Creature
+  - Lake
   layers:
   - Default
   - TransparentFX
@@ -48,4 +50,10 @@ TagManager:
     locked: 0
   - name: Guns
     uniqueID: 1033825307
+    locked: 0
+  - name: Background
+    uniqueID: 3895057193
+    locked: 0
+  - name: Creatures
+    uniqueID: 3838470703
     locked: 0
