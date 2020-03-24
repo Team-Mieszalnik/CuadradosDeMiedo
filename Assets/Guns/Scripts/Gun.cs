@@ -2,23 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public class Gun : MonoBehaviour
 {
     public float attackSpeed;
     public Transform firePoint;
     public GameObject bulletPrefab;
     //public Rigidbody2D rb;
 
-    Camera cam;
-    Transform tf;
-    Vector2 mousePosition;
-    float time;
+    protected Animator animator;
+    protected Camera cam;
+    protected Transform tf;
+    protected Vector2 mousePosition;
+    protected float time;
 
     // Start is called before the first frame update
     void Start()
     {
         tf = this.GetComponent<Transform>();
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        animator = this.GetComponent<Animator>();
+        time = attackSpeed;
     }
 
     // Update is called once per frame
@@ -31,6 +34,7 @@ public class Weapon : MonoBehaviour
         {
             time = 0;
             Shoot();
+            StartCoroutine(ShootAnimation());
         }
 
         time += Time.deltaTime;
@@ -44,8 +48,14 @@ public class Weapon : MonoBehaviour
         tf.rotation = Quaternion.Euler(0, 0, angle);
     }
 
-    public virtual void Shoot()
+    protected virtual void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+
+
+    protected virtual IEnumerator ShootAnimation()
+    {
+        yield return new WaitForSeconds(0);
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1609370456669826741}
   - component: {fileID: -5030162302656241716}
   - component: {fileID: 1609370456669826740}
+  - component: {fileID: -3028899352941027297}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Untagged
@@ -45,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce977c0dd1163b4a945a8141d58ea4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 0.6
+  attackSpeed: 1
   firePoint: {fileID: 1609370457332413484}
   bulletPrefab: {fileID: 6878982044772593513, guid: e852d2e47586e9946a2174e37df3d7dc,
     type: 3}
@@ -88,7 +89,8 @@ SpriteRenderer:
   m_SortingLayerID: 1033825307
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d56565bf5c18fe64ea86d1ee7b1f654d, type: 3}
+  m_Sprite: {fileID: -6057293701274465165, guid: a33553fff59787e4a948d8105f000aa5,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,6 +101,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &-3028899352941027297
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609370456669826762}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0bb0c15e2833ad74497c8354d5ab8358, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1609370457332413475
 GameObject:
   m_ObjectHideFlags: 0

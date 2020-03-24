@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageTest : MonoBehaviour
+public class DamageTest : MonoBehaviour, IGetDamaged
 {
-    public HeroManager hero;
+
+    public float health;
 
     // Start is called before the first frame update
     void Start()
     {
-        hero = FindObjectOfType<HeroManager>();
+
     }
 
     // Update is called once per frame
@@ -26,5 +27,10 @@ public class DamageTest : MonoBehaviour
         {
             target.GetDamage(10);
         }
+    }
+
+    public void GetDamage(float damage)
+    {
+        health -= damage;
     }
 }
