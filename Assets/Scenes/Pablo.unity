@@ -35525,12 +35525,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 28.49967}
   m_EdgeRadius: 0
---- !u!4 &1513019964 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7939121321483462424, guid: 1ef37057dc8ec9743a2445327d185215,
-    type: 3}
-  m_PrefabInstance: {fileID: 1842733197}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1542741357
 GameObject:
   m_ObjectHideFlags: 0
@@ -36923,7 +36917,7 @@ PrefabInstance:
     - target: {fileID: 3824457931430958077, guid: 79fac9fc2cb86384a95a9546f02e6d97,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3824457931430958077, guid: 79fac9fc2cb86384a95a9546f02e6d97,
         type: 3}
@@ -36953,7 +36947,6 @@ GameObject:
   - component: {fileID: 1831465127}
   - component: {fileID: 1831465126}
   - component: {fileID: 1831465125}
-  - component: {fileID: 1831465128}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -37020,25 +37013,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1831465124}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03, y: -0.21, z: -7.075815}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1513019964}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1831465128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831465124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 195878bd560a0c540a47d66cfa5ea8e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationOn: 0
 --- !u!1001 &1842733197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37094,7 +37074,7 @@ PrefabInstance:
     - target: {fileID: 7939121321483462424, guid: 1ef37057dc8ec9743a2445327d185215,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7939121321483462424, guid: 1ef37057dc8ec9743a2445327d185215,
         type: 3}
@@ -37143,7 +37123,7 @@ Transform:
   - {fileID: 699883289}
   - {fileID: 1580406604}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1991475201
 GameObject:

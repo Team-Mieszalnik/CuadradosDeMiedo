@@ -35,10 +35,14 @@ public class Hero : Creature
             rb.velocity = new Vector2(speed, rb.velocity.y);
         }
 
+
+
         if (Input.GetKey(KeyCode.Space) && !energyIsUsed)
         {
             StartCoroutine(UseEnergy());
         }
+
+
 
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (ray.origin.x > transform.position.x)
@@ -49,6 +53,8 @@ public class Hero : Creature
         {
             transform.rotation = Quaternion.Euler(0, 180f, 0);
         }
+
+        Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
     }
 
     private IEnumerator UseEnergy()
