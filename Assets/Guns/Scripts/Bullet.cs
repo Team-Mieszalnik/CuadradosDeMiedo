@@ -7,13 +7,16 @@ public class Bullet : MonoBehaviour
     public int damage;
     public float range;
     public float bulletSpeed;
-    public Transform currentTransform;
-    public Rigidbody2D rb;
+    protected Transform currentTransform;
+    protected Rigidbody2D rb;
     protected Vector3 startPoint;
 
     // Start is called before the first frame update
     void Start()
     {
+        currentTransform = this.GetComponent<Transform>();
+        rb = this.GetComponent<Rigidbody2D>();
+
         startPoint = currentTransform.position;
 
         //rb.velocity = currentTransform.right * bulletSpeed;
