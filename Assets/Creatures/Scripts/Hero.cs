@@ -6,6 +6,8 @@ public class Hero : Creature
 {
     protected bool energyIsUsed = false;
 
+    protected Ray ray;
+
 
     // Update is called once per frame
     void Update()
@@ -38,15 +40,15 @@ public class Hero : Creature
             StartCoroutine(UseEnergy());
         }
 
-        //ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //if (ray.origin.x > tf.position.x)
-        //{
-        //    tf.localRotation = new Quaternion(tf.localRotation.x, 0, tf.localRotation.z, tf.localRotation.w);
-        //}
-        //else
-        //{
-        //    tf.localRotation = new Quaternion(tf.localRotation.x, 1f, tf.localRotation.z, tf.localRotation.w);
-        //}
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (ray.origin.x > transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 0f, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 180f, 0);
+        }
     }
 
     private IEnumerator UseEnergy()

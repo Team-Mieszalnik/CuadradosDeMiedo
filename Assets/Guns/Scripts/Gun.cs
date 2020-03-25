@@ -45,7 +45,16 @@ public class Gun : MonoBehaviour
         Vector2 lookDirection = mousePosition - new Vector2(tf.position.x, tf.position.y);
         float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
         //Debug.Log(angle);
-        tf.rotation = Quaternion.Euler(0, 0, angle);
+        //tf.rotation = Quaternion.Euler(0, 0, angle);
+
+        if (mousePosition.x > tf.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0f, 0, angle);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(180f, 0, -angle);
+        }
     }
 
     protected virtual void Shoot()
