@@ -9,6 +9,6 @@ public class cameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!rotationOn) transform.rotation = Quaternion.Euler(Vector3.zero);
+        //if (!rotationOn) transform.rotation = Quaternion.Euler(Vector3.zero);
     }
 }
