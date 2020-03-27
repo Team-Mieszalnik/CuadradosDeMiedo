@@ -2,24 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class FlameThrower : MonoBehaviour
 {
-    public float attackSpeed;
-    public Transform firePoint;
-    public GameObject bulletPrefab;
-    //public Rigidbody2D rb;
-
-    protected Animator animator;
+    public GameObject Flame;
     protected Camera cam;
     protected Vector2 mousePosition;
-    protected float time;
 
     // Start is called before the first frame update
     protected void Start()
     {
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
-        animator = this.GetComponent<Animator>();
-        time = attackSpeed;
+
     }
 
     // Update is called once per frame
@@ -28,14 +21,17 @@ public class Gun : MonoBehaviour
         mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
 
         //if(Input.GetButtonDown("Fire1"))
-        if (Input.GetMouseButton(0) && time > attackSpeed)
+        if (Input.GetMouseButton(0))
         {
-            time = 0;
-            Shoot();
-            StartCoroutine(ShootAnimation());
+            Flame.SetActive(true);
+
+            //StartCoroutine(ShootAnimation());
+        }
+        else
+        {
+            Flame.SetActive(false);
         }
 
-        time += Time.deltaTime;
     }
 
     private void FixedUpdate()
@@ -55,14 +51,4 @@ public class Gun : MonoBehaviour
         }
     }
 
-    protected virtual void Shoot()
-    {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-    }
-
-
-    protected virtual IEnumerator ShootAnimation()
-    {
-        yield return new WaitForSeconds(0);
-    }
 }
