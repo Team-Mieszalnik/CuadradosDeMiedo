@@ -154,8 +154,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6894152017762640786}
   - component: {fileID: 6894152017762640787}
-  - component: {fileID: 4459186860166113338}
   - component: {fileID: 2021662456041106744}
+  - component: {fileID: 3890280676339049480}
   m_Layer: 0
   m_Name: LaserBeamGun
   m_TagString: Untagged
@@ -229,22 +229,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4459186860166113338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6894152017762640877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5166ad603605b945ba4ffefc098bb9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackSpeed: 0
-  firePoint: {fileID: 0}
-  bulletPrefab: {fileID: 0}
-  laser: {fileID: 6894152016832411908}
 --- !u!95 &2021662456041106744
 Animator:
   serializedVersion: 3
@@ -264,3 +248,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3890280676339049480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6894152017762640877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02abbc2824d756745aa2be700652284b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 0
+  firePoint: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  cast: {fileID: 6894152016832411908}

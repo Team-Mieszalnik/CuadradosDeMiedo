@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2523725696224243746}
   - component: {fileID: 6000313305897261679}
-  - component: {fileID: -8883024924517865014}
   - component: {fileID: 4975327941956705474}
   - component: {fileID: 219099149747884829}
+  - component: {fileID: -8883024924517865014}
   m_Layer: 0
   m_Name: GrenadeBullet
   m_TagString: Bullet
@@ -84,25 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-8883024924517865014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5360552409274154641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d15f450ccd8655448bf3c71fd6f62002, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 15
-  range: 20
-  bulletSpeed: 20
-  currentTransform: {fileID: 2523725696224243746}
-  rb: {fileID: 4975327941956705474}
-  explosion: {fileID: 3831509487082657746, guid: abff1cdf38a27da44a5a14822c86aef0,
-    type: 3}
 --- !u!50 &4975327941956705474
 Rigidbody2D:
   serializedVersion: 4
@@ -140,3 +121,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.105
+--- !u!114 &-8883024924517865014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5360552409274154641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15f450ccd8655448bf3c71fd6f62002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  range: 20
+  bulletSpeed: 20
+  explosion: {fileID: 3831509487082657746, guid: abff1cdf38a27da44a5a14822c86aef0,
+    type: 3}

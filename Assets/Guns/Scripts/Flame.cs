@@ -7,6 +7,8 @@ public class Flame : MonoBehaviour
     private ParticleSystem PSystem;
     private List<ParticleCollisionEvent> CollisionEvents;
 
+    public float damage;
+
     void Start()
     {
         PSystem = GetComponent<ParticleSystem>();
@@ -15,14 +17,11 @@ public class Flame : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
-        Debug.Log("hitek");
-
         IGetDamaged target = other.GetComponent<IGetDamaged>();
-
 
         if (target != null)
         {
-            target.GetDamage(0.1f);
+            target.GetDamage(damage);
         }
 
         //int collCount = PSystem.GetSafeCollisionEventSize();

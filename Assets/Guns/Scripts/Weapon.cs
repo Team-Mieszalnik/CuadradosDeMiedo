@@ -2,48 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public abstract class Weapon : MonoBehaviour
 {
     public float attackSpeed;
+
     public Transform firePoint;
     public GameObject bulletPrefab;
-    //public Rigidbody2D rb;
 
     protected Animator animator;
-    protected Camera cam;
     protected Vector2 mousePosition;
+
     protected float time;
 
     // Start is called before the first frame update
     protected void Start()
     {
-        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
         animator = this.GetComponent<Animator>();
         time = attackSpeed;
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
-        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        //if(Input.GetButtonDown("Fire1"))
-        if (Input.GetMouseButton(0) && time > attackSpeed)
-        {
-            time = 0;
-            Shoot();
-            StartCoroutine(ShootAnimation());
-        }
+        Control();
 
         time += Time.deltaTime;
     }
 
-    private void FixedUpdate()
+    protected void FixedUpdate()
     {
         Vector2 lookDirection = mousePosition - new Vector2(transform.position.x, transform.position.y);
         float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
-        //Debug.Log(angle);
-        //tf.rotation = Quaternion.Euler(0, 0, angle);
 
         if (mousePosition.x > transform.position.x)
         {
@@ -55,14 +46,28 @@ public class Gun : MonoBehaviour
         }
     }
 
+    protected virtual void Control()
+    {
+        if (Input.GetMouseButton(0) && time > attackSpeed)
+        {
+            time = 0;
+            Shoot();
+            StartCoroutine(ShootAnimation());
+        }
+    }
+
     protected virtual void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
     }
 
 
     protected virtual IEnumerator ShootAnimation()
     {
-        yield return new WaitForSeconds(0);
+        animator.SetBool("shoot", true);
+
+        yield return new WaitForSeconds(attackSpeed);
+
+        animator.SetBool("shoot", false);
     }
 }

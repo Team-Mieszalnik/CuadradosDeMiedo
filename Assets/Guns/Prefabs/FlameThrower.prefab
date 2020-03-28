@@ -3625,7 +3625,7 @@ ParticleSystem:
     m_Bounce:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4767,6 +4767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6515d96fd6475ed46a34e9df2323e6f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0.3
 --- !u!1 &3796136698500015009
 GameObject:
   m_ObjectHideFlags: 0
@@ -4777,7 +4778,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3796136698500015070}
   - component: {fileID: 3796136698500015071}
-  - component: {fileID: 7018382045046984553}
+  - component: {fileID: -532513103695756220}
+  - component: {fileID: 710817231573738934}
   m_Layer: 0
   m_Name: FlameThrower
   m_TagString: Untagged
@@ -4850,7 +4852,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7018382045046984553
+--- !u!95 &-532513103695756220
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3796136698500015009}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &710817231573738934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4859,7 +4880,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3796136698500015009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 035799c5847ff18428a0978496d3fd37, type: 3}
+  m_Script: {fileID: 11500000, guid: 02abbc2824d756745aa2be700652284b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Flame: {fileID: 3796136698089617736}
+  attackSpeed: 0
+  firePoint: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  cast: {fileID: 3796136698089617736}

@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2369207808899908750}
   - component: {fileID: 5810325201392070339}
-  - component: {fileID: 5711372965037192277}
   - component: {fileID: 5110711131455924334}
   - component: {fileID: 66827566562355121}
+  - component: {fileID: 5711372965037192277}
   m_Layer: 0
-  m_Name: GunBullet
+  m_Name: PistolBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,23 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5711372965037192277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5297232439948692029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a7cfc0cbeedee84e8e138306ae910a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 5
-  range: 20
-  bulletSpeed: 20
-  currentTransform: {fileID: 2369207808899908750}
-  rb: {fileID: 5110711131455924334}
 --- !u!50 &5110711131455924334
 Rigidbody2D:
   serializedVersion: 4
@@ -138,3 +121,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.105
+--- !u!114 &5711372965037192277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297232439948692029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7cfc0cbeedee84e8e138306ae910a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  range: 20
+  bulletSpeed: 20
