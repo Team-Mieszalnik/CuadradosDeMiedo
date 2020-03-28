@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 40
+  healthDisplay: {fileID: 0}
 --- !u!58 &3824457931430958075
 CircleCollider2D:
   m_ObjectHideFlags: 0

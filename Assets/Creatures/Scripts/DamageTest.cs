@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DamageTest : MonoBehaviour, IGetDamaged
 {
@@ -31,6 +32,6 @@ public class DamageTest : MonoBehaviour, IGetDamaged
 
     public void GetDamage(float damage)
     {
-        health -= damage;
+        health -= damage;   
     }
 }

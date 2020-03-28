@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class Creature : MonoBehaviour, IGetDamaged
 {
@@ -9,6 +10,7 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     public int healthMax;
     public float health;
     public float healthRegeneration;
+    public Text healthDisplay;
 
     public int energyMax;
     public float energy;
@@ -23,18 +25,22 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        if (healthDisplay != null)
+            healthDisplay.text = health.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     protected void FixedUpdate()
     {
         ChargingEnergy();
         ChargingHealth();
+        if (healthDisplay != null)
+            healthDisplay.text = health.ToString();
     }
 
 
@@ -58,6 +64,12 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     public virtual void GetDamage(float damage)
     {
         health -= damage;
+        if (healthDisplay != null)
+        {
+            healthDisplay.text = health.ToString();
+            Debug.Log("dziala");
+        }
+        else Debug.Log("nie dziala");
 
         StartCoroutine(GetDamageAnimation());
     }
