@@ -7,23 +7,24 @@ public class Bullet : MonoBehaviour
     public int damage;
     public float range;
     public float bulletSpeed;
-    public Transform currentTransform;
-    public Rigidbody2D rb;
+    protected Rigidbody2D rb;
     protected Vector3 startPoint;
 
     // Start is called before the first frame update
     void Start()
     {
-        startPoint = currentTransform.position;
+        rb = this.GetComponent<Rigidbody2D>();
+
+        startPoint = transform.position;
 
         //rb.velocity = currentTransform.right * bulletSpeed;
-        rb.AddForce(currentTransform.right * bulletSpeed, ForceMode2D.Impulse);
+        rb.AddForce(transform.right * bulletSpeed, ForceMode2D.Impulse);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ((startPoint - currentTransform.position).magnitude > range)
+        if ((startPoint - transform.position).magnitude > range)
             EndofRange();
     }
 

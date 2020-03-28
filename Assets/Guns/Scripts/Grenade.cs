@@ -26,7 +26,7 @@ public class Grenade : Bullet
 
     private void Explosion()
     {
-        Instantiate(explosion, currentTransform.position, currentTransform.rotation);
+        Instantiate(explosion, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 

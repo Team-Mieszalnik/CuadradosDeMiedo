@@ -11,14 +11,13 @@ public class Explosion : MonoBehaviour
         StartCoroutine(KabumAnimation());
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        IGetDamaged[] hits = collision.GetComponents<IGetDamaged>();
+        IGetDamaged target = collision.GetComponent<IGetDamaged>();
 
-        foreach(var hit in hits)
+        if(target != null)
         {
-            hit.GetDamage(damage);
+            target.GetDamage(damage);
         }
     }
 

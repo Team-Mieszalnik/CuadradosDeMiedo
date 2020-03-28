@@ -17,14 +17,14 @@ public class DamageTest : MonoBehaviour, IGetDamaged
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         IGetDamaged target = collision.GetComponent<IGetDamaged>();
 
-        if (target != null)  
+        if (target != null)
         {
             target.GetDamage(10);
         }
@@ -34,4 +34,10 @@ public class DamageTest : MonoBehaviour, IGetDamaged
     {
         health -= damage;   
     }
+
+    void OnParticleCollision(GameObject other)
+    {
+        Debug.Log("hitekmobek");
+    }
+
 }

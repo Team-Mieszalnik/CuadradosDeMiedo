@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrenadeLauncher : Gun
+public class GrenadeLauncher : Weapon
 {
     protected override void Shoot()
     {
@@ -12,6 +12,8 @@ public class GrenadeLauncher : Gun
         grenade.range = mouseDistance > grenade.range ? grenade.range : mouseDistance;
     }
 
-
-
+    protected override IEnumerator ShootAnimation()
+    {
+        yield return new WaitForSeconds(0);
+    }
 }

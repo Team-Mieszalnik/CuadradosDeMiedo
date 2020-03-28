@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3897193249100210650}
   - component: {fileID: 5068496351010868119}
-  - component: {fileID: 6464457790058074369}
   - component: {fileID: 5771474926585515322}
   - component: {fileID: 1592561499271037669}
+  - component: {fileID: 6464457790058074369}
   m_Layer: 0
   m_Name: ShotgunBullet
   m_TagString: Bullet
@@ -84,23 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6464457790058074369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6878982044772593513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a7cfc0cbeedee84e8e138306ae910a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 5
-  range: 15
-  bulletSpeed: 12
-  currentTransform: {fileID: 3897193249100210650}
-  rb: {fileID: 5771474926585515322}
 --- !u!50 &5771474926585515322
 Rigidbody2D:
   serializedVersion: 4
@@ -138,3 +121,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.105
+--- !u!114 &6464457790058074369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6878982044772593513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7cfc0cbeedee84e8e138306ae910a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  range: 15
+  bulletSpeed: 12
