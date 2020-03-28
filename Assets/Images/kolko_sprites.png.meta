@@ -1,7 +1,82 @@
 fileFormatVersion: 2
 guid: 0ba669b7684ef6c44b30499d774769c1
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1641219386759242027
+    second: kolko_sprites_0
+  - first:
+      213: 2542113665903121610
+    second: kolko_sprites_1
+  - first:
+      213: -2910198030609022407
+    second: kolko_sprites_2
+  - first:
+      213: -5356249204385723669
+    second: kolko_sprites_3
+  - first:
+      213: 5143121535446245332
+    second: kolko_sprites_4
+  - first:
+      213: 7696576383059485191
+    second: kolko_sprites_5
+  - first:
+      213: -1004009512083731801
+    second: kolko_sprites_6
+  - first:
+      213: 5244219287244762938
+    second: kolko_sprites_7
+  - first:
+      213: -2185432145997504988
+    second: kolko_sprites_8
+  - first:
+      213: -2415682846897097376
+    second: kolko_sprites_9
+  - first:
+      213: 890366628691289795
+    second: kolko_sprites_10
+  - first:
+      213: 4230495129297388918
+    second: kolko_sprites_11
+  - first:
+      213: -8778753863346353796
+    second: kolko_sprites_12
+  - first:
+      213: 8227560107260359538
+    second: kolko_sprites_13
+  - first:
+      213: -6339946163570321374
+    second: kolko_sprites_14
+  - first:
+      213: -7063745442448892441
+    second: kolko_sprites_15
+  - first:
+      213: -3098802051700277055
+    second: kolko_sprites_16
+  - first:
+      213: -7005354607669719439
+    second: kolko_sprites_17
+  - first:
+      213: -7905996829753050762
+    second: kolko_sprites_18
+  - first:
+      213: -6251984783047779115
+    second: kolko_sprites_19
+  - first:
+      213: 1606365333634571321
+    second: kolko_sprites_20
+  - first:
+      213: 2138339842526554672
+    second: kolko_sprites_21
+  - first:
+      213: -8270346923903450713
+    second: kolko_sprites_22
+  - first:
+      213: -3182906935346451322
+    second: kolko_sprites_23
+  - first:
+      213: -7352180872686945376
+    second: kolko_sprites_24
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +115,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +145,546 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: kolko_sprites_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1069
+        width: 234
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b21e4423658c6c610800000000000000
+      internalID: 1641219386759242027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_1
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1068
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac452d219e6674320800000000000000
+      internalID: 2542113665903121610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_2
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 1068
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 932028f5f46ec97d0800000000000000
+      internalID: -2910198030609022407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_3
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1069
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beace1c2ab7caa5b0800000000000000
+      internalID: -5356249204385723669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_4
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 1070
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df5fec79c9006740800000000000000
+      internalID: 5143121535446245332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_5
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 812
+        width: 234
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702ebe2317bbfca60800000000000000
+      internalID: 7696576383059485191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_6
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 810
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aac2211baa0112f0800000000000000
+      internalID: -1004009512083731801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_7
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 810
+        width: 228
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3fe97c18a537c840800000000000000
+      internalID: 5244219287244762938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_8
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 810
+        width: 182
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e5919ca09cba1e0800000000000000
+      internalID: -2185432145997504988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_9
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 810
+        width: 181
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065b1b4ef35c97ed0800000000000000
+      internalID: -2415682846897097376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_10
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 555
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6a10f3bb73b5c00800000000000000
+      internalID: 890366628691289795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_11
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 554
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6758acde7ecb5ba30800000000000000
+      internalID: 4230495129297388918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_12
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 554
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7907a48fd99b2680800000000000000
+      internalID: -8778753863346353796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_13
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 554
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273bd69735a2e2270800000000000000
+      internalID: 8227560107260359538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_14
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 554
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2285a410e8cf308a0800000000000000
+      internalID: -6339946163570321374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_15
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 301
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed9c0702f888fd90800000000000000
+      internalID: -7063745442448892441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_16
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 300
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0472fb3f7def4d0800000000000000
+      internalID: -3098802051700277055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_17
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 300
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e433ca91bf7ce90800000000000000
+      internalID: -7005354607669719439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_18
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 300
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679743765c1484290800000000000000
+      internalID: -7905996829753050762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_19
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 300
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc1a49d6fc7c39a0800000000000000
+      internalID: -6251984783047779115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_20
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 43
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c5ac292c4fa4610800000000000000
+      internalID: 1606365333634571321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_21
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 42
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a2cd2e1c8ecad10800000000000000
+      internalID: 2138339842526554672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_22
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 42
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a18d777a43d93d80800000000000000
+      internalID: -8270346923903450713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_23
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 42
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c2c8d810b04d3d0800000000000000
+      internalID: -3182906935346451322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kolko_sprites_24
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 42
+        width: 234
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0abb217237ec7f990800000000000000
+      internalID: -7352180872686945376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
