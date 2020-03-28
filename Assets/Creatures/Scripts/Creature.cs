@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class Creature : MonoBehaviour, IGetDamaged
 {
@@ -8,11 +9,12 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
 
     public int healthMax;
     public float health;
-    public float healthChargeRate;
+    public float healthRegeneration;
+    public Text healthDisplay;
 
     public int energyMax;
     public float energy;
-    public float energyChargeRate;
+    public float energyRegeneration;
 
     public Rigidbody2D rb;
     protected Animator animator;
@@ -23,18 +25,22 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        if (healthDisplay != null)
+            healthDisplay.text = health.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     protected void FixedUpdate()
     {
         ChargingEnergy();
         ChargingHealth();
+        if (healthDisplay != null)
+            healthDisplay.text = health.ToString();
     }
 
 
@@ -42,7 +48,7 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     {
         if (energyMax > energy)
         {
-            energy += Time.deltaTime * energyChargeRate;
+            energy += Time.deltaTime * energyRegeneration;
         }
     }
 
@@ -50,7 +56,7 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     {
         if (healthMax > health)
         {
-            health += Time.deltaTime * healthChargeRate;
+            health += Time.deltaTime * healthRegeneration;
         }
     }
 
@@ -58,6 +64,12 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     public virtual void GetDamage(float damage)
     {
         health -= damage;
+        if (healthDisplay != null)
+        {
+            healthDisplay.text = health.ToString();
+            Debug.Log("dziala");
+        }
+        else Debug.Log("nie dziala");
 
         StartCoroutine(GetDamageAnimation());
     }
@@ -70,21 +82,21 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
 
             //postac umarla i nie zyje
             //i co dalej?
-            AfterDeath();
+            StartCoroutine(AfterDeath());
 
         }
         else
         {
             animator.SetBool("getDamage", true);
 
-            yield return new WaitForSeconds(0.01F);
+            yield return new WaitForSeconds(0.01F);//animation time
 
             animator.SetBool("getDamage", false);
         }
     }
 
-    protected virtual void AfterDeath()
+    protected virtual IEnumerator AfterDeath()
     {
-
+        yield return new WaitForSeconds(0.01F);//animation time
     }
 }
