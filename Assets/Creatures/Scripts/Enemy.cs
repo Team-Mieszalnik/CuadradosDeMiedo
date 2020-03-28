@@ -13,26 +13,11 @@ public class Enemy : Creature
     }
 
 
-
-    protected override IEnumerator GetDamageAnimation()
+    protected override IEnumerator AfterDeath()
     {
-        if (health <= 0)
-        {
-            animator.SetBool("dead", true);
-
-            //postac umarla i nie zyje
-            //i co dalej?
-            AfterDeath();
-
-        }
-        else
-        {
-            animator.SetBool("getDamage", true);
-
-            yield return new WaitForSeconds(0.5F);
-
-            animator.SetBool("getDamage", false);
-        }
+        yield return new WaitForSeconds(0.5F);//animation time
+        Destroy(gameObject);
     }
+
 
 }

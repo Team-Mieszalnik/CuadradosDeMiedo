@@ -1,7 +1,82 @@
 fileFormatVersion: 2
 guid: 93c49527551eefe4a908e26136b22044
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1033946800310207617
+    second: trojkat_sprites_0
+  - first:
+      213: -1003597091847444036
+    second: trojkat_sprites_1
+  - first:
+      213: 4804140281823655746
+    second: trojkat_sprites_2
+  - first:
+      213: 4452003846296906914
+    second: trojkat_sprites_3
+  - first:
+      213: 718632962296958118
+    second: trojkat_sprites_4
+  - first:
+      213: 70130375813551679
+    second: trojkat_sprites_5
+  - first:
+      213: -4365696512908723427
+    second: trojkat_sprites_6
+  - first:
+      213: -3536265483373137402
+    second: trojkat_sprites_7
+  - first:
+      213: -6616081752962360989
+    second: trojkat_sprites_8
+  - first:
+      213: 6527303830598587766
+    second: trojkat_sprites_9
+  - first:
+      213: -680448388145529480
+    second: trojkat_sprites_10
+  - first:
+      213: -7602563879305396663
+    second: trojkat_sprites_11
+  - first:
+      213: 1940931796918351236
+    second: trojkat_sprites_12
+  - first:
+      213: 3420038517784804556
+    second: trojkat_sprites_13
+  - first:
+      213: -7732568384081978749
+    second: trojkat_sprites_14
+  - first:
+      213: -2731456045450437280
+    second: trojkat_sprites_15
+  - first:
+      213: 7652146940246066887
+    second: trojkat_sprites_16
+  - first:
+      213: 721148139520515180
+    second: trojkat_sprites_17
+  - first:
+      213: 6049929883464938990
+    second: trojkat_sprites_18
+  - first:
+      213: 1212657292787244623
+    second: trojkat_sprites_19
+  - first:
+      213: -3147751859762079833
+    second: trojkat_sprites_20
+  - first:
+      213: -4820238189540711542
+    second: trojkat_sprites_21
+  - first:
+      213: -7321157452165839926
+    second: trojkat_sprites_22
+  - first:
+      213: 8072659532882759613
+    second: trojkat_sprites_23
+  - first:
+      213: 5919510596971966295
+    second: trojkat_sprites_24
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +115,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +145,546 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: trojkat_sprites_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1069
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7bbbdafcdea6a1f0800000000000000
+      internalID: -1033946800310207617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_1
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 1073
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb961d223c18212f0800000000000000
+      internalID: -1003597091847444036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_2
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 1080
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2477e35022cbba240800000000000000
+      internalID: 4804140281823655746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_3
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 1080
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac233519e1b8cd30800000000000000
+      internalID: 4452003846296906914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_4
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 1082
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6acc8992fd819f900800000000000000
+      internalID: 718632962296958118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_5
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 825
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36d45a843729f000800000000000000
+      internalID: 70130375813551679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_6
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 829
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1bf9e6e62ee963c0800000000000000
+      internalID: -4365696512908723427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_7
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 822
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602b1106749aceec0800000000000000
+      internalID: -3536265483373137402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_8
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 814
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3691cbdf2b4fe24a0800000000000000
+      internalID: -6616081752962360989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_9
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 806
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67510e33044a59a50800000000000000
+      internalID: 6527303830598587766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_10
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 542
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d3990dbcf8e86f0800000000000000
+      internalID: -680448388145529480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_11
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 541
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e39cf8e644e7690800000000000000
+      internalID: -7602563879305396663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_12
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 541
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48534909f239fea10800000000000000
+      internalID: 1940931796918351236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_13
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 550
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc77ba69ea667f20800000000000000
+      internalID: 3420038517784804556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_14
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 558
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a9069060660b490800000000000000
+      internalID: -7732568384081978749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_15
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 301
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d5553d23be71ad0800000000000000
+      internalID: -2731456045450437280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_16
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 301
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6857e6913e13a60800000000000000
+      internalID: 7652146940246066887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_17
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 301
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6cdd8e7968020a00800000000000000
+      internalID: 721148139520515180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_18
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 301
+        width: 180
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5b2f3dc2ba5f350800000000000000
+      internalID: 6049929883464938990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_19
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 301
+        width: 180
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4eded2026934d010800000000000000
+      internalID: 1212657292787244623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_20
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 46
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a75ecd6c50f054d0800000000000000
+      internalID: -3147751859762079833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_21
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 46
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8367a3c7e21b1db0800000000000000
+      internalID: -4820238189540711542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_22
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 46
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac383fe1616066a90800000000000000
+      internalID: -7321157452165839926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_23
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 46
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbfc52a0319d70070800000000000000
+      internalID: 8072659532882759613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trojkat_sprites_24
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 46
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75faca86683562250800000000000000
+      internalID: 5919510596971966295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

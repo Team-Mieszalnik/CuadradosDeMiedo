@@ -1,7 +1,82 @@
 fileFormatVersion: 2
 guid: 658f9925d08b8bb4c9d4fec1ce04d244
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2258220473347376953
+    second: kwadrat_sprites_0
+  - first:
+      213: -6696257913862569194
+    second: kwadrat_sprites_1
+  - first:
+      213: 8052914251609211373
+    second: kwadrat_sprites_2
+  - first:
+      213: -3598140690890793896
+    second: kwadrat_sprites_3
+  - first:
+      213: 400761493048368327
+    second: kwadrat_sprites_4
+  - first:
+      213: -9171305067092742867
+    second: kwadrat_sprites_5
+  - first:
+      213: 6321197578403910612
+    second: kwadrat_sprites_6
+  - first:
+      213: -66106040212262866
+    second: kwadrat_sprites_7
+  - first:
+      213: 7005624323878415799
+    second: kwadrat_sprites_8
+  - first:
+      213: 7462941407702629958
+    second: kwadrat_sprites_9
+  - first:
+      213: -2655248889679702764
+    second: kwadrat_sprites_10
+  - first:
+      213: -1957031036138310770
+    second: kwadrat_sprites_11
+  - first:
+      213: -2488400209963603763
+    second: kwadrat_sprites_12
+  - first:
+      213: 4319065822062714265
+    second: kwadrat_sprites_13
+  - first:
+      213: -7644164227064352970
+    second: kwadrat_sprites_14
+  - first:
+      213: 1149092836957994916
+    second: kwadrat_sprites_15
+  - first:
+      213: -3446496714884391883
+    second: kwadrat_sprites_16
+  - first:
+      213: 4282460918284210273
+    second: kwadrat_sprites_17
+  - first:
+      213: 6093902857947965306
+    second: kwadrat_sprites_18
+  - first:
+      213: 6613125381056868222
+    second: kwadrat_sprites_19
+  - first:
+      213: 4269122370491483130
+    second: kwadrat_sprites_20
+  - first:
+      213: 8541318651882705003
+    second: kwadrat_sprites_21
+  - first:
+      213: -2172835965245834055
+    second: kwadrat_sprites_22
+  - first:
+      213: 2499468148567142566
+    second: kwadrat_sprites_23
+  - first:
+      213: -7741471561382842681
+    second: kwadrat_sprites_24
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +115,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +145,546 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: kwadrat_sprites_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1067
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93782625e8fc65f10800000000000000
+      internalID: 2258220473347376953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_1
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1067
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613c2d7d7ec1213a0800000000000000
+      internalID: -6696257913862569194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_2
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1066
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de109dd78d2b1cf60800000000000000
+      internalID: 8052914251609211373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_3
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 1066
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c539bfa16d01ec0800000000000000
+      internalID: -3598140690890793896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_4
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 1066
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc9dc0647acf8500800000000000000
+      internalID: 400761493048368327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_5
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 811
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d623512aaf8b080800000000000000
+      internalID: -9171305067092742867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_6
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 811
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d313d7d4b769b750800000000000000
+      internalID: 6321197578403910612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_7
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 810
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20f3ab18e4251ff0800000000000000
+      internalID: -66106040212262866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_8
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 810
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bdeb96843af83160800000000000000
+      internalID: 7005624323878415799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_9
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 810
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e3ba18ba1b19760800000000000000
+      internalID: 7462941407702629958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_10
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 556
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4151464f339a62bd0800000000000000
+      internalID: -2655248889679702764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_11
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 556
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e83bf8434aa37d4e0800000000000000
+      internalID: -1957031036138310770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_12
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 555
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8ac12713d677dd0800000000000000
+      internalID: -2488400209963603763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_13
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 555
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d14955b7760fb30800000000000000
+      internalID: 4319065822062714265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_14
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 555
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63fa411d2297ae590800000000000000
+      internalID: -7644164227064352970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_15
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 299
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4afb3d8d8d562ff00800000000000000
+      internalID: 1149092836957994916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_16
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 299
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53cd3c58f759b20d0800000000000000
+      internalID: -3446496714884391883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_17
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 298
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160d2d6048b5e6b30800000000000000
+      internalID: 4282460918284210273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_18
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 298
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77e9b7cc54e19450800000000000000
+      internalID: 6093902857947965306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_19
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 298
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7fa3090f7a86cb50800000000000000
+      internalID: 6613125381056868222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_20
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 43
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af381db5d28fe3b30800000000000000
+      internalID: 4269122370491483130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_21
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 43
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6013ee5f0cd88670800000000000000
+      internalID: 8541318651882705003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_22
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 42
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc3458a33988d1e0800000000000000
+      internalID: -2172835965245834055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_23
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 42
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a07fb2d905efa220800000000000000
+      internalID: 2499468148567142566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kwadrat_sprites_24
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 42
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ceacf881a4c09490800000000000000
+      internalID: -7741471561382842681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
