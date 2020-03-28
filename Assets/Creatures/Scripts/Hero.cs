@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hero : Creature
 {
-    protected bool energyIsUsed = false;
+    [HideInInspector] public float damageReduction = 1;
 
     protected Ray ray;
 
@@ -36,14 +36,6 @@ public class Hero : Creature
         }
 
 
-
-        if (Input.GetKey(KeyCode.Space) && !energyIsUsed)
-        {
-            StartCoroutine(UseEnergy());
-        }
-
-
-
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (ray.origin.x > transform.position.x)
         {
@@ -57,20 +49,11 @@ public class Hero : Creature
         Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
     }
 
-    private IEnumerator UseEnergy()
+
+    public override void GetDamage(float damage)
     {
-        if (energy > 10)
-        {
-            energyIsUsed = true;
-            animator.SetBool("useEnergy", true);
-            energy -= 10;
-            speed *= 2;
+        health -= damage / damageReduction;
 
-            yield return new WaitForSeconds(1);
-
-            speed /= 2;
-            animator.SetBool("useEnergy", false);
-            energyIsUsed = false;
-        }
+        StartCoroutine(GetDamageAnimation());
     }
 }

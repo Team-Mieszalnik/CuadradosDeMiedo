@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 8214266213647809682}
   - component: {fileID: 8214266213647809685}
   - component: {fileID: 2029025050}
+  - component: {fileID: 709545717}
+  - component: {fileID: 709545722}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -200,8 +202,40 @@ MonoBehaviour:
   speed: 5
   healthMax: 100
   health: 50
-  healthChargeRate: 0.1
-  energyMax: 50
-  energy: 100
-  energyChargeRate: 1
+  healthRegeneration: 0.1
+  energyMax: 100
+  energy: 50
+  energyRegeneration: 1
   rb: {fileID: 0}
+  damageReduction: 1
+--- !u!114 &709545717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8214266213647809695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98acce858bcff1745bc08a403588d68e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &709545722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8214266213647809695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe9a45aafc13c1845b4852dfbad30c79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curePower: 20
+  cureEnergy: 30
+  cureDelay: 5
+  sprintPower: 2
+  sprintEnergy: 10
+  defensePower: 2
+  defenseEnergy: 5

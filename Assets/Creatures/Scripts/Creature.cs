@@ -8,11 +8,11 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
 
     public int healthMax;
     public float health;
-    public float healthChargeRate;
+    public float healthRegeneration;
 
     public int energyMax;
     public float energy;
-    public float energyChargeRate;
+    public float energyRegeneration;
 
     public Rigidbody2D rb;
     protected Animator animator;
@@ -42,7 +42,7 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     {
         if (energyMax > energy)
         {
-            energy += Time.deltaTime * energyChargeRate;
+            energy += Time.deltaTime * energyRegeneration;
         }
     }
 
@@ -50,7 +50,7 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     {
         if (healthMax > health)
         {
-            health += Time.deltaTime * healthChargeRate;
+            health += Time.deltaTime * healthRegeneration;
         }
     }
 
@@ -77,7 +77,7 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
         {
             animator.SetBool("getDamage", true);
 
-            yield return new WaitForSeconds(0.01F);
+            yield return new WaitForSeconds(0.01F);//animation time
 
             animator.SetBool("getDamage", false);
         }
