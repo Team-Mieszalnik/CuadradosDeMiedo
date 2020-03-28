@@ -82,7 +82,7 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
 
             //postac umarla i nie zyje
             //i co dalej?
-            AfterDeath();
+            StartCoroutine(AfterDeath());
 
         }
         else
@@ -95,8 +95,8 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
         }
     }
 
-    protected virtual void AfterDeath()
+    protected virtual IEnumerator AfterDeath()
     {
-
+        yield return new WaitForSeconds(0.01F);//animation time
     }
 }
