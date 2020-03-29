@@ -6,6 +6,12 @@ public class CastWeapons : Weapon
 {
     public GameObject cast;
 
+    protected void Start()
+    {
+        base.Start();
+        cast.SetActive(false);
+    }
+
     protected override void Control()
     {
         if (Input.GetMouseButton(0))

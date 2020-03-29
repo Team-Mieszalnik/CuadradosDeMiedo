@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
 {
+    public bool isActive;
     public float attackSpeed;
 
     public Transform firePoint;
@@ -24,11 +25,14 @@ public abstract class Weapon : MonoBehaviour
     // Update is called once per frame
     protected void Update()
     {
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (isActive)
+        {
+            mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        Control();
+            Control();
 
-        time += Time.deltaTime;
+            time += Time.deltaTime;
+        }
     }
 
     protected void FixedUpdate()
