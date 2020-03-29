@@ -10,9 +10,4 @@ public class Shotgun : Weapon
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation * Quaternion.Euler(0, 0, -15f));
     }
-
-    protected override IEnumerator ShootAnimation()
-    {
-        yield return new WaitForSeconds(0);
-    }
 }

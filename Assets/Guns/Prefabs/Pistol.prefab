@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343430424215957552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.79, y: 0.11, z: 0}
+  m_LocalPosition: {x: 1.03, y: 0.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1343430424340621990}
@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 1343430424340621990}
   - component: {fileID: 1343430424340621991}
   - component: {fileID: -2478839697233155670}
+  - component: {fileID: -4132565571308380213}
   - component: {fileID: 1343430424340622040}
   m_Layer: 0
   m_Name: Pistol
@@ -103,7 +104,7 @@ SpriteRenderer:
   m_SortingLayerID: 1033825307
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d06e12a16e056a7469f60564812e3fa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b2b9904890a840e41bda4092e860525b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,6 +134,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &-4132565571308380213
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343430424340622041}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.445, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0.5}
+    oldSize: {x: 0.95, y: 0.66}
+    newSize: {x: 1.74, y: 0.66}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.89, y: 0.66}
+  m_EdgeRadius: 0
 --- !u!114 &1343430424340622040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e9ee614a30ed7040bc9feef0a4a0fd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 0
   attackSpeed: 0.5
   firePoint: {fileID: 1343430424215957567}
   bulletPrefab: {fileID: 5297232439948692029, guid: b4b7443ba2fbda24c94282650712c8c5,
