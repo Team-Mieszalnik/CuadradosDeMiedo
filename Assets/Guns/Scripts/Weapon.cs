@@ -37,16 +37,19 @@ public abstract class Weapon : MonoBehaviour
 
     protected void FixedUpdate()
     {
-        Vector2 lookDirection = mousePosition - new Vector2(transform.position.x, transform.position.y);
-        float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
+        if (isActive)
+        {
+            Vector2 lookDirection = mousePosition - new Vector2(transform.position.x, transform.position.y);
+            float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
 
-        if (mousePosition.x > transform.position.x)
-        {
-            transform.rotation = Quaternion.Euler(0f, 0, angle);
-        }
-        else
-        {
-            transform.rotation = Quaternion.Euler(180f, 0, -angle);
+            if (mousePosition.x > transform.position.x)
+            {
+                transform.rotation = Quaternion.Euler(0f, 0, angle);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(180f, 0, -angle);
+            }
         }
     }
 
@@ -70,7 +73,7 @@ public abstract class Weapon : MonoBehaviour
     {
         animator.SetBool("shoot", true);
 
-        yield return new WaitForSeconds(attackSpeed);
+        yield return new WaitForSeconds(attackSpeed - 0.09f);
 
         animator.SetBool("shoot", false);
     }
