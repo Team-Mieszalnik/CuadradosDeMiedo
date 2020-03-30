@@ -24,11 +24,11 @@ public class LaserBeam : MonoBehaviour
 
 
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right * beamLength);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(1,0,0), transform.right * beamLength);
 
         if (hit)
         {
-            //time = 0;
+
             var target = hit.transform.GetComponent<IGetDamaged>();
             if (target != null)
             {
