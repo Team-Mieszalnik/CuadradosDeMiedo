@@ -10,8 +10,4 @@ public class Pistol : Weapon
     }
 
 
-    protected override IEnumerator ShootAnimation()
-    {
-        yield return new WaitForSeconds(0);
-    }
 }
