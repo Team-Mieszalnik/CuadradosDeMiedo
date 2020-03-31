@@ -10,14 +10,27 @@ public class Enemy : Creature
   public Transform hero;
 	protected bool attack = false;
 
+  protected bool moveRandomizer = false;
+  protected bool alternateMove = false;
 
+  Vector2 moveDirection;
+
+   public delegate IEnumerator movingDelegate();
+
+   movingDelegate moving;
 
 
     // Update is called once per frame
     void Update()
     {
       hero = GameObject.Find("Hero").transform;
-      Move();
+
+      if(!moveRandomizer)
+      {
+        StartCoroutine(Move());
+      }
+      StartCoroutine(moving());
+
 
 		  if(!attack)
 		    {
@@ -40,17 +53,47 @@ public class Enemy : Creature
 		  attack = false;
     }
 
-    protected void Move()
+    protected IEnumerator StandardMove()
     {
-           //= new Vector2(rb.velocity.x, speed);
-          
           Vector2 moveDirection = new Vector2(hero.position.x, hero.position.y) - new Vector2(transform.position.x, transform.position.y);
           if(moveDirection.magnitude >= 10)
           {
             rb.velocity = moveDirection.normalized * speed;
           }
+          yield return new WaitForSeconds(0);
+    }
+
+    protected IEnumerator AlternativeMove()
+    {
+          if(!alternateMove)
+          {
+            moveDirection = new Vector2(Random.Range(-10,10), Random.Range(-10,10));
+            alternateMove = true;
+          }
+          rb.velocity = moveDirection.normalized * speed;
+          yield return new WaitForSeconds(0);
+    }
+
+    protected IEnumerator Move() 
+    {
+          moveRandomizer = true;
+          switch (Random.Range(0,100))
+          {
+            case int n when(n>=50):
+                moving = StandardMove;
+                yield return new WaitForSeconds(4F);
+                break;
+            default:
+                moving = AlternativeMove;
+                yield return new WaitForSeconds(1F);
+                break;
+          }
+           // moves delay
+          moveRandomizer = false;
+          alternateMove = false;
     }
     
+   
 
 
     protected override IEnumerator AfterDeath()
