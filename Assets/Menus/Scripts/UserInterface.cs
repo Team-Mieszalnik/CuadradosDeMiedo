@@ -1,18 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UserInterface : MonoBehaviour
 {
-    public Canvas hudCanvas;
-    public Canvas escapeCanvas;
+    //public Canvas hudCanvas;
+    //public Canvas escapeCanvas;
+    private Canvas hudCanvas;
+    private Canvas escapeCanvas;
+    public GameObject playSpace;
+    private Text heroHealthText;
+    private Hero hero;
 
     // Start is called before the first frame update
     void Start()
     {
-        hudCanvas = hudCanvas.GetComponent<Canvas>();
-        escapeCanvas = escapeCanvas.GetComponent<Canvas>();
 
+        //Initialize key components
+
+        foreach (var child in transform.GetComponentsInChildren<Canvas>())
+        {
+            if (child.name == "HUD") hudCanvas = child;
+            else if (child.name == "EscapeMenu") escapeCanvas = child;
+        }
+        //hudCanvas = hudCanvas.GetComponent<Canvas>();
+        //escapeCanvas = escapeCanvas.GetComponent<Canvas>();
+
+
+        hero = playSpace.GetComponentInChildren<Hero>();
+        //hero = hero.GetComponent<Hero>();
+        //heroHealthText = GameObject.Find("UserInterface/HUD/HeroHealthDisplay").GetComponent<Text>();
+        foreach (var child in hudCanvas.GetComponentsInChildren<Text>())
+        {
+            if (child.name == "HeroHealthDisplay") heroHealthText = child;
+        }
+        //heroHealthText = ;
+
+        //  //
+
+        // Starting state of the scene
         escapeCanvas.enabled = true; //turn on escape menu canvas
         hudCanvas.enabled = false;   //turn off hud canvas
         Time.timeScale = 0;         //Stop the game
@@ -25,6 +52,7 @@ public class UserInterface : MonoBehaviour
         {
             ChangeExitMenuState();
         }
+        heroHealthText.text = hero.health.ToString();
     }
 
     public void ChangeExitMenuState()
