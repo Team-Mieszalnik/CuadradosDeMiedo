@@ -33,7 +33,7 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         IGetDamaged target = collision.GetComponent<IGetDamaged>();
 

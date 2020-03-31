@@ -26,17 +26,17 @@ public class Enemy : Creature
 
     protected IEnumerator Attack()
     {
-		attack = true;
-    animator.SetBool("attack", true);
+		  attack = true;
+      animator.SetBool("attack", true);
 
-    Vector2 lookDirection = new Vector2(hero.position.x, hero.position.y) - new Vector2(transform.position.x, transform.position.y);
-            float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
+      Vector2 lookDirection = new Vector2(hero.position.x, hero.position.y) - new Vector2(transform.position.x, transform.position.y);
+      float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
 
-        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, angle)); // obiekt, pozycja startowa, kierunek
-        yield return new WaitForSeconds(1F);//animation time
-		animator.SetBool("attack", false);
-		yield return new WaitForSeconds(2F);//attack time
-		attack = false;
+      Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, angle)); // obiekt, pozycja startowa, kierunek
+      yield return new WaitForSeconds(1F);//animation time
+		  animator.SetBool("attack", false);
+		  yield return new WaitForSeconds(2F);//attack time
+		  attack = false;
     }
 
 
