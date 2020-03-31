@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5960344139199355694}
   - component: {fileID: 5960344139199355699}
   - component: {fileID: 3376127966560020035}
+  - component: {fileID: 6550257121305542174}
   m_Layer: 0
   m_Name: ObstacleBox
   m_TagString: Untagged
@@ -155,4 +156,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b957fb4b9ae15bd43ac601a5bdfbcd57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 15
+  hp: 4
+--- !u!114 &6550257121305542174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5960344139199355695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 000000008370d2d01bec9e3d29db29e82f6acae4
+  m_ShapePath:
+  - {x: -0.061007597, y: -0.05610978, z: 0}
+  - {x: -0.043371487, y: -0.06723777, z: 0}
+  - {x: 0.0469491, y: -0.06723777, z: 0}
+  - {x: 0.062079716, y: -0.056242328, z: 0}
+  - {x: 0.07008295, y: -0.044380676, z: 0}
+  - {x: 0.06691484, y: 0.04494957, z: 0}
+  - {x: 0.05930872, y: 0.05921067, z: 0}
+  - {x: 0.045998476, y: 0.07061957, z: 0}
+  - {x: -0.044435788, y: 0.070503466, z: 0}
+  - {x: -0.06048422, y: 0.061112154, z: 0}
+  - {x: -0.066188715, y: 0.04970326, z: 0}
+  - {x: -0.06809073, y: -0.040617045, z: 0}
+  m_ShapePathHash: 945250349
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -20240

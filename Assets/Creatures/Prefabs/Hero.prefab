@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 709545717}
   - component: {fileID: 709545722}
   - component: {fileID: 442830938220739705}
+  - component: {fileID: 8125555829179928420}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -286,3 +287,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 0}
   hando: {fileID: 1934951172}
+--- !u!114 &8125555829179928420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8214266213647809695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 000000008370d2d01bec9e3d29db29e82f6acae4
+  m_ShapePath:
+  - {x: 1.2787857, y: -0.65255785, z: 0}
+  - {x: 1.2799988, y: 0.6611495, z: 0}
+  - {x: 0.061714172, y: 1.2897105, z: 0}
+  - {x: -0.09083557, y: 1.2867186, z: 0}
+  - {x: -1.2712479, y: 0.66836333, z: -0.00000166893}
+  - {x: -1.2810516, y: -0.6649518, z: -0.00000166893}
+  - {x: -0.084991455, y: -1.2727866, z: -0.00000166893}
+  - {x: 0.0718689, y: -1.2727866, z: -0.00000166893}
+  m_ShapePathHash: 1909104301
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -24594
