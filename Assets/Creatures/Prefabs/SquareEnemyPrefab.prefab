@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1098177804011346435}
   - component: {fileID: -2360791674184658166}
   - component: {fileID: 3832169046121260361}
+  - component: {fileID: 5880755145334242458}
   m_Layer: 0
   m_Name: SquareEnemyPrefab
   m_TagString: Enemy
@@ -178,4 +179,29 @@ MonoBehaviour:
   rb: {fileID: 0}
   bulletPrefab: {fileID: 7877758546424837181, guid: 0ed005be6ddef834ab0ffd850b4558aa,
     type: 3}
-  hero: {fileID: 0}
+--- !u!114 &5880755145334242458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098177804011346434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 000000008370d2d01bec9e3d29db29e82f6acae4
+  m_ShapePath:
+  - {x: -0.85266876, y: -0.85266924, z: 0}
+  - {x: 0.8578453, y: -0.8423104, z: 0}
+  - {x: 0.86302567, y: 0.85266876, z: 0}
+  - {x: -0.8630295, y: 0.85784817, z: 0}
+  m_ShapePathHash: 920864149
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -24728
