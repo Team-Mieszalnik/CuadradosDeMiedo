@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 1635935634195744006}
   - component: {fileID: 1635935634195744007}
   m_Layer: 0
-  m_Name: HPdisplay
+  m_Name: HeroHealthDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -440,8 +440,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 44, y: 23.00003}
-  m_SizeDelta: {x: 53.600006, y: 27.279999}
+  m_AnchoredPosition: {x: 83.2, y: 23.00003}
+  m_SizeDelta: {x: 132, y: 27.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1635935634195744006
 CanvasRenderer:
@@ -482,9 +482,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'HP
-
-'
+  m_Text: Hero Health
 --- !u!1 &1635935634541910012
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hudCanvas: {fileID: 1635935633562760372}
   escapeCanvas: {fileID: 261231726}
+  playSpace: {fileID: 0}
 --- !u!1 &1635935635421417255
 GameObject:
   m_ObjectHideFlags: 0
