@@ -8,6 +8,8 @@ TagManager:
   - Bullet
   - Creature
   - Lake
+  - Enemy
+  - Hero
   layers:
   - Default
   - TransparentFX
