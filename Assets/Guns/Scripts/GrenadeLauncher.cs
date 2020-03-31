@@ -11,9 +11,4 @@ public class GrenadeLauncher : Weapon
         float mouseDistance = (firePoint.position - new Vector3(mousePosition.x, mousePosition.y)).magnitude;
         grenade.range = mouseDistance > grenade.range ? grenade.range : mouseDistance;
     }
-
-    protected override IEnumerator ShootAnimation()
-    {
-        yield return new WaitForSeconds(0);
-    }
 }

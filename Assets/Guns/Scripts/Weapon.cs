@@ -58,8 +58,8 @@ public abstract class Weapon : MonoBehaviour
         if (Input.GetMouseButton(0) && time > attackSpeed)
         {
             time = 0;
-            Shoot();
             StartCoroutine(ShootAnimation());
+            Shoot();
         }
     }
 
@@ -73,7 +73,7 @@ public abstract class Weapon : MonoBehaviour
     {
         animator.SetBool("shoot", true);
 
-        yield return new WaitForSeconds(attackSpeed - 0.09f);
+        yield return new WaitForSeconds(attackSpeed - 0.04f);
 
         animator.SetBool("shoot", false);
     }
