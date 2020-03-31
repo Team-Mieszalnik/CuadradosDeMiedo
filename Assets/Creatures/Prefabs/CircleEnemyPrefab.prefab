@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 4756201572567424597}
   - component: {fileID: 4756201572567424618}
   - component: {fileID: 4756201572567424619}
-  - component: {fileID: 4756201572567424596}
   - component: {fileID: 4756201572567424599}
+  - component: {fileID: 3021749490638589458}
+  - component: {fileID: -6402814254457012825}
   m_Layer: 0
   m_Name: CircleEnemyPrefab
   m_TagString: Enemy
@@ -157,30 +158,6 @@ PolygonCollider2D:
       - {x: 0.28, y: -0.96}
       - {x: 0.51, y: -0.85999995}
       - {x: 0.74, y: -0.66999996}
---- !u!114 &4756201572567424596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4756201572567424616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0986d96158d525f409bb15c9afa8164d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  healthMax: 100
-  health: 100
-  healthRegeneration: 0
-  healthDisplay: {fileID: 0}
-  energyMax: 0
-  energy: 0
-  energyRegeneration: 0
-  rb: {fileID: 0}
-  bulletPrefab: {fileID: 7877758546424837181, guid: 0ed005be6ddef834ab0ffd850b4558aa,
-    type: 3}
-  hero: {fileID: 0}
 --- !u!95 &4756201572567424599
 Animator:
   serializedVersion: 3
@@ -200,3 +177,48 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &3021749490638589458
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4756201572567424616}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 9.99
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &-6402814254457012825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4756201572567424616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1f913d9a074f34e9d694c531458933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
+  healthMax: 100
+  health: 100
+  healthRegeneration: 0.1
+  healthDisplay: {fileID: 0}
+  energyMax: 0
+  energy: 0
+  energyRegeneration: 0
+  rb: {fileID: 0}
+  bulletPrefab: {fileID: 7877758546424837181, guid: 0ed005be6ddef834ab0ffd850b4558aa,
+    type: 3}
+  hero: {fileID: 0}
