@@ -17,6 +17,7 @@ public class Enemy : Creature
     void Update()
     {
       hero = GameObject.Find("Hero").transform;
+      Move();
 
 		  if(!attack)
 		    {
@@ -29,15 +30,27 @@ public class Enemy : Creature
 		  attack = true;
       animator.SetBool("attack", true);
 
+      yield return new WaitForSeconds(1.5F);//animation time
       Vector2 lookDirection = new Vector2(hero.position.x, hero.position.y) - new Vector2(transform.position.x, transform.position.y);
       float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
-
       Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, angle)); // obiekt, pozycja startowa, kierunek
-      yield return new WaitForSeconds(1F);//animation time
 		  animator.SetBool("attack", false);
-		  yield return new WaitForSeconds(2F);//attack time
+
+		  yield return new WaitForSeconds(Random.Range(2F, 4F));//attack time
 		  attack = false;
     }
+
+    protected void Move()
+    {
+           //= new Vector2(rb.velocity.x, speed);
+          
+          Vector2 moveDirection = new Vector2(hero.position.x, hero.position.y) - new Vector2(transform.position.x, transform.position.y);
+          if(moveDirection.magnitude >= 10)
+          {
+            rb.velocity = moveDirection.normalized * speed;
+          }
+    }
+    
 
 
     protected override IEnumerator AfterDeath()

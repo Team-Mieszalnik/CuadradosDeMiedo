@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public abstract class Creature : MonoBehaviour, IGetDamaged
 {
+
     public float speed;
 
     public int healthMax;

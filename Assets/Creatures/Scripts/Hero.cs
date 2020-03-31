@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class Hero : Creature
 {
     [HideInInspector] public float damageReduction = 1;
