@@ -24,7 +24,7 @@ public class Explosion : MonoBehaviour
 
     protected virtual IEnumerator KabumAnimation()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.2f);
         Destroy(gameObject);
     }
 }

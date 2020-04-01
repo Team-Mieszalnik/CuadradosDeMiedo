@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6894152016832411915}
   - component: {fileID: 1991321461}
   - component: {fileID: 1991321460}
+  - component: {fileID: 967813084}
   m_Layer: 0
   m_Name: Laser Point
   m_TagString: Untagged
@@ -144,6 +145,47 @@ MonoBehaviour:
   beamLength: 15
   Damage: 5
   Cooldown: 0.3
+--- !u!114 &967813084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6894152016832411908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 1
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Intensity: 1
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.1562649, y: -0.038583733, z: 0}
+  - {x: 11.526482, y: -0.065136544, z: 0}
+  - {x: 11.531206, y: 0.08285549, z: 0}
+  - {x: -0.14730227, y: 0.14776573, z: 0}
 --- !u!1 &6894152017762640877
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   attackSpeed: 0
+  ammo: 1000
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 0}
   cast: {fileID: 6894152016832411908}

@@ -6,6 +6,7 @@ public abstract class Weapon : MonoBehaviour
 {
     public bool isActive;
     public float attackSpeed;
+    public float ammo;
 
     public Transform firePoint;
     public GameObject bulletPrefab;
@@ -32,7 +33,14 @@ public abstract class Weapon : MonoBehaviour
             Control();
 
             time += Time.deltaTime;
+
+            if (ammo <= 0)
+            {
+                Destroy(gameObject);
+            }
+
         }
+
     }
 
     protected void FixedUpdate()
@@ -58,6 +66,7 @@ public abstract class Weapon : MonoBehaviour
         if (Input.GetMouseButton(0) && time > attackSpeed)
         {
             time = 0;
+            ammo--;
             StartCoroutine(ShootAnimation());
             Shoot();
         }
