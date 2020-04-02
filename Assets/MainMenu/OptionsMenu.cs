@@ -37,9 +37,14 @@ public class OptionsMenu : MonoBehaviour
 
     }
 
-    public void SetQuality(float quality)
+    public void SetVolume(float volume)
     {
 
+    }
+
+    public void SetQuality(float quality)
+    {
+        QualitySettings.SetQualityLevel((int)quality);
     }
 
     public void SetFullscreen(bool isFullscrenn)
