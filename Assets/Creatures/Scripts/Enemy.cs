@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : Creature
 {
-
+    public Transform firePoint;
     public GameObject bulletPrefab;
     protected Transform hero;
 

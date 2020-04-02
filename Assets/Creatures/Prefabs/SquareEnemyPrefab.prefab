@@ -177,7 +177,7 @@ MonoBehaviour:
   energy: 0
   energyRegeneration: 0
   rb: {fileID: 0}
-  bulletPrefab: {fileID: 7877758546424837181, guid: 0ed005be6ddef834ab0ffd850b4558aa,
+  bulletPrefab: {fileID: 5659481989795792469, guid: 693d4d8442023c74aa4785283bb69a34,
     type: 3}
 --- !u!114 &5880755145334242458
 MonoBehaviour:
