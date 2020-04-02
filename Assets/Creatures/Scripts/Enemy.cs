@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : Creature
 {
-
+    public Transform firePoint;
     public GameObject bulletPrefab;
     protected Transform hero;
 
@@ -23,8 +23,8 @@ public class Enemy : Creature
     void Update()
     {
         hero = GameObject.Find("Hero").transform;
-
-        if(!moveRandomizer)
+        
+        if (!moveRandomizer)
         {
             StartCoroutine(Move());
         }
@@ -103,7 +103,13 @@ public class Enemy : Creature
     protected override IEnumerator AfterDeath()
     {
         yield return new WaitForSeconds(1F);//animation time
+
+        animator.SetBool("dead", false);
+
         Destroy(gameObject);
+
+        Experience.addDefeatedOpponents(1);
+        LevelController.enemyCounter--;
     }
 
 

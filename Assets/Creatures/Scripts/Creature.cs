@@ -11,7 +11,7 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     public int healthMax;
     public float health;
     public float healthRegeneration;
-    public Text healthDisplay;
+    [HideInInspector] public Text healthDisplay;
 
     public int energyMax;
     public float energy;
@@ -76,6 +76,7 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     {
         if (health <= 0)
         {
+            gameObject.GetComponent<PolygonCollider2D>().enabled = false;
             animator.SetBool("dead", true);
 
             //postac umarla i nie zyje

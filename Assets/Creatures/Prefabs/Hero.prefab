@@ -63,7 +63,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8214266213647809695}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.015774451, y: -0.0047968216, z: -2.924185}
+  m_LocalPosition: {x: 0.015774451, y: -0.0047968216, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1934951173}
@@ -234,11 +234,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   healthMax: 100
-  health: 50
+  health: 100
   healthRegeneration: 0.1
   healthDisplay: {fileID: 0}
   energyMax: 100
-  energy: 50
+  energy: 100
   energyRegeneration: 1
   rb: {fileID: 0}
   damageReduction: 1
@@ -287,6 +287,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 0}
   hando: {fileID: 1934951172}
+  basicWeapon: {fileID: 1343430424340622041, guid: a06bf3d928bbf804193dddee129c6c19,
+    type: 3}
 --- !u!114 &8125555829179928420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,4 +318,4 @@ MonoBehaviour:
   - {x: 0.0718689, y: -1.2727866, z: -0.00000166893}
   m_ShapePathHash: 1909104301
   m_Mesh: {fileID: 0}
-  m_InstanceId: -9874
+  m_InstanceId: 25650
