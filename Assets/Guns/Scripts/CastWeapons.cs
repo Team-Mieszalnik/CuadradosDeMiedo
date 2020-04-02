@@ -6,9 +6,8 @@ public class CastWeapons : Weapon
 {
     public GameObject cast;
 
-    protected void Start()
+    private void Awake()
     {
-        base.Start();
         cast.SetActive(false);
     }
 
@@ -18,7 +17,8 @@ public class CastWeapons : Weapon
         {
             cast.SetActive(true);
             // Shoot();
-            StartCoroutine(ShootAnimation());
+            //StartCoroutine(ShootAnimation());
+            ammo -= 10 * Time.deltaTime;
         }
         else
         {

@@ -5,81 +5,61 @@ using UnityEngine;
 public class Enemy : Creature
 {
 
+    public GameObject bulletPrefab;
+    protected Transform hero;
 
-  public GameObject bulletPrefab;
-  public Transform hero;
-	protected bool attack = false;
+    Vector2 moveDirection;
 
-  protected bool moveRandomizer = false;
-  protected bool alternateMove = false;
 
-  Vector2 moveDirection;
+    protected bool attack = false;
+    protected bool alternateMove = false;
+    protected bool moveRandomizer = false;
 
-   public delegate IEnumerator movingDelegate();
-
-   movingDelegate moving;
+    protected delegate IEnumerator movingDelegate();
+    protected movingDelegate moving;
 
 
     // Update is called once per frame
     void Update()
     {
-      hero = GameObject.Find("Hero").transform;
+        hero = GameObject.Find("Hero").transform;
 
-      if(!moveRandomizer)
-      {
-        StartCoroutine(Move());
-      }
-      StartCoroutine(moving());
+        if(!moveRandomizer)
+        {
+            StartCoroutine(Move());
+        }
+        StartCoroutine(moving());
 
-
-		  if(!attack)
-		    {
-			    StartCoroutine(Attack());
-		    }
+        if (!attack)
+        {
+            StartCoroutine(Attack());
+        }
     }
 
     protected IEnumerator Attack()
     {
-		  attack = true;
-      animator.SetBool("attack", true);
+        attack = true;
+        animator.SetBool("attack", true);
 
-      yield return new WaitForSeconds(1.5F);//animation time
-      Vector2 lookDirection = new Vector2(hero.position.x, hero.position.y) - new Vector2(transform.position.x, transform.position.y);
-      float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
-      Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, angle)); // obiekt, pozycja startowa, kierunek
-		  animator.SetBool("attack", false);
+        yield return new WaitForSeconds(1.5F);//animation time
 
-		  yield return new WaitForSeconds(Random.Range(2F, 4F));//attack time
-		  attack = false;
+        Vector2 lookDirection = new Vector2(hero.position.x, hero.position.y) - new Vector2(transform.position.x, transform.position.y);
+        float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
+        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, angle)); // obiekt, pozycja startowa, kierunek
+
+
+		animator.SetBool("attack", false);
+		yield return new WaitForSeconds(Random.Range(2F, 4F));//attack time
+        attack = false;
     }
 
-    protected IEnumerator StandardMove()
-    {
-          Vector2 moveDirection = new Vector2(hero.position.x, hero.position.y) - new Vector2(transform.position.x, transform.position.y);
-          if(moveDirection.magnitude >= 10)
-          {
-            rb.velocity = moveDirection.normalized * speed;
-          }
-          yield return new WaitForSeconds(0);
-    }
 
-    protected IEnumerator AlternativeMove()
+    protected IEnumerator Move()
     {
-          if(!alternateMove)
-          {
-            moveDirection = new Vector2(Random.Range(-10,10), Random.Range(-10,10));
-            alternateMove = true;
-          }
-          rb.velocity = moveDirection.normalized * speed;
-          yield return new WaitForSeconds(0);
-    }
-
-    protected IEnumerator Move() 
-    {
-          moveRandomizer = true;
-          switch (Random.Range(0,100))
-          {
-            case int n when(n>=50):
+        moveRandomizer = true;
+        switch (Random.Range(0, 100))
+        {
+            case int n when (n >= 50):
                 moving = StandardMove;
                 yield return new WaitForSeconds(4F);
                 break;
@@ -87,10 +67,34 @@ public class Enemy : Creature
                 moving = AlternativeMove;
                 yield return new WaitForSeconds(1F);
                 break;
-          }
-           // moves delay
-          moveRandomizer = false;
-          alternateMove = false;
+        }
+        // moves delay
+        moveRandomizer = false;
+        alternateMove = false;
+    }
+
+
+
+
+    protected IEnumerator StandardMove()
+    {
+        Vector2 moveDirection = new Vector2(hero.position.x, hero.position.y) - new Vector2(transform.position.x, transform.position.y);
+        if(moveDirection.magnitude >= 10)
+        {
+            rb.velocity = moveDirection.normalized * speed;
+        }
+        yield return new WaitForSeconds(0);
+    }
+
+    protected IEnumerator AlternativeMove()
+    {
+        if(!alternateMove)
+        {
+            moveDirection = new Vector2(Random.Range(-10,10), Random.Range(-10,10));
+            alternateMove = true;
+        }
+        rb.velocity = moveDirection.normalized * speed;
+        yield return new WaitForSeconds(0);
     }
     
    

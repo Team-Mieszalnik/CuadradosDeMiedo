@@ -174,6 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   attackSpeed: 1
+  ammo: 100
   firePoint: {fileID: 5956721176508285032}
   bulletPrefab: {fileID: 7029271218683282713, guid: 91a01e9809d5e6a4a92eacd346688038,
     type: 3}

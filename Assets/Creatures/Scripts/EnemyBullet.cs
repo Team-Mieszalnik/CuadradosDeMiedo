@@ -13,7 +13,7 @@ public class EnemyBullet : Bullet
             return;
         }
 
-        if (target != null);
+        if (target != null)
         {
             target.GetDamage(damage);
         }

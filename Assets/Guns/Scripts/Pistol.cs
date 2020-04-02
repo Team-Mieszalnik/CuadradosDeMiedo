@@ -8,6 +8,4 @@ public class Pistol : Weapon
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
-
-
 }
