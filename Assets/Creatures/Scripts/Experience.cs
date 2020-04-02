@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Experience : MonoBehaviour
 {
-    public static int defeatedOpponents { get; private set; }
+    public static int DefeatedOpponents { get; private set; }
 
     public static int points;
     private int upgradeCost = 10;
@@ -37,7 +37,7 @@ public class Experience : MonoBehaviour
 
     public static void addDefeatedOpponents(int number)
     {
-        defeatedOpponents += number;
+        DefeatedOpponents += number;
         points += number;
     }
 

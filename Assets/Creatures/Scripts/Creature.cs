@@ -11,7 +11,7 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     public int healthMax;
     public float health;
     public float healthRegeneration;
-    public Text healthDisplay;
+    [HideInInspector] public Text healthDisplay;
 
     public int energyMax;
     public float energy;
