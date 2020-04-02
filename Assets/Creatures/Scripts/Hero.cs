@@ -61,8 +61,9 @@ public class Hero : Creature
 
     protected override IEnumerator AfterDeath()
     {
-        yield return new WaitForSeconds(2F);
+        yield return new WaitForSeconds(0.5F);
         animator.SetBool("dead", false);
+
         for (int i = 0; i < 401; i++)
         {
             transform.localScale = new Vector3(transform.localScale.x - 0.01f, transform.localScale.y - 0.01f, transform.localScale.z - 0.01f);

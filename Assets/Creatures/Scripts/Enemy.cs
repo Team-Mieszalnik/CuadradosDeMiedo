@@ -103,6 +103,9 @@ public class Enemy : Creature
     protected override IEnumerator AfterDeath()
     {
         yield return new WaitForSeconds(1F);//animation time
+
+        animator.SetBool("dead", false);
+
         Destroy(gameObject);
 
         Experience.addDefeatedOpponents(1);

@@ -78,6 +78,7 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     {
         if (health <= 0)
         {
+            gameObject.GetComponent<PolygonCollider2D>().enabled = false;
             animator.SetBool("dead", true);
 
             //postac umarla i nie zyje

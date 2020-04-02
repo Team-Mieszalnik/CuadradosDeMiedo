@@ -11,14 +11,15 @@ public class MapController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (SceneManager.GetActiveScene().name.Equals(SceneName))
-        {
-            SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(1));
-        }
-        else
-        {
-            SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(0));
-        }
+        //if (SceneManager.GetActiveScene().name.Equals(SceneName))
+        //{
+        //    SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(1));
+        //}
+        //else
+        //{
+        //    SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(0));
+        //}
+        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
     }
 
     // Update is called once per frame
@@ -28,13 +29,33 @@ public class MapController : MonoBehaviour
     }
 
 
-    public static void GoNextLevel()
+    public static void EndLevel()
     {
-        if (LevelController.LevelCompleted()) 
+        if (LevelController.LevelCompleted())
         {
-            CreateScene();
+            CreateLoadingScene();
         }
     }
+
+
+    public static void GoNextLevel()
+    {
+        CreateScene();
+    }
+
+
+
+
+    public static void CreateFirstLevel()
+    {
+        LevelController.ResetLevel();
+
+        SceneSetings();
+
+        SceneManager.LoadScene(SceneName, LoadSceneMode.Additive);
+    }
+
+
 
     protected static void CreateScene()
     {
@@ -49,14 +70,18 @@ public class MapController : MonoBehaviour
         SceneManager.MoveGameObjectToScene(GameObject.Find("Hero"), SceneManager.GetSceneByName(SceneName));
     }
 
-    public static void CreateFirstLevel()
+    protected static void CreateLoadingScene()
     {
-        LevelController.ResetLevel();
+        GameObject.Find("Hero").transform.parent = null;
+        DontDestroyOnLoad(GameObject.Find("Hero"));
 
-        SceneSetings();
-
-        SceneManager.LoadScene(SceneName, LoadSceneMode.Additive);
+        SceneManager.LoadScene("LoadingLevel", LoadSceneMode.Additive);
+        SceneManager.MoveGameObjectToScene(GameObject.Find("Hero"), SceneManager.GetSceneByName("LoadingLevel"));
     }
+
+
+
+
 
     protected static void SceneSetings()
     {
