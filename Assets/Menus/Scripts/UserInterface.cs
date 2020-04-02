@@ -9,9 +9,12 @@ public class UserInterface : MonoBehaviour
     //public Canvas escapeCanvas;
     private Canvas hudCanvas;
     private Canvas escapeCanvas;
-    public GameObject playSpace;
+    //public GameObject playSpace;
     private Text heroHealthText;
+    private Text heroEnergyDisplay;
     private Hero hero;
+    private Slider heroHealthBar;
+    private Slider heroEnergyBar;
 
     // Start is called before the first frame update
     void Start()
@@ -28,13 +31,29 @@ public class UserInterface : MonoBehaviour
         //escapeCanvas = escapeCanvas.GetComponent<Canvas>();
 
 
-        hero = playSpace.GetComponentInChildren<Hero>();
+        //hero = playSpace.GetComponentInChildren<Hero>();
+        hero = GameObject.FindGameObjectWithTag("Hero").GetComponent<Hero>();
         //hero = hero.GetComponent<Hero>();
         //heroHealthText = GameObject.Find("UserInterface/HUD/HeroHealthDisplay").GetComponent<Text>();
         foreach (var child in hudCanvas.GetComponentsInChildren<Text>())
         {
             if (child.name == "HeroHealthDisplay") heroHealthText = child;
+            else if (child.name == "HeroEnergyDisplay") heroEnergyDisplay = child;
         }
+        foreach (var child in hudCanvas.GetComponentsInChildren<Slider>())
+        {
+            if (child.name == "HeroHealthBar")
+            {
+                heroHealthBar = child;
+                heroHealthBar.maxValue = hero.healthMax;
+            }
+            else if (child.name == "HeroEnergyBar")
+            {
+                heroEnergyBar = child;
+                heroEnergyBar.maxValue = hero.energyMax;
+            }
+        }
+
         //heroHealthText = ;
 
         //  //
@@ -53,6 +72,9 @@ public class UserInterface : MonoBehaviour
             ChangeExitMenuState();
         }
         heroHealthText.text = hero.health.ToString();
+        heroEnergyDisplay.text = hero.energy.ToString();
+        heroHealthBar.value = hero.health;
+        heroEnergyBar.value = hero.energy;
     }
 
     public void ChangeExitMenuState()

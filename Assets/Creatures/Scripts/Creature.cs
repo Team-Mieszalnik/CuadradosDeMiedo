@@ -68,10 +68,7 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
         if (healthDisplay != null)
         {
             healthDisplay.text = health.ToString();
-            Debug.Log("dziala");
         }
-        else Debug.Log("nie dziala");
-
         StartCoroutine(GetDamageAnimation());
     }
 
