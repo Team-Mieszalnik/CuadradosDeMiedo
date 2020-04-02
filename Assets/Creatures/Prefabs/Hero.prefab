@@ -287,6 +287,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 0}
   hando: {fileID: 1934951172}
+  basicWeapon: {fileID: 1343430424340622041, guid: a06bf3d928bbf804193dddee129c6c19,
+    type: 3}
 --- !u!114 &8125555829179928420
 MonoBehaviour:
   m_ObjectHideFlags: 0
