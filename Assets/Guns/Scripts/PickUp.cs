@@ -6,6 +6,7 @@ public class PickUp : MonoBehaviour
 {
     public GameObject weapon;
     public GameObject hando;
+    public GameObject basicWeapon;
 
 
     // Start is called before the first frame update
@@ -17,7 +18,13 @@ public class PickUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (weapon == null)
+        {
+            weapon = Instantiate(basicWeapon, hando.transform.position, hando.transform.rotation);
+            weapon.transform.position = hando.transform.position;
+            weapon.transform.parent = hando.transform;
+            weapon.GetComponent<Weapon>().isActive = true;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -25,13 +32,18 @@ public class PickUp : MonoBehaviour
         Weapon target = collision.GetComponent<Weapon>();
         if (target != null && Input.GetMouseButtonDown(1))
         {
-            if (weapon != null)
-            {
+            //if (weapon != null)
+            //{
                 //Destroy(weapon);
                 weapon.transform.position = transform.position;
-                weapon.transform.parent = null;
+                weapon.transform.rotation = Quaternion.identity;
                 weapon.GetComponent<Weapon>().isActive = false;
-            }
+                //if (weapon.GetComponent<CastWeapons>() != null)
+                //{
+                //    weapon.GetComponent<CastWeapons>().cast.SetActive(false);
+                //}
+                weapon.transform.parent = null;
+            //}
 
             weapon = target.gameObject;
             weapon.transform.position = hando.transform.position;
