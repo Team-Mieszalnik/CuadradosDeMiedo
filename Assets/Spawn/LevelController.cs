@@ -49,6 +49,8 @@ public class LevelController : MonoBehaviour
         
     }
 
+
+
     public static bool LevelCompleted()
     {
         if (enemyCounter <= 0)
@@ -113,9 +115,11 @@ public class LevelController : MonoBehaviour
 
         for (int i = 0; i < enemies.Count; i++) 
         {
+            Debug.Log("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
             Debug.Log("first for: enemies.count: " + enemies.Count);
             for (int j = 0; j < enemiesCounter[i]; j++) 
             {
+                Debug.Log("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
                 Debug.Log("second for: enemiesCounter: " + enemiesCounter[i]);
                 positionNumber = Random.Range(0, spawnPointsEnemy.Count - 1);
                 Instantiate(enemies[i], spawnPointsEnemy[positionNumber].transform);
