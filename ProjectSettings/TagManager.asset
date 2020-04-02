@@ -10,6 +10,9 @@ TagManager:
   - Lake
   - Enemy
   - Hero
+  - SpawnPointEnemy
+  - SpawnPointHero
+  - SpawnPointObstacle
   layers:
   - Default
   - TransparentFX

@@ -23,8 +23,8 @@ public class Enemy : Creature
     void Update()
     {
         hero = GameObject.Find("Hero").transform;
-
-        if(!moveRandomizer)
+        
+        if (!moveRandomizer)
         {
             StartCoroutine(Move());
         }
@@ -104,6 +104,9 @@ public class Enemy : Creature
     {
         yield return new WaitForSeconds(1F);//animation time
         Destroy(gameObject);
+
+        Experience.addDefeatedOpponents(1);
+        LevelController.enemyCounter--;
     }
 
 
