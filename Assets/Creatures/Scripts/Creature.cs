@@ -70,7 +70,6 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
             healthDisplay.text = health.ToString();
             Debug.Log("dziala");
         }
-        else Debug.Log("nie dziala");
 
         StartCoroutine(GetDamageAnimation());
     }

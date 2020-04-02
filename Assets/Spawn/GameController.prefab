@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4409779427884070354}
-  - component: {fileID: 863432545660989610}
-  - component: {fileID: 8982369101928986397}
+  - component: {fileID: 900446239156609991}
+  - component: {fileID: -5192999837235677444}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863432545660989610
+--- !u!114 &900446239156609991
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,11 +46,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hero: {fileID: 8214266213647809695, guid: 7533e833495956144a3e7e9c20e1ba92, type: 3}
   enemies:
-  - {fileID: 4756201572567424616, guid: 97f8eb372f33cb84bbc2b42cfff10060, type: 3}
+  - {fileID: 244378721620129753, guid: b6154f73ed3ffbb4a96b6dc1d9180c69, type: 3}
   - {fileID: 7316513707140981720, guid: 2f6d612be4d0e7246b1ff79bc09713f4, type: 3}
   - {fileID: 1098177804011346434, guid: 036de3d8fa0c1a445b8f38df241a13e5, type: 3}
   enemiesCounter: 
---- !u!114 &8982369101928986397
+--- !u!114 &-5192999837235677444
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
