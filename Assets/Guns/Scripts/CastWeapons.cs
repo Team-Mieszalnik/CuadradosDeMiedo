@@ -16,12 +16,15 @@ public class CastWeapons : Weapon
         if (Input.GetMouseButton(0))
         {
             cast.SetActive(true);
+            if (!audioSource.isPlaying)
+                audioSource.Play();
             // Shoot();
             //StartCoroutine(ShootAnimation());
             ammo -= 10 * Time.deltaTime;
         }
         else
         {
+            audioSource.Stop();
             cast.SetActive(false);
         }
     }

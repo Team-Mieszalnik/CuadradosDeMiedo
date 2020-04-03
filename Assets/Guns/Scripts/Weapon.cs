@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public abstract class Weapon : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public abstract class Weapon : MonoBehaviour
 
     protected Animator animator;
     protected Vector2 mousePosition;
+    protected AudioSource audioSource;
 
     protected float time;
 
@@ -21,6 +23,7 @@ public abstract class Weapon : MonoBehaviour
     {
         animator = this.GetComponent<Animator>();
         time = attackSpeed;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -65,6 +68,7 @@ public abstract class Weapon : MonoBehaviour
     {
         if (Input.GetMouseButton(0) && time > attackSpeed)
         {
+            audioSource.Play();
             time = 0;
             ammo--;
             StartCoroutine(ShootAnimation());
