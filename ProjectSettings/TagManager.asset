@@ -13,6 +13,8 @@ TagManager:
   - SpawnPointEnemy
   - SpawnPointHero
   - SpawnPointObstacle
+  - Background
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Wall
   - 
   - 
   - 
@@ -61,4 +63,7 @@ TagManager:
     locked: 0
   - name: Creatures
     uniqueID: 3838470703
+    locked: 0
+  - name: Wall
+    uniqueID: 2910806407
     locked: 0

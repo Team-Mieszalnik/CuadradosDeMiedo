@@ -65,12 +65,17 @@ PrefabInstance:
     - target: {fileID: 5297232439948692029, guid: b4b7443ba2fbda24c94282650712c8c5,
         type: 3}
       propertyPath: m_Name
-      value: MachineBullet Variant
+      value: MachineBullet
       objectReference: {fileID: 0}
     - target: {fileID: 5711372965037192277, guid: b4b7443ba2fbda24c94282650712c8c5,
         type: 3}
       propertyPath: bulletSpeed
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5810325201392070339, guid: b4b7443ba2fbda24c94282650712c8c5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bcc28e0225d3ce249b499c4d39ad1a2b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4b7443ba2fbda24c94282650712c8c5, type: 3}

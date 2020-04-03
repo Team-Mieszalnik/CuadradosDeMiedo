@@ -40,15 +40,17 @@ public class Bullet : MonoBehaviour
         if (target != null )
         {
             target.GetDamage(damage);
-            Destroy(gameObject);
+            
         }
+
+        Destroy(gameObject);
 
         //IBulletDestroyable detory = collision.GetComponent<IBulletDestroyable>();
 
-        if (collision.GetComponent<IBulletDestroyable>() != null)
-        {
-            Destroy(gameObject);
-        }
+        //if (collision.GetComponent<IBulletDestroyable>() != null)
+        //{
+        //    Destroy(gameObject);
+        //}
 
     }
 }

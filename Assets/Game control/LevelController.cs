@@ -84,7 +84,7 @@ public class LevelController : MonoBehaviour
                 enemiesCounter[1] = 1;//triangleEnemyCount
                 enemiesCounter[2] = 0;//squareEnemyCount
 
-                obstaclesCounter[0] = 10;//rock
+                obstaclesCounter[0] = 15;//rock
                 break;
             case 2:
                 enemiesCounter[0] = 1;//circleEnemyCount
