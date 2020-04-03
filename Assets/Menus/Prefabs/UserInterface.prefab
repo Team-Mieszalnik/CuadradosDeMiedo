@@ -134,7 +134,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 83.2, y: 53.7}
+  m_AnchoredPosition: {x: 219, y: 61}
   m_SizeDelta: {x: 132, y: 27.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &264307300
@@ -520,7 +520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 83.2, y: 23.00003}
+  m_AnchoredPosition: {x: 217.5, y: 23.00003}
   m_SizeDelta: {x: 132, y: 27.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1635935634195744006
@@ -692,7 +692,7 @@ GameObject:
   - component: {fileID: 4016582162130519201}
   - component: {fileID: 5978900879657432672}
   m_Layer: 5
-  m_Name: HealthBar
+  m_Name: HeroHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -715,7 +715,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 83.2, y: 93.3}
+  m_AnchoredPosition: {x: 79.9, y: 22.2}
   m_SizeDelta: {x: 132, y: 26.399994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5978900879657432672
@@ -856,7 +856,7 @@ GameObject:
   - component: {fileID: 6413941126713081807}
   - component: {fileID: 7470909586249093024}
   m_Layer: 5
-  m_Name: EnergyBar
+  m_Name: HeroEnergyBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -879,7 +879,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 83.2, y: 132.79999}
+  m_AnchoredPosition: {x: 80.3, y: 63.4}
   m_SizeDelta: {x: 132, y: 26.399994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7470909586249093024

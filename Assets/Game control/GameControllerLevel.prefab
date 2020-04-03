@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 900446239156609991}
   - component: {fileID: -5192999837235677444}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: GameControllerLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,6 +50,9 @@ MonoBehaviour:
   - {fileID: 7316513707140981720, guid: 2f6d612be4d0e7246b1ff79bc09713f4, type: 3}
   - {fileID: 1098177804011346434, guid: 036de3d8fa0c1a445b8f38df241a13e5, type: 3}
   enemiesCounter: 
+  obstacles:
+  - {fileID: 5960344139199355695, guid: cb50695990991f94ab94ff5046456435, type: 3}
+  obstaclesCounter: 
 --- !u!114 &-5192999837235677444
 MonoBehaviour:
   m_ObjectHideFlags: 0

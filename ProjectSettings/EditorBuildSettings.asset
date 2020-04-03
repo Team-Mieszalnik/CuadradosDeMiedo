@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoadingLevel.unity
     guid: 5e4e29047f051c048a7d8f9d010600af
+  - enabled: 1
+    path: Assets/Scenes/Maps/Arena.unity
+    guid: 57bf980ee2f694543a6ad2c10b53c32a
   m_configObjects: {}
