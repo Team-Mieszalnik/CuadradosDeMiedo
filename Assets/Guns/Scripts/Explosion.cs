@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.Experimental.Rendering.Universal;
+
 public class Explosion : MonoBehaviour
 {
+    Light2D light2D;
+
     public float damage;
 
     void Start()
     {
+        light2D = GetComponent<Light2D>();
         StartCoroutine(KabumAnimation());
     }
 

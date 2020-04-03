@@ -19,6 +19,10 @@ public class Enemy : Creature
     protected movingDelegate moving;
 
 
+    public float distance;
+    public float move;
+
+
     // Update is called once per frame
     void Update()
     {
@@ -59,7 +63,7 @@ public class Enemy : Creature
         moveRandomizer = true;
         switch (Random.Range(0, 100))
         {
-            case int n when (n >= 50):
+            case int n when (n >= move):
                 moving = StandardMove;
                 yield return new WaitForSeconds(4F);
                 break;
@@ -79,7 +83,7 @@ public class Enemy : Creature
     protected IEnumerator StandardMove()
     {
         Vector2 moveDirection = new Vector2(hero.position.x, hero.position.y) - new Vector2(transform.position.x, transform.position.y);
-        if(moveDirection.magnitude >= 10)
+        if(moveDirection.magnitude >= distance)
         {
             rb.velocity = moveDirection.normalized * speed;
         }

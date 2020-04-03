@@ -46,9 +46,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hero: {fileID: 8214266213647809695, guid: 7533e833495956144a3e7e9c20e1ba92, type: 3}
   enemies:
-  - {fileID: 244378721620129753, guid: b6154f73ed3ffbb4a96b6dc1d9180c69, type: 3}
-  - {fileID: 7316513707140981720, guid: 2f6d612be4d0e7246b1ff79bc09713f4, type: 3}
-  - {fileID: 1098177804011346434, guid: 036de3d8fa0c1a445b8f38df241a13e5, type: 3}
+  - {fileID: 1406142646245717400, guid: e40638a06d1145d479473fc9d328d8fa, type: 3}
+  - {fileID: 4350575759247743059, guid: 801530a370420b04986f36421931d95c, type: 3}
+  - {fileID: 7310637247756992671, guid: eeba2acc911e16c40ac83b2adc040ca3, type: 3}
+  - {fileID: 8483311717547107744, guid: 6ab2f7c989fb7ab43a4abdd5d17fab78, type: 3}
+  - {fileID: 8581523956178932973, guid: 0c07ff7fd0793ec429bc1a59540d214d, type: 3}
+  - {fileID: 1433856447870327718, guid: a5b8e652766e4d64bac6f1565fc402ec, type: 3}
+  - {fileID: 6686775825369388648, guid: 0b7879114819aa046b2658d3ddf2876d, type: 3}
+  - {fileID: 683020761880804102, guid: 42dac9fc4525c3a4f9dbcb2678bee515, type: 3}
+  - {fileID: 5284851743381652444, guid: 8b9e40db0d10bd5419a2226813e727b5, type: 3}
   enemiesCounter: 
   obstacles:
   - {fileID: 5960344139199355695, guid: cb50695990991f94ab94ff5046456435, type: 3}

@@ -80,9 +80,15 @@ public class LevelController : MonoBehaviour
         switch (Level)
         {
             case 1:
-                enemiesCounter[0] = 0;//circleEnemyCount
-                enemiesCounter[1] = 1;//triangleEnemyCount
-                enemiesCounter[2] = 0;//squareEnemyCount
+                enemiesCounter[0] = 1;//circle1
+                enemiesCounter[1] = 1;//triangle1
+                enemiesCounter[2] = 1;//square1
+                enemiesCounter[3] = 1;//circle2
+                enemiesCounter[4] = 1;//triangle2
+                enemiesCounter[5] = 1;//square2
+                enemiesCounter[6] = 1;//circle3
+                enemiesCounter[7] = 1;//triangle3
+                enemiesCounter[8] = 1;//square3
 
                 obstaclesCounter[0] = 15;//rock
                 break;
