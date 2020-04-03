@@ -14,15 +14,15 @@ public class LevelController : MonoBehaviour
 
     protected List<GameObject> spawnPointsEnemy;
     protected List<GameObject> spawnPointsHero;
-    //protected List<GameObject> spawnPointsObstacle;
+    protected List<GameObject> spawnPointsObstacle;
 
     public GameObject hero;
 
     public List<GameObject> enemies;
     [HideInInspector] public List<int> enemiesCounter;
 
-    //public List<GameObject> obstacles;
-    //[HideInInspector] public List<int> obstaclesCounter;
+    public List<GameObject> obstacles;
+    [HideInInspector] public List<int> obstaclesCounter;
 
 
     // Start is called before the first frame update
@@ -32,11 +32,15 @@ public class LevelController : MonoBehaviour
         enemiesCounter.AddRange(Enumerable.Repeat<int>(0, enemies.Count));
         enemyCounter = 0;
 
-        //spawnPointsObstacle = new List<GameObject>();
+        obstaclesCounter = new List<int>();
+        obstaclesCounter.AddRange(Enumerable.Repeat<int>(0, obstacles.Count));
+
+
+        spawnPointsObstacle = new List<GameObject>();
         spawnPointsEnemy = new List<GameObject>();
         spawnPointsHero = new List<GameObject>();
 
-        //spawnPointsObstacle.AddRange(GameObject.FindGameObjectsWithTag("SpawnPointObstacle"));
+        spawnPointsObstacle.AddRange(GameObject.FindGameObjectsWithTag("SpawnPointObstacle"));
         spawnPointsEnemy.AddRange(GameObject.FindGameObjectsWithTag("SpawnPointEnemy"));
         spawnPointsHero.AddRange(GameObject.FindGameObjectsWithTag("SpawnPointHero"));
 
@@ -79,11 +83,15 @@ public class LevelController : MonoBehaviour
                 enemiesCounter[0] = 0;//circleEnemyCount
                 enemiesCounter[1] = 1;//triangleEnemyCount
                 enemiesCounter[2] = 0;//squareEnemyCount
+
+                obstaclesCounter[0] = 10;//rock
                 break;
             case 2:
                 enemiesCounter[0] = 1;//circleEnemyCount
                 enemiesCounter[1] = 1;//triangleEnemyCount
                 enemiesCounter[2] = 0;//squareEnemyCount
+
+                obstaclesCounter[0] = 5;//rock
                 break;
             case 3:
                 enemiesCounter[0] = 5;//circleEnemyCount
@@ -106,6 +114,8 @@ public class LevelController : MonoBehaviour
         SpawnHero();
 
         SpawnEnemy();
+
+        SpawnObstacles();
     }
 
     protected void SpawnHero()
@@ -146,6 +156,28 @@ public class LevelController : MonoBehaviour
                 Instantiate(enemies[i], spawnPointsEnemy[positionNumber].transform);
 
                 spawnPointsEnemy.RemoveAt(positionNumber);
+            }
+        }
+    }
+
+    protected void SpawnObstacles()
+    {
+        int positionNumber;
+
+        for (int i = 0; i < obstacles.Count; i++)
+        {
+            for (int j = 0; j < obstaclesCounter[i]; j++)
+            {
+                if (spawnPointsObstacle.Count <= 0)//check the availability of spawn points
+                {
+                    Debug.Log("MISSED SPAWN POINTS - OBSTACLE");
+                }
+
+
+                positionNumber = Random.Range(0, spawnPointsObstacle.Count - 1);
+                Instantiate(obstacles[i], spawnPointsObstacle[positionNumber].transform);
+
+                spawnPointsObstacle.RemoveAt(positionNumber);
             }
         }
     }
