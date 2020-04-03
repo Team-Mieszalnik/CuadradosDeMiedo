@@ -15,6 +15,7 @@ public class UserInterface : MonoBehaviour
     private Hero hero;
     private Slider heroHealthBar;
     private Slider heroEnergyBar;
+    private bool hudIsInitialized = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,57 +23,34 @@ public class UserInterface : MonoBehaviour
 
         //Initialize key components
 
-        foreach (var child in transform.GetComponentsInChildren<Canvas>())
-        {
-            if (child.name == "HUD") hudCanvas = child;
-            else if (child.name == "EscapeMenu") escapeCanvas = child;
-        }
-        //hudCanvas = hudCanvas.GetComponent<Canvas>();
-        //escapeCanvas = escapeCanvas.GetComponent<Canvas>();
-
-
-        //hero = playSpace.GetComponentInChildren<Hero>();
-        hero = GameObject.FindGameObjectWithTag("Hero").GetComponent<Hero>();
-        //hero = hero.GetComponent<Hero>();
-        //heroHealthText = GameObject.Find("UserInterface/HUD/HeroHealthDisplay").GetComponent<Text>();
+        hudCanvas = GameObject.Find("HUD").GetComponent<Canvas>();
+        escapeCanvas = GameObject.Find("EscapeMenu").GetComponent<Canvas>();
         heroHealthText = GameObject.Find("HeroHealthDisplay").GetComponent<Text>();
         heroEnergyDisplay = GameObject.Find("HeroEnergyDisplay").GetComponent<Text>();
-
-        foreach (var child in hudCanvas.GetComponentsInChildren<Slider>())
-        {
-            if (child.name == "HeroHealthBar")
-            {
-                heroHealthBar = child;
-                heroHealthBar.maxValue = hero.healthMax;
-            }
-            else if (child.name == "HeroEnergyBar")
-            {
-                heroEnergyBar = child;
-                heroEnergyBar.maxValue = hero.energyMax;
-            }
-        }
-
-        //heroHealthText = ;
-
+        heroHealthBar = GameObject.Find("HeroHealthBar").GetComponent<Slider>();
+        heroEnergyBar = GameObject.Find("HeroEnergyBar").GetComponent<Slider>();
+        initializeHUD();
         //  //
 
         // Starting state of the scene
-        escapeCanvas.enabled = true; //turn on escape menu canvas
-        hudCanvas.enabled = false;   //turn off hud canvas
-        Time.timeScale = 0;         //Stop the game
+        escapeCanvas.enabled = false; //turn off escape menu canvas
+        hudCanvas.enabled = true;   //turn on hud canvas
+        //Time.timeScale = 0;         //Stop the game
+    }
+
+    private void initializeHUD()
+    {
+        hero = GameObject.FindGameObjectWithTag("Hero").GetComponent<Hero>();
+        heroHealthBar.maxValue = hero.healthMax;
+        heroEnergyBar.maxValue = hero.energyMax;
+        hudIsInitialized = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            ChangeExitMenuState();
-        }
-        heroHealthText.text = hero.health.ToString();
-        heroEnergyDisplay.text = hero.energy.ToString();
-        heroHealthBar.value = hero.health;
-        heroEnergyBar.value = hero.energy;
+        if (Input.GetKeyUp(KeyCode.Escape)) ChangeExitMenuState();
+        else ContinueGame();
     }
 
     public void ChangeExitMenuState()
@@ -87,8 +65,13 @@ public class UserInterface : MonoBehaviour
     public void ContinueGame()
     {
         escapeCanvas.enabled = false;   //turn off escape menu canvas
-        hudCanvas.enabled = true;   //turn on escape hud canvas
+        hudCanvas.enabled = true;   //turn on hud canvas
+        if (!hudIsInitialized) initializeHUD();
         Time.timeScale = 1;        //Start the game
+        heroHealthText.text = ((int)hero.health).ToString();
+        heroEnergyDisplay.text = ((int)hero.energy).ToString();
+        heroHealthBar.value = hero.health;
+        heroEnergyBar.value = hero.energy;
     }
 
 }
