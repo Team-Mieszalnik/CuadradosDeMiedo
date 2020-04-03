@@ -35,11 +35,9 @@ public class UserInterface : MonoBehaviour
         hero = GameObject.FindGameObjectWithTag("Hero").GetComponent<Hero>();
         //hero = hero.GetComponent<Hero>();
         //heroHealthText = GameObject.Find("UserInterface/HUD/HeroHealthDisplay").GetComponent<Text>();
-        foreach (var child in hudCanvas.GetComponentsInChildren<Text>())
-        {
-            if (child.name == "HeroHealthDisplay") heroHealthText = child;
-            else if (child.name == "HeroEnergyDisplay") heroEnergyDisplay = child;
-        }
+        heroHealthText = GameObject.Find("HeroHealthDisplay").GetComponent<Text>();
+        heroEnergyDisplay = GameObject.Find("HeroEnergyDisplay").GetComponent<Text>();
+
         foreach (var child in hudCanvas.GetComponentsInChildren<Slider>())
         {
             if (child.name == "HeroHealthBar")
