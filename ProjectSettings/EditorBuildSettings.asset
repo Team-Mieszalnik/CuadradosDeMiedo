@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: f2fa6c885014bbe4b8a613afef4307ce
   - enabled: 1
-    path: Assets/Scenes/Lamplescene.unity
-    guid: f7d5195b66d58b547ab2c01045f5aa15
-  - enabled: 1
     path: Assets/Scenes/Arena1.unity
     guid: 032f25464a0904f41ac27f048ac3edf1
   - enabled: 1
