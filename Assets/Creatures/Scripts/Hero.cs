@@ -1,12 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 
 
 public class Hero : Creature
 {
-    [HideInInspector] public float damageReduction = 1;
+    [HideInInspector] 
+    public float damageReduction = 1;
+
+    //[SerializeField]
+    //public Dictionary<string, AudioClip> audioClips;
+    public AudioClip[] audioClips;
+    public AudioSource audioSource;
 
     protected Ray ray;
 
@@ -55,6 +62,8 @@ public class Hero : Creature
     public override void GetDamage(float damage)
     {
         health -= damage / damageReduction;
+
+        audioSource.PlayOneShot(audioClips[0]);
 
         StartCoroutine(GetDamageAnimation());
     }
