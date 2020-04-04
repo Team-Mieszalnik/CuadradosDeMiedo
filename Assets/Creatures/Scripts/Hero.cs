@@ -73,10 +73,12 @@ public class Hero : Creature
         yield return new WaitForSeconds(0.5F);
         animator.SetBool("dead", false);
 
-        for (int i = 0; i < 401; i++)
+        for (int i = 0; i < 801; i++)
         {
-            transform.localScale = new Vector3(transform.localScale.x - 0.01f, transform.localScale.y - 0.01f, transform.localScale.z - 0.01f);
-            yield return new WaitForSeconds(0.0005F);//animation time
+            transform.localScale = new Vector3(transform.localScale.x - 0.02f, transform.localScale.y - 0.02f, transform.localScale.z - 0.02f);
+            transform.position = new Vector3(0, 0, 0);
+            transform.rotation = Quaternion.identity;
+            yield return new WaitForSeconds(0.0001F);//animation time
         }
 
         GameObject.Find("UserInterface").GetComponent<UserInterface>().DeathScreen();
