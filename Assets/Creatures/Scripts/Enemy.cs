@@ -110,6 +110,10 @@ public class Enemy : Creature
 
         Experience.addDefeatedOpponents(1);
         LevelController.enemyCounter--;
+
+        var loot = GetComponent<Loot>();
+        if (loot != null) loot.LootItem();
+
     }
 
 

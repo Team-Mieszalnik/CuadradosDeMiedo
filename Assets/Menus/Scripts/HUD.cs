@@ -33,7 +33,7 @@ public class HUD : MonoBehaviour
         //heroEnergyText.text = ((int)hero.energy).ToString();
         string ammo = ((int)pickUpWeapon.weapon.GetComponent<Weapon>().ammo).ToString();
         if (ammo == "-2147483648")
-            ammo = "∞";
+            ammo = "INF";//"∞";
 
 
         heroAmmoText.text = ammo;

@@ -11,7 +11,6 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     public int healthMax;
     public float health;
     public float healthRegeneration;
-    [HideInInspector] public Text healthDisplay;
 
     public int energyMax;
     public float energy;
@@ -26,9 +25,6 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
-        if (healthDisplay != null)
-            healthDisplay.text = health.ToString();
     }
 
     // Update is called once per frame
@@ -40,8 +36,6 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     {
         ChargingEnergy();
         ChargingHealth();
-        if (healthDisplay != null)
-            healthDisplay.text = health.ToString();
     }
 
 
@@ -65,10 +59,6 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     public virtual void GetDamage(float damage)
     {
         health -= damage;
-        if (healthDisplay != null)
-        {
-            healthDisplay.text = health.ToString();
-        }
         StartCoroutine(GetDamageAnimation());
     }
 
