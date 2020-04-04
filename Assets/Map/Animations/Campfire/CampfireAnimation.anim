@@ -20,15 +20,15 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: d686086b217b7254d816e0aedc0d4f76, type: 3}
+      value: {fileID: 21300000, guid: 4397da945fc7ea14b8ce39cd0bf7f675, type: 3}
     - time: 0.06666667
-      value: {fileID: 21300000, guid: c678db1687f96a64fae00b98d4b5594e, type: 3}
+      value: {fileID: 21300000, guid: 0caf7b9d30b2374408d779636336ba4a, type: 3}
     - time: 0.13333334
-      value: {fileID: 21300000, guid: da9982eeb972bce4ba9e5eae0e1ec17a, type: 3}
+      value: {fileID: 21300000, guid: 8857c72c42fee4e4e810317a95f736b0, type: 3}
     - time: 0.2
-      value: {fileID: 21300000, guid: bf44c641cefdb294baf7b3ee0150fd1c, type: 3}
+      value: {fileID: 21300000, guid: 77d9ed75d7a075d4990ae574f34d4925, type: 3}
     - time: 0.26666668
-      value: {fileID: 21300000, guid: bf44c641cefdb294baf7b3ee0150fd1c, type: 3}
+      value: {fileID: 21300000, guid: 77d9ed75d7a075d4990ae574f34d4925, type: 3}
     attribute: m_LightCookieSprite
     path: 
     classID: 114
@@ -48,11 +48,11 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: d686086b217b7254d816e0aedc0d4f76, type: 3}
-    - {fileID: 21300000, guid: c678db1687f96a64fae00b98d4b5594e, type: 3}
-    - {fileID: 21300000, guid: da9982eeb972bce4ba9e5eae0e1ec17a, type: 3}
-    - {fileID: 21300000, guid: bf44c641cefdb294baf7b3ee0150fd1c, type: 3}
-    - {fileID: 21300000, guid: bf44c641cefdb294baf7b3ee0150fd1c, type: 3}
+    - {fileID: 21300000, guid: 4397da945fc7ea14b8ce39cd0bf7f675, type: 3}
+    - {fileID: 21300000, guid: 0caf7b9d30b2374408d779636336ba4a, type: 3}
+    - {fileID: 21300000, guid: 8857c72c42fee4e4e810317a95f736b0, type: 3}
+    - {fileID: 21300000, guid: 77d9ed75d7a075d4990ae574f34d4925, type: 3}
+    - {fileID: 21300000, guid: 77d9ed75d7a075d4990ae574f34d4925, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
