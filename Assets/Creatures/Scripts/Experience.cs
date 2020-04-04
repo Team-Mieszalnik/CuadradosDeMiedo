@@ -42,9 +42,14 @@ public class Experience : MonoBehaviour
     }
 
 
-    void HealthLevelUpgrade()
+    public bool CanHealthUpgrade()
     {
-        if (points - upgradeCost >= 0 && healthLevel > healthMaxLevel) 
+        return ((points >= upgradeCost) && (healthLevel < healthMaxLevel));
+    }
+
+    public void HealthLevelUpgrade()
+    {
+        if (CanHealthUpgrade()) 
         {
             if (healthLevel == 0) 
             {
@@ -60,9 +65,14 @@ public class Experience : MonoBehaviour
         }
     }
 
-    void MoveLevellUpgrade()
+    public bool CanMovementUpgrade()
     {
-        if (points - upgradeCost >= 0 && moveLevel > moveMaxLevel)
+        return (points >= upgradeCost && moveLevel < moveMaxLevel);
+    }
+
+    public void MoveLevellUpgrade()
+    {
+        if (CanMovementUpgrade())
         {
             if (moveLevel == 0)
             {
