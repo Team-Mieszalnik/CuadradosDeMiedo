@@ -50,20 +50,18 @@ public class MapController : MonoBehaviour
     {
         LevelController.ResetLevel();
 
-        SceneSetings();
-
-        SceneManager.LoadScene(SceneName, LoadSceneMode.Additive);
+        CreateLoadingScene();
     }
 
 
 
     protected static void CreateScene()
     {
-        SceneSetings();
-
-
-        GameObject.Find("Hero").transform.parent = null;
-        DontDestroyOnLoad(GameObject.Find("Hero"));
+        if (GameObject.Find("Hero") != null)
+        {
+            GameObject.Find("Hero").transform.parent = null;
+            DontDestroyOnLoad(GameObject.Find("Hero"));
+        }
 
         //AsyncOperation loadScene = SceneManager.LoadSceneAsync(SceneName, LoadSceneMode.Additive);
         SceneManager.LoadScene(SceneName, LoadSceneMode.Additive);
@@ -72,8 +70,13 @@ public class MapController : MonoBehaviour
 
     protected static void CreateLoadingScene()
     {
-        GameObject.Find("Hero").transform.parent = null;
-        DontDestroyOnLoad(GameObject.Find("Hero"));
+        SceneSetings();
+
+        if (GameObject.Find("Hero") != null)
+        {
+            GameObject.Find("Hero").transform.parent = null;
+            DontDestroyOnLoad(GameObject.Find("Hero"));
+        }
 
         SceneManager.LoadScene("LoadingLevel", LoadSceneMode.Additive);
         SceneManager.MoveGameObjectToScene(GameObject.Find("Hero"), SceneManager.GetSceneByName("LoadingLevel"));
@@ -85,16 +88,16 @@ public class MapController : MonoBehaviour
 
     protected static void SceneSetings()
     {
-        switch (Random.Range(1, 2))
+        switch (Random.Range(1, 3))
         {
             case 1:
                 SceneName = "Arena";
                 break;
             case 2:
-                SceneName = "Arena2";
+                SceneName = "Invierno";
                 break;
             default:
-                SceneName = "Arena2";
+                SceneName = "Arena";
                 break;
         }
     }
