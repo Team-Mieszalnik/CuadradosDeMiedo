@@ -34,15 +34,15 @@ public class PickUp : MonoBehaviour
         {
             //if (weapon != null)
             //{
-                //Destroy(weapon);
-                weapon.transform.position = transform.position;
-                weapon.transform.rotation = Quaternion.identity;
-                weapon.GetComponent<Weapon>().isActive = false;
-                //if (weapon.GetComponent<CastWeapons>() != null)
-                //{
-                //    weapon.GetComponent<CastWeapons>().cast.SetActive(false);
-                //}
-                weapon.transform.parent = null;
+            //Destroy(weapon);
+            weapon.transform.position = transform.position;
+            weapon.transform.rotation = Quaternion.identity;
+            weapon.GetComponent<Weapon>().isActive = false;
+            //if (weapon.GetComponent<CastWeapons>() != null)
+            //{
+            //    weapon.GetComponent<CastWeapons>().cast.SetActive(false);
+            //}
+            weapon.transform.parent = null;
             //}
 
             weapon = target.gameObject;

@@ -5,7 +5,8 @@ using UnityEngine;
 public class Skills : MonoBehaviour
 {
     private bool SkillsReady = true;
-    private bool CureReady = true;
+    [HideInInspector]
+    public bool CureReady = true;
 
     public float curePower = 20;
     public float cureEnergy = 30;
