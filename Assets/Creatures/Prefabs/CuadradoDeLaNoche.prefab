@@ -173,7 +173,6 @@ MonoBehaviour:
   healthMax: 200
   health: 200
   healthRegeneration: 1
-  healthDisplay: {fileID: 0}
   energyMax: 0
   energy: 0
   energyRegeneration: 0
@@ -183,6 +182,8 @@ MonoBehaviour:
     type: 3}
   distance: 3
   move: 20
+  alternativeBulletPrefab: {fileID: 8529288225209641873, guid: f9af2fe138bb42a4892e455289edc6cf,
+    type: 3}
 --- !u!114 &5568478386769427774
 MonoBehaviour:
   m_ObjectHideFlags: 0

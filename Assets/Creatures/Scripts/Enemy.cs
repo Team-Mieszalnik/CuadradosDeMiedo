@@ -18,9 +18,12 @@ public class Enemy : Creature
     protected delegate IEnumerator movingDelegate();
     protected movingDelegate moving;
 
+    protected delegate IEnumerator attackDelegate();
+    protected attackDelegate attacking;
 
-    public float distance;
-    public float move;
+
+    public float distance = 2;
+    public float move = 80;
 
 
     // Update is called once per frame
@@ -37,10 +40,25 @@ public class Enemy : Creature
         if (!attack)
         {
             StartCoroutine(Attack());
+            StartCoroutine(attacking());
         }
     }
 
     protected IEnumerator Attack()
+    {
+        switch (Random.Range(0, 100))
+        {
+            case int n when (n > 30):
+                attacking = StandardAttack;
+                break;
+            default:
+                attacking = AlternativeAttack;
+                break;
+        }
+        yield return new WaitForSeconds(0.1F);
+    }
+
+    protected IEnumerator StandardAttack()
     {
         attack = true;
         animator.SetBool("attack", true);
@@ -57,6 +75,22 @@ public class Enemy : Creature
         attack = false;
     }
 
+    protected virtual IEnumerator AlternativeAttack()
+    {
+        attack = true;
+        animator.SetBool("attack", true);
+
+        yield return new WaitForSeconds(1.5F);//animation time
+
+        Vector2 lookDirection = new Vector2(hero.position.x, hero.position.y) - new Vector2(transform.position.x, transform.position.y);
+        float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
+        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, angle)); // obiekt, pozycja startowa, kierunek
+
+
+		animator.SetBool("attack", false);
+		yield return new WaitForSeconds(Random.Range(2F, 4F));//attack time
+        attack = false;
+    }
 
     protected IEnumerator Move()
     {
