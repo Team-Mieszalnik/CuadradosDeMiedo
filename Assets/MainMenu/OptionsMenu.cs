@@ -44,6 +44,11 @@ public class OptionsMenu : MonoBehaviour
         audioMixer.SetFloat("Music", volume);
     }
 
+    public void SetEffects(float volume)
+    {
+        audioMixer.SetFloat("SoundEffects", volume);
+    }
+
     public void SetQuality(float quality)
     {
         QualitySettings.SetQualityLevel((int)quality);
