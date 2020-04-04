@@ -18,6 +18,11 @@ public class EnemyBullet : Bullet
             return;
         }
 
+        if(collision.gameObject.tag == "EnemyBullet")
+        {
+            return;
+        }
+
         if (target != null)
         {
             target.GetDamage(damage);

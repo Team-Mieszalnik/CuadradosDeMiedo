@@ -15,6 +15,7 @@ TagManager:
   - SpawnPointObstacle
   - Background
   - Wall
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

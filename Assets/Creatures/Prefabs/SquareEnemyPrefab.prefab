@@ -172,13 +172,16 @@ MonoBehaviour:
   healthMax: 200
   health: 200
   healthRegeneration: 0.2
-  healthDisplay: {fileID: 0}
   energyMax: 0
   energy: 0
   energyRegeneration: 0
   rb: {fileID: 0}
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 5659481989795792469, guid: 693d4d8442023c74aa4785283bb69a34,
+    type: 3}
+  distance: 0
+  move: 0
+  alternativeBulletPrefab: {fileID: 8529288225209641873, guid: f9af2fe138bb42a4892e455289edc6cf,
     type: 3}
 --- !u!114 &5880755145334242458
 MonoBehaviour:
