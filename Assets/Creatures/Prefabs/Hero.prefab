@@ -110,7 +110,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7388399842426930641, guid: cc935d053660d1946b2a94b429dbca7c,
+  m_Sprite: {fileID: 3749147949731459164, guid: 3070c46b980ef3644b040422c50cad60,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -160,7 +160,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
+    oldSize: {x: 2.37, y: 2.38}
     newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -269,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe9a45aafc13c1845b4852dfbad30c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CureReady: 1
   curePower: 20
   cureEnergy: 30
   cureDelay: 5
@@ -311,17 +312,15 @@ MonoBehaviour:
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 000000008370d2d01bec9e3d29db29e82f6acae4
   m_ShapePath:
-  - {x: 1.2787857, y: -0.65255785, z: 0}
-  - {x: 1.2799988, y: 0.6611495, z: 0}
-  - {x: 0.061714172, y: 1.2897105, z: 0}
-  - {x: -0.09083557, y: 1.2867186, z: 0}
-  - {x: -1.2712479, y: 0.66836333, z: -0.00000166893}
-  - {x: -1.2810516, y: -0.6649518, z: -0.00000166893}
-  - {x: -0.084991455, y: -1.2727866, z: -0.00000166893}
-  - {x: 0.0718689, y: -1.2727866, z: -0.00000166893}
-  m_ShapePathHash: 1909104301
+  - {x: 1.1877769, y: -0.5734151, z: 0}
+  - {x: 1.1864558, y: 0.59204096, z: 0}
+  - {x: -0.0018942505, y: 1.194624, z: 0}
+  - {x: -1.183157, y: 0.601211, z: -0.00000166893}
+  - {x: -1.1838357, y: -0.5871791, z: -0.00000166893}
+  - {x: 0.0030699521, y: -1.1755707, z: -0.00000166893}
+  m_ShapePathHash: -516384653
   m_Mesh: {fileID: 0}
-  m_InstanceId: -9516
+  m_InstanceId: 359484
 --- !u!82 &672492697
 AudioSource:
   m_ObjectHideFlags: 0
