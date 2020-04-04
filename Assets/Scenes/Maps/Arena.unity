@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5177,7 +5177,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &189395083
 PrefabInstance:
@@ -20344,6 +20344,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 900446239156609991, guid: 1374b7922768e5e4397c98bb5526d40d,
+        type: 3}
+      propertyPath: obstacles.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 900446239156609991, guid: 1374b7922768e5e4397c98bb5526d40d,
+        type: 3}
+      propertyPath: obstacles.Array.data[1]
+      value: 
+      objectReference: {fileID: 7582315143558510683, guid: 45fd0642f9594554fb0fb779a5cf7008,
+        type: 3}
+    - target: {fileID: 900446239156609991, guid: 1374b7922768e5e4397c98bb5526d40d,
+        type: 3}
+      propertyPath: obstacles.Array.data[2]
+      value: 
+      objectReference: {fileID: 1889743713626077809, guid: 5908f3699e7916b4580f1e5211d55cc1,
+        type: 3}
     - target: {fileID: 4409779427884070354, guid: 1374b7922768e5e4397c98bb5526d40d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28058,7 +28075,7 @@ PrefabInstance:
     - target: {fileID: 7458707044065871732, guid: ce76a2b4c81b51c4c9c4a138f4d952ea,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7458707044065871732, guid: ce76a2b4c81b51c4c9c4a138f4d952ea,
         type: 3}
@@ -97956,6 +97973,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5067221109277604554, guid: e7946637a3f6f354f8e7b6ad06f0d20b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5195427842302101046, guid: e7946637a3f6f354f8e7b6ad06f0d20b,
         type: 3}
       propertyPath: m_LocalPosition.x

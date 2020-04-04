@@ -44,7 +44,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 683020761880804102}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -253,7 +253,7 @@ MonoBehaviour:
   - {x: -0.89479303, y: -0.89002156, z: 0}
   m_ShapePathHash: -1754626425
   m_Mesh: {fileID: 0}
-  m_InstanceId: -116002
+  m_InstanceId: 74002
 --- !u!1 &8010452137470810272
 GameObject:
   m_ObjectHideFlags: 0

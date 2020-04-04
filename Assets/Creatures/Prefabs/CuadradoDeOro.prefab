@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 2258220473347376953, guid: 658f9925d08b8bb4c9d4fec1ce04d244,
     type: 3}
-  m_Color: {r: 0.764151, g: 0.7422712, b: 0.18382876, a: 1}
+  m_Color: {r: 0.2264151, g: 0.22256166, b: 0.13136348, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
   - {x: -0.8630295, y: 0.85784817, z: 0}
   m_ShapePathHash: 920864149
   m_Mesh: {fileID: 0}
-  m_InstanceId: -127666
+  m_InstanceId: 73824
 --- !u!114 &1830626557366547157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5284851743381652444}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 

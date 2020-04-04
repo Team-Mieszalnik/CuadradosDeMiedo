@@ -83,6 +83,8 @@ public class LevelController : MonoBehaviour
                 enemiesCounter[0] = 1;//circle1
 
                 obstaclesCounter[0] = 20;//rock
+                obstaclesCounter[1] = 5;//tree
+                obstaclesCounter[2] = 2;//tower
                 break;
             case 2:
                 enemiesCounter[0] = 8;//circle1
