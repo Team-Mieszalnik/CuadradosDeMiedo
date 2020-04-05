@@ -273,7 +273,7 @@ MonoBehaviour:
   curePower: 20
   cureEnergy: 30
   cureDelay: 5
-  sprintPower: 2
+  sprintPower: 5
   sprintEnergy: 10
   defensePower: 2
   defenseEnergy: 5

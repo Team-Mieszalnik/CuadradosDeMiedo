@@ -16,6 +16,7 @@ TagManager:
   - Background
   - Wall
   - EnemyBullet
+  - Surface
   layers:
   - Default
   - TransparentFX

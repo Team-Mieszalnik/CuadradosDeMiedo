@@ -2453,11 +2453,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1360506640156525700, guid: ce76a2b4c81b51c4c9c4a138f4d952ea,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 7458707044065871732, guid: ce76a2b4c81b51c4c9c4a138f4d952ea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2517,11 +2512,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Campfire (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7458707044065871739, guid: ce76a2b4c81b51c4c9c4a138f4d952ea,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce76a2b4c81b51c4c9c4a138f4d952ea, type: 3}
@@ -50717,6 +50707,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UserInterface
+      objectReference: {fileID: 0}
+    - target: {fileID: 8766512158662688338, guid: f9d4676c3beb05a46bbc3fd53afefa52,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8766512158662688338, guid: f9d4676c3beb05a46bbc3fd53afefa52,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9d4676c3beb05a46bbc3fd53afefa52, type: 3}

@@ -23,6 +23,11 @@ public class EnemyBullet : Bullet
             return;
         }
 
+        if (collision.gameObject.tag == "Surface") 
+        {
+            return;
+        }
+
         if (target != null)
         {
             target.GetDamage(damage);

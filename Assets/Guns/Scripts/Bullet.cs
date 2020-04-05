@@ -43,6 +43,11 @@ public class Bullet : MonoBehaviour
             
         }
 
+        if (collision.gameObject.tag == "Surface") 
+        {
+            return;
+        }
+
         Destroy(gameObject);
 
         //IBulletDestroyable detory = collision.GetComponent<IBulletDestroyable>();

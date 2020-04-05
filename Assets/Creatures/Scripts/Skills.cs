@@ -12,7 +12,7 @@ public class Skills : MonoBehaviour
     public float cureEnergy = 30;
     public float cureDelay = 5;
 
-    public float sprintPower = 2;
+    public float sprintPower = 5;
     public float sprintEnergy = 10;
 
     public float defensePower = 2;
@@ -62,11 +62,11 @@ public class Skills : MonoBehaviour
             SkillsReady = false;
             animator.SetBool("useSprint", true);
             hero.energy -= sprintEnergy;
-            hero.speed *= sprintPower;
+            hero.speed += sprintPower;
 
             yield return new WaitForSeconds(1);//animation time and skill time
 
-            hero.speed /= sprintPower;
+            hero.speed -= sprintPower;
             animator.SetBool("useSprint", false);
             SkillsReady = true;
         }
