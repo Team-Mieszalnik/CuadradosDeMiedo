@@ -16,6 +16,7 @@ TagManager:
   - Background
   - Wall
   - EnemyBullet
+  - MusicManager
   layers:
   - Default
   - TransparentFX

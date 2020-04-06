@@ -9,12 +9,13 @@ public class UserInterface : MonoBehaviour
     public GameObject hud;
     public GameObject pauseMenu;
     public GameObject deathScreen;
+    public GameObject musicManagerInterface;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     public void Update()
@@ -26,12 +27,14 @@ public class UserInterface : MonoBehaviour
     public void PauseMenu()
     {
         pauseMenu.SetActive(true);
+        musicManagerInterface.SetActive(true);
         Time.timeScale = 0;
     }
 
     public void ContinueGame()
     {
         pauseMenu.SetActive(false);
+        musicManagerInterface.SetActive(false);
         Time.timeScale = 1;
     }
 
