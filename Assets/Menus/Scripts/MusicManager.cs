@@ -35,7 +35,7 @@ public class MusicManager : MonoBehaviour
         Text buttonText= EventSystem.current.currentSelectedGameObject.GetComponentInChildren<Text>();
         if (isPlaying)
         { 
-            StopMusic();
+            PauseMusic();
             buttonText.text = "Start Music";
         }
         else
@@ -45,17 +45,19 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    private void StopMusic()
+    private void PauseMusic()
     {
         isPlaying = false;
         StopCoroutine("WaitForMusicEnd");
-        audioSource.Stop();
+        //audioSource.Stop();
+        audioSource.Pause();
     }
 
     private void PlayMusic()
     {
         isPlaying = true;
-        audioSource.Stop();
+        //audioSource.Stop();
+        audioSource.Pause();
         audioSource.clip = audioClips[currentClipNumber];
         audioSource.Play();
         StartCoroutine("WaitForMusicEnd");
