@@ -19,6 +19,12 @@ public class IceSurface : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "EnemyBullet")
+        {
+            return;
+        }
+
+
         Rigidbody2D target = collision.GetComponent<Rigidbody2D>();
 
         if (target != null)
@@ -30,6 +36,12 @@ public class IceSurface : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "EnemyBullet")
+        {
+            return;
+        }
+
+
         Rigidbody2D target = collision.GetComponent<Rigidbody2D>();
 
         if (target != null)

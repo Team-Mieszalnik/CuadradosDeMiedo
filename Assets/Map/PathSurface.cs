@@ -19,6 +19,12 @@ public class PathSurface : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "EnemyBullet")
+        {
+            return;
+        }
+
+
         Creature target = collision.GetComponent<Creature>();
 
         if (target != null)
@@ -30,6 +36,12 @@ public class PathSurface : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "EnemyBullet")
+        {
+            return;
+        }
+
+
         Creature target = collision.GetComponent<Creature>();
 
         if (target != null)
