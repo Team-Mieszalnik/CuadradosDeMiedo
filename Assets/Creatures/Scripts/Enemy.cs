@@ -44,7 +44,7 @@ public class Enemy : Creature
         }
     }
 
-    protected IEnumerator Attack()
+    protected virtual IEnumerator Attack()
     {
         switch (Random.Range(0, 100))
         {
