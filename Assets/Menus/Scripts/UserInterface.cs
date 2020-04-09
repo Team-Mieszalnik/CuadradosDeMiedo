@@ -11,17 +11,19 @@ public class UserInterface : MonoBehaviour
     public GameObject deathScreen;
     public GameObject musicManagerInterface;
 
+    private delegate void ChangeMenuState();
+    private ChangeMenuState changeMenuState;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        changeMenuState = PauseMenu;
     }
 
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-            PauseMenu();
+            changeMenuState();
     }
 
     public void PauseMenu()
@@ -29,6 +31,7 @@ public class UserInterface : MonoBehaviour
         pauseMenu.SetActive(true);
         musicManagerInterface.SetActive(true);
         Time.timeScale = 0;
+        changeMenuState = ContinueGame;
     }
 
     public void ContinueGame()
@@ -36,6 +39,7 @@ public class UserInterface : MonoBehaviour
         pauseMenu.SetActive(false);
         musicManagerInterface.SetActive(false);
         Time.timeScale = 1;
+        changeMenuState = PauseMenu;
     }
 
     public void DeathScreen()
