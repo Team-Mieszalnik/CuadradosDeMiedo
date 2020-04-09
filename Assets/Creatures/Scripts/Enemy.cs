@@ -147,9 +147,9 @@ public class Enemy : Creature
         Destroy(gameObject);
 
         Experience.addDefeatedOpponents(1);
-        LevelController.enemyCounter--;
+        LevelController.DecrementEnemyCounter();
 
-        var loot = GetComponent<Loot>();
+                var loot = GetComponent<Loot>();
         if (loot != null) loot.LootItem();
 
     }

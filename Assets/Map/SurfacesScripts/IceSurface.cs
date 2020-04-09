@@ -19,7 +19,7 @@ public class IceSurface : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "EnemyBullet")
+        if(collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "EnemyBullet" || collision.gameObject.tag == "Triangle")
         {
             return;
         }
@@ -35,7 +35,7 @@ public class IceSurface : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "EnemyBullet")
+        if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "EnemyBullet" || collision.gameObject.tag == "Triangle")
         {
             return;
         }

@@ -30,10 +30,13 @@ public class LavaSurface : MonoBehaviour
 
     private IEnumerator Fire(Collider2D collision)
     {
-        IGetDamaged target = collision.GetComponent<IGetDamaged>();
-        if (target != null)
+        if(collision.gameObject.tag != "Triangle")
         {
-            target.GetDamage(1);
+            IGetDamaged target = collision.GetComponent<IGetDamaged>();
+            if (target != null)
+            {
+                target.GetDamage(1);
+            }
         }
 
 
