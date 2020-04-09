@@ -88,13 +88,19 @@ public class MapController : MonoBehaviour
 
     protected static void SceneSetings()
     {
-        switch (Random.Range(1, 3))
+        switch (Random.Range(1, 5))
         {
             case 1:
                 SceneName = "Arena";
                 break;
             case 2:
                 SceneName = "Invierno";
+                break;
+            case 3:
+                SceneName = "Primavera";
+                break;
+            case 4:
+                SceneName = "Vesuvio";
                 break;
             default:
                 SceneName = "Arena";

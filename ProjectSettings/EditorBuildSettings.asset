@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Maps/Invierno.unity
     guid: dfb5ca507e607fc4284dc92101a43959
+  - enabled: 1
+    path: Assets/Scenes/Maps/Primavera.unity
+    guid: 62c62391532685a438002fb817397437
   m_configObjects: {}

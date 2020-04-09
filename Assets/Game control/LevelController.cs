@@ -129,6 +129,7 @@ public class LevelController : MonoBehaviour
         if (spawnPointsHero.Count <= 0)//check the availability of spawn points
         {
             Debug.Log("MISSED SPAWN POINTS - HERO");
+            return;
         }
 
         int positionNumber;
@@ -155,6 +156,7 @@ public class LevelController : MonoBehaviour
                 if (spawnPointsEnemy.Count <= 0)//check the availability of spawn points
                 {
                     Debug.Log("MISSED SPAWN POINTS - ENEMY");
+                    return;
                 }
 
 
@@ -177,6 +179,7 @@ public class LevelController : MonoBehaviour
                 if (spawnPointsObstacle.Count <= 0)//check the availability of spawn points
                 {
                     Debug.Log("MISSED SPAWN POINTS - OBSTACLE");
+                    return;
                 }
 
 
