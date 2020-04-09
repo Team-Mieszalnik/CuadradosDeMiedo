@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Maps/Primavera.unity
     guid: 62c62391532685a438002fb817397437
+  - enabled: 1
+    path: Assets/Scenes/Maps/Vesuvio.unity
+    guid: a434b0d7146cb8345ad4aa48fc7f061c
   m_configObjects: {}
