@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: -2994149723904243674}
   m_Layer: 0
   m_Name: "TrianguloHerramientaDeSatan\xE1s"
-  m_TagString: Enemy
+  m_TagString: Triangle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

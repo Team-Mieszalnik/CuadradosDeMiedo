@@ -17,6 +17,7 @@ TagManager:
   - Wall
   - EnemyBullet
   - Surface
+  - Triangle
   layers:
   - Default
   - TransparentFX

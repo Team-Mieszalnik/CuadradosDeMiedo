@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1852682782495342013}
   m_Layer: 0
   m_Name: TriangleDeOro
-  m_TagString: Enemy
+  m_TagString: Triangle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
