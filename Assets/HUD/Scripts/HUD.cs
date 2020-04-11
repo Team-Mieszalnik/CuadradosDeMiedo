@@ -57,9 +57,6 @@ public class HUD : MonoBehaviour
         heroHealthBar.value = hero.health;
         heroEnergyBar.value = hero.energy;
         heroExpirienceBar.value = Experience.points;
-
-
-        if (Input.GetKeyDown(KeyCode.O)) Experience.points++;
     }
 
     public void UpgradeHP()

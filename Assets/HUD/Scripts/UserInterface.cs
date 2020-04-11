@@ -44,6 +44,7 @@ public class UserInterface : MonoBehaviour
 
     public void DeathScreen()
     {
+        changeMenuState = null;
         deathScreen.SetActive(true);
         //pauseMenu.SetActive(false);
         Time.timeScale = 0;
