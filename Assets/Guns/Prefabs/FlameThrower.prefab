@@ -4768,7 +4768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6515d96fd6475ed46a34e9df2323e6f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 4
+  damage: 0.5
 --- !u!114 &973677329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4958,7 +4958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   attackSpeed: 0
-  ammo: 500
+  ammo: 200
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 0}
   cast: {fileID: 3796136698089617736}

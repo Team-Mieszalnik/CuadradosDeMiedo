@@ -331,10 +331,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   attackSpeed: 0
-  ammo: 1000
+  ammo: 200
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 0}
   cast: {fileID: 6894152016832411908}
+  startClip: {fileID: 0}
+  loopClip: {fileID: 0}
 --- !u!82 &7657652133714639735
 AudioSource:
   m_ObjectHideFlags: 0

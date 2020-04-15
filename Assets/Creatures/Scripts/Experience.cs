@@ -90,7 +90,7 @@ public class Experience : MonoBehaviour
         {
             if (healthLevel == 0) 
             {
-                hero.health += 10;
+                hero.healthMax += 10;
             }
             if (healthLevel == 1)
             {
@@ -98,7 +98,7 @@ public class Experience : MonoBehaviour
             }
             if (healthLevel == 2)
             {
-                hero.health += 20;
+                hero.healthMax += 20;
             }
             if (healthLevel == 3)
             {
@@ -106,7 +106,7 @@ public class Experience : MonoBehaviour
             }
             if (healthLevel == 4)
             {
-                hero.health += 20;
+                hero.healthMax += 20;
                 hero.healthRegeneration += (float)0.2;
             }
 
@@ -122,7 +122,7 @@ public class Experience : MonoBehaviour
         {
             if (energyLevel == 0)
             {
-                hero.energy += 10;
+                hero.energyMax += 10;
             }
             if (energyLevel == 1)
             {
@@ -130,7 +130,7 @@ public class Experience : MonoBehaviour
             }
             if (energyLevel == 2)
             {
-                hero.energy += 20;
+                hero.energyMax += 20;
             }
             if (energyLevel == 3)
             {
@@ -138,7 +138,7 @@ public class Experience : MonoBehaviour
             }
             if (energyLevel == 4)
             {
-                hero.energy += 20;
+                hero.energyMax += 20;
                 hero.energyRegeneration += (float)0.3;
             }
 

@@ -285,7 +285,7 @@ MonoBehaviour:
   - {x: -0.52455693, y: -0.7182689, z: 0}
   m_ShapePathHash: 1246413008
   m_Mesh: {fileID: 0}
-  m_InstanceId: 181486
+  m_InstanceId: 295302
 --- !u!114 &911394897377466104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,4 +370,4 @@ MonoBehaviour:
   lootWeapons:
   - {fileID: 1609370456669826762, guid: 72c1529b610ba5042bb53d928056e9ee, type: 3}
   - {fileID: 5956721176902146702, guid: 0484df7bad6e00044b8d5e7155deed7a, type: 3}
-  chance: 20
+  chance: 24

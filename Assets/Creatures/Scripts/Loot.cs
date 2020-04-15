@@ -11,7 +11,7 @@ public class Loot : MonoBehaviour
     {
         if(Random.Range(0,101) <= chance)
         {
-            int item = Random.Range(0, lootWeapons.Length - 1);
+            int item = Random.Range(0, lootWeapons.Length);
 
             Instantiate(lootWeapons[item], transform.position, Quaternion.identity);
 
