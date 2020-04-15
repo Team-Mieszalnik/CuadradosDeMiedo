@@ -10,18 +10,27 @@ public class Experience : MonoBehaviour
     public static int points;
     private int upgradeCost = 10;
 
+    [HideInInspector]
+    public int healthLevel;
+    [HideInInspector]
+    public int energyLevel;
+    [HideInInspector]
+    public int movementLevel;
+    [HideInInspector]
+    public int cureLevel;
+    [HideInInspector]
+    public int armorLevel;
 
-    private int healthLevel;
-    private int energyLevel;
-    private int movementLevel;
-    private int cureLevel;
-    private int armorLevel;
-
-    private int healthMaxLevel = 5;
-    private int energyhMaxLevel = 5;
-    private int movementMaxLevel = 5;
-    private int cureMaxLevel = 5;
-    private int armorMaxLevel = 5;
+    [HideInInspector]
+    public int healthMaxLevel = 5;
+    [HideInInspector]
+    public int energyhMaxLevel = 5;
+    [HideInInspector]
+    public int movementMaxLevel = 5;
+    [HideInInspector]
+    public int cureMaxLevel = 5;
+    [HideInInspector]
+    public int armorMaxLevel = 5;
 
 
     private Hero hero;

@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
-    //public Text heroHealthText;
-    //public Text heroEnergyText;
 
     public Image cureCooldown;
     public TextMeshProUGUI enemiesLeft;
@@ -17,6 +15,10 @@ public class HUD : MonoBehaviour
     public Slider heroEnergyBar;
     public Slider heroHealthBar;
     public Slider heroExpirienceBar;
+
+    public TextMeshProUGUI heroHealthText;
+    public TextMeshProUGUI heroEnergyText;
+    public TextMeshProUGUI heroExpirienceText;
 
     public Button HealthUpgarade;
     public Button EnergyUpgarade;
@@ -44,8 +46,6 @@ public class HUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //heroHealthText.text = ((int)hero.health).ToString();
-        //heroEnergyText.text = ((int)hero.energy).ToString();
         string ammo = ((int)pickUpWeapon.weapon.GetComponent<Weapon>().ammo).ToString();
         if (ammo == "-2147483648")
         {
@@ -67,19 +67,16 @@ public class HUD : MonoBehaviour
         enemiesLeft.text = LevelController.enemyCounter.ToString();
         cureCooldown.color = skills.CureReady ? Color.green : Color.gray;
 
-
-        HealthUpgarade.image.color = experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
-        EnergyUpgarade.image.color = experience.CanEnergyUpgrade() ? Color.yellow : Color.grey;
-        MovementUpgrade.image.color = experience.CanMovementUpgrade() ? Color.yellow : Color.grey;
-        CureUpgarade.image.color = experience.CanCureUpgrade() ? Color.yellow : Color.grey;
-        ArmorUpgarade.image.color = experience.CanArmorUpgrade() ? Color.yellow : Color.grey;
+        heroHealthText.text =  ((int)hero.health).ToString() + " / " + ((int)hero.healthMax).ToString();
+        heroEnergyText.text = ((int)hero.energy).ToString() + " / " + ((int)hero.energyMax).ToString();
+        heroExpirienceText.text = Experience.points.ToString() + " / 10";
 
 
-        //HealthUpgarade.image.color = experience.MaxHealthUpgare ? Color.blue : experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
-        //EnergyUpgarade.image.color = experience.MaxHealthUpgare ? Color.blue : experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
-        //MovementUpgrade.image.color = experience.MaxHealthUpgare ? Color.blue : experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
-        //CureUpgarade.image.color = experience.MaxHealthUpgare ? Color.blue : experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
-        //ArmorUpgarade.image.color = experience.MaxHealthUpgare ? Color.blue : experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
+        HealthUpgarade.image.color = experience.healthLevel == experience.healthMaxLevel ? Color.magenta : experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
+        EnergyUpgarade.image.color = experience.energyLevel == experience.energyhMaxLevel ? Color.magenta : experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
+        MovementUpgrade.image.color = experience.movementLevel == experience.movementMaxLevel ? Color.magenta : experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
+        CureUpgarade.image.color = experience.cureLevel == experience.cureMaxLevel ? Color.magenta : experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
+        ArmorUpgarade.image.color = experience.armorLevel == experience.armorMaxLevel ? Color.magenta : experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
 
 
         heroHealthBar.value = hero.health;
@@ -92,7 +89,6 @@ public class HUD : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha3)) UpgradeMovement();
         if (Input.GetKeyDown(KeyCode.Alpha4)) UpgradeCure();
         if (Input.GetKeyDown(KeyCode.Alpha5)) UpgradeArmor();
-
     }
 
     public void UpgradeHealth()
