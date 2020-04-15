@@ -94,20 +94,23 @@ public class Experience : MonoBehaviour
             }
             if (healthLevel == 1)
             {
-                hero.healthRegeneration += (float)0.1;
+                hero.healthMax += 10;
+                hero.healthRegeneration += (float)0.2;
             }
             if (healthLevel == 2)
             {
                 hero.healthMax += 20;
+                hero.healthRegeneration += (float)0.2;
             }
             if (healthLevel == 3)
             {
+                hero.healthMax += 20;
                 hero.healthRegeneration += (float)0.2;
             }
             if (healthLevel == 4)
             {
-                hero.healthMax += 20;
-                hero.healthRegeneration += (float)0.2;
+                hero.healthMax += 40;
+                hero.healthRegeneration += (float)0.3;
             }
 
             healthLevel++;
@@ -126,19 +129,22 @@ public class Experience : MonoBehaviour
             }
             if (energyLevel == 1)
             {
+                hero.energyMax += 10;
                 hero.energyRegeneration += (float)0.2;
             }
             if (energyLevel == 2)
             {
                 hero.energyMax += 20;
+                hero.energyRegeneration += (float)0.2;
             }
             if (energyLevel == 3)
             {
-                hero.energyRegeneration += (float)0.3;
+                hero.energyMax += 20;
+                hero.energyRegeneration += (float)0.2;
             }
             if (energyLevel == 4)
             {
-                hero.energyMax += 20;
+                hero.energyMax += 40;
                 hero.energyRegeneration += (float)0.3;
             }
 
@@ -168,6 +174,7 @@ public class Experience : MonoBehaviour
             if (movementLevel == 3)
             {
                 skills.sprintEnergy -= 1;
+                skills.sprintPower += 0.5f;
                 hero.speed += 0.5f;
             }
             if (movementLevel == 4)
@@ -193,23 +200,23 @@ public class Experience : MonoBehaviour
             if (cureLevel == 1)
             {
                 skills.cureEnergy -= 2;
-                skills.curePower += 2;
+                skills.curePower += 4;
             }
             if (cureLevel == 2)
             {
                 skills.cureEnergy -= 2;
-                skills.curePower += 2;
+                skills.curePower += 4;
             }
             if (cureLevel == 3)
             {
                 skills.cureEnergy -= 2;
-                skills.curePower += 2;
+                skills.curePower += 4;
                 skills.cureDelay -= 0.5f;
             }
             if (cureLevel == 4)
             {
                 skills.cureEnergy -= 2;
-                skills.curePower += 4;
+                skills.curePower += 8;
                 skills.cureDelay -= 0.5f;
             }
 
@@ -224,26 +231,26 @@ public class Experience : MonoBehaviour
         {
             if (armorLevel == 0)
             {
-                skills.defenseEnergy -= 0.5f;
+                skills.defenseEnergy -= 0.4f;
             }
             if (armorLevel == 1)
             {
-                skills.defenseEnergy -= 0.5f;
+                skills.defenseEnergy -= 0.4f;
                 skills.defensePower += 0.5f;
             }
             if (armorLevel == 2)
             {
-                skills.defenseEnergy -= 0.5f;
+                skills.defenseEnergy -= 0.4f;
                 skills.defensePower += 0.5f;
             }
             if (armorLevel == 3)
             {
-                skills.defenseEnergy -= 0.5f;
+                skills.defenseEnergy -= 0.4f;
                 skills.defensePower += 1f;
             }
             if (armorLevel == 4)
             {
-                skills.defenseEnergy -= 0.5f;
+                skills.defenseEnergy -= 0.4f;
                 skills.defensePower += 2f;
             }
 
