@@ -37,15 +37,25 @@ public class Bullet : MonoBehaviour
     {
         IGetDamaged target = collision.GetComponent<IGetDamaged>();
 
-        if (target != null )
+        if (collision.gameObject.tag == "Bullet")
         {
-            target.GetDamage(damage);
-            
+            return;
+        }
+
+        if(collision.gameObject.tag == "Gun")
+        {
+            return;
         }
 
         if (collision.gameObject.tag == "Surface") 
         {
             return;
+        }
+
+        if (target != null )
+        {
+            target.GetDamage(damage);
+            
         }
 
         Destroy(gameObject);
