@@ -242,8 +242,12 @@ MonoBehaviour:
   energyRegeneration: 1
   rb: {fileID: 0}
   damageReduction: 1
-  audioClips:
-  - {fileID: 8300000, guid: de7734987ff46b04bb3ec62dbf3f0760, type: 3}
+  damageClip: {fileID: 8300000, guid: de7734987ff46b04bb3ec62dbf3f0760, type: 3}
+  deathClips:
+  - {fileID: 8300000, guid: 07092d70f0ca6dc4582afc9342ba0d3d, type: 3}
+  - {fileID: 8300000, guid: c32f67f8da7f9504c843c930d719ebcd, type: 3}
+  - {fileID: 8300000, guid: be7ab5a3b6089df4f8f1105d139fb9c8, type: 3}
+  - {fileID: 8300000, guid: abf3445d224e44547887f893214ada34, type: 3}
   audioSource: {fileID: 672492697}
 --- !u!114 &709545717
 MonoBehaviour:
@@ -269,6 +273,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe9a45aafc13c1845b4852dfbad30c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 672492697}
+  healClip: {fileID: 8300000, guid: 81250596e675e65469c3aa4438330b57, type: 3}
+  shieldClip: {fileID: 8300000, guid: 2731af1a25f29cb49837a6cddba8f502, type: 3}
   CureReady: 1
   curePower: 20
   cureEnergy: 30
@@ -320,7 +327,7 @@ MonoBehaviour:
   - {x: 0.0030699521, y: -1.1755707, z: -0.00000166893}
   m_ShapePathHash: -516384653
   m_Mesh: {fileID: 0}
-  m_InstanceId: 359484
+  m_InstanceId: 22390
 --- !u!82 &672492697
 AudioSource:
   m_ObjectHideFlags: 0
