@@ -104,7 +104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229497928561137698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.208, y: 2.551, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5.393, y: 5.611, z: 1}
   m_Children:
   - {fileID: 9152644335297828483}
@@ -264,7 +264,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 6
+  m_Mass: 100
   m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -358,7 +358,7 @@ MonoBehaviour:
   - {x: -0.52455693, y: -0.7182689, z: 0}
   m_ShapePathHash: 1246413008
   m_Mesh: {fileID: 0}
-  m_InstanceId: -34944
+  m_InstanceId: 188918
 --- !u!114 &830495854194743975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,9 +371,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b9fac870013161419af17f9252901b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  healthMax: 500
-  health: 500
+  speed: 5
+  healthMax: 700
+  health: 700
   healthRegeneration: 0
   energyMax: 0
   energy: 0
@@ -382,8 +382,8 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 2983138913376166895, guid: baeddc4f97b01314795910e61e3e15f6,
     type: 3}
-  distance: 2
-  move: 80
+  distance: 8
+  move: 60
 --- !u!114 &3392186448647905651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,10 +396,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff1c28f631bf8848923a57a5c1b8ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lootWeapons: []
-  enemies: {fileID: 1406142646245717400, guid: e40638a06d1145d479473fc9d328d8fa, type: 3}
-  chance: 0
-  numberOfEnemies: 5
+  lootWeapons:
+  - {fileID: 3796136698500015009, guid: 3e1c76054ccc0c847b86e51e081168cc, type: 3}
+  - {fileID: 5052215841487507432, guid: 88642fd526163164bba903f16c6eecbb, type: 3}
+  - {fileID: 6894152017762640877, guid: 198d468f62889ff47b658e926cd25bdf, type: 3}
+  - {fileID: 5956721176902146702, guid: 0484df7bad6e00044b8d5e7155deed7a, type: 3}
+  - {fileID: 1609370456669826762, guid: 72c1529b610ba5042bb53d928056e9ee, type: 3}
+  enemies: {fileID: 0}
+  chance: 130
+  numberOfEnemies: 0
 --- !u!1 &1208319590486938475
 GameObject:
   m_ObjectHideFlags: 0

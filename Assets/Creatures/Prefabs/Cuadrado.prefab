@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3852217370690783639}
   - component: {fileID: 6874606578454314964}
   - component: {fileID: 4311555175726294535}
+  - component: {fileID: 8298806512269498912}
   m_Layer: 0
   m_Name: Cuadrado
   m_TagString: Enemy
@@ -148,7 +149,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 4.04
-  m_LinearDrag: 9.99
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -169,9 +170,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  healthMax: 200
-  health: 200
-  healthRegeneration: 0.2
+  healthMax: 150
+  health: 150
+  healthRegeneration: 0.1
   energyMax: 0
   energy: 0
   energyRegeneration: 0
@@ -179,8 +180,8 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 5659481989795792469, guid: 693d4d8442023c74aa4785283bb69a34,
     type: 3}
-  distance: 0
-  move: 0
+  distance: 1
+  move: 30
   alternativeBulletPrefab: {fileID: 8529288225209641873, guid: f9af2fe138bb42a4892e455289edc6cf,
     type: 3}
 --- !u!114 &4311555175726294535
@@ -208,4 +209,21 @@ MonoBehaviour:
   - {x: -0.8630295, y: 0.85784817, z: 0}
   m_ShapePathHash: 920864149
   m_Mesh: {fileID: 0}
-  m_InstanceId: -127466
+  m_InstanceId: 90156
+--- !u!114 &8298806512269498912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7310637247756992671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff1c28f631bf8848923a57a5c1b8ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootWeapons:
+  - {fileID: 3796136698500015009, guid: 3e1c76054ccc0c847b86e51e081168cc, type: 3}
+  enemies: {fileID: 0}
+  chance: 15
+  numberOfEnemies: 0

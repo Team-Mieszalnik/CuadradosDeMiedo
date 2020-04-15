@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3023339504332727533}
   - component: {fileID: 5568478386769427774}
   - component: {fileID: 6311886941082475354}
+  - component: {fileID: 998712547412072210}
   m_Layer: 0
   m_Name: CuadradoDeLaNoche
   m_TagString: Enemy
@@ -149,7 +150,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 30
-  m_LinearDrag: 9.99
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -172,7 +173,7 @@ MonoBehaviour:
   speed: 4
   healthMax: 200
   health: 200
-  healthRegeneration: 1
+  healthRegeneration: 0.1
   energyMax: 0
   energy: 0
   energyRegeneration: 0
@@ -180,7 +181,7 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 5659481989795792469, guid: 693d4d8442023c74aa4785283bb69a34,
     type: 3}
-  distance: 3
+  distance: 0
   move: 20
   alternativeBulletPrefab: {fileID: 8529288225209641873, guid: f9af2fe138bb42a4892e455289edc6cf,
     type: 3}
@@ -209,7 +210,7 @@ MonoBehaviour:
   - {x: -0.8630295, y: 0.85784817, z: 0}
   m_ShapePathHash: 920864149
   m_Mesh: {fileID: 0}
-  m_InstanceId: 73894
+  m_InstanceId: 90224
 --- !u!114 &6311886941082475354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,3 +253,20 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &998712547412072210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433856447870327718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff1c28f631bf8848923a57a5c1b8ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootWeapons:
+  - {fileID: 5052215841487507432, guid: 88642fd526163164bba903f16c6eecbb, type: 3}
+  enemies: {fileID: 0}
+  chance: 12
+  numberOfEnemies: 0

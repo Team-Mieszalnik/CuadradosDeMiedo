@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4376899659656960266}
   - component: {fileID: 7483624121684595286}
   - component: {fileID: 6486464806842368407}
+  - component: {fileID: 4199185142766795688}
   m_Layer: 0
   m_Name: TrianguloDeLaNoche
   m_TagString: Triangle
@@ -253,7 +254,7 @@ MonoBehaviour:
   - {x: -0.89479303, y: -0.89002156, z: 0}
   m_ShapePathHash: -1754626425
   m_Mesh: {fileID: 0}
-  m_InstanceId: -168098
+  m_InstanceId: 89472
 --- !u!114 &6486464806842368407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,3 +297,20 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &4199185142766795688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8581523956178932973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff1c28f631bf8848923a57a5c1b8ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootWeapons:
+  - {fileID: 3831509487082657746, guid: abff1cdf38a27da44a5a14822c86aef0, type: 3}
+  enemies: {fileID: 0}
+  chance: 30
+  numberOfEnemies: 0

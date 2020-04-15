@@ -378,7 +378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8944918939840449976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.766, y: -0.08, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5.262, y: 4.867, z: 1}
   m_Children:
   - {fileID: 60621037}
@@ -496,8 +496,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
-  m_LinearDrag: 9.99
+  m_Mass: 1000
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -530,7 +530,7 @@ MonoBehaviour:
   - {x: -0.8630295, y: 0.85784817, z: 0}
   m_ShapePathHash: 920864149
   m_Mesh: {fileID: 0}
-  m_InstanceId: -29684
+  m_InstanceId: 188808
 --- !u!114 &2044817348689638411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,8 +554,8 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 8529288225209641873, guid: f9af2fe138bb42a4892e455289edc6cf,
     type: 3}
-  distance: 2
-  move: 80
+  distance: 0
+  move: 10
   alternativeBulletPrefab: {fileID: 8529288225209641873, guid: f9af2fe138bb42a4892e455289edc6cf,
     type: 3}
 --- !u!114 &-8806703347335463989
@@ -570,7 +570,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff1c28f631bf8848923a57a5c1b8ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lootWeapons: []
-  enemies: {fileID: 7310637247756992671, guid: eeba2acc911e16c40ac83b2adc040ca3, type: 3}
-  chance: 0
-  numberOfEnemies: 5
+  lootWeapons:
+  - {fileID: 3796136698500015009, guid: 3e1c76054ccc0c847b86e51e081168cc, type: 3}
+  - {fileID: 5052215841487507432, guid: 88642fd526163164bba903f16c6eecbb, type: 3}
+  - {fileID: 6894152017762640877, guid: 198d468f62889ff47b658e926cd25bdf, type: 3}
+  - {fileID: 5956721176902146702, guid: 0484df7bad6e00044b8d5e7155deed7a, type: 3}
+  - {fileID: 1609370456669826762, guid: 72c1529b610ba5042bb53d928056e9ee, type: 3}
+  enemies: {fileID: 0}
+  chance: 130
+  numberOfEnemies: 0

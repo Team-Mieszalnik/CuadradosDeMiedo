@@ -67,7 +67,7 @@ public class HUD : MonoBehaviour
 
     public void UpgradeMovement()
     {
-        experience.MoveLevellUpgrade();
+        experience.MovementLevellUpgrade();
     }
 
 
