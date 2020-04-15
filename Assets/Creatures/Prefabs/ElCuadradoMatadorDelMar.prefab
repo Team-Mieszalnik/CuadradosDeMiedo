@@ -530,7 +530,7 @@ MonoBehaviour:
   - {x: -0.8630295, y: 0.85784817, z: 0}
   m_ShapePathHash: 920864149
   m_Mesh: {fileID: 0}
-  m_InstanceId: 188808
+  m_InstanceId: 182140
 --- !u!114 &2044817348689638411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,10 +554,11 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 8529288225209641873, guid: f9af2fe138bb42a4892e455289edc6cf,
     type: 3}
-  distance: 0
-  move: 10
   spawnable: {fileID: 7310637247756992671, guid: eeba2acc911e16c40ac83b2adc040ca3,
     type: 3}
+  distance: 0
+  move: 10
+  Exp: 10
   alternativeBulletPrefab: {fileID: 8529288225209641873, guid: f9af2fe138bb42a4892e455289edc6cf,
     type: 3}
 --- !u!114 &-8806703347335463989
@@ -578,6 +579,4 @@ MonoBehaviour:
   - {fileID: 6894152017762640877, guid: 198d468f62889ff47b658e926cd25bdf, type: 3}
   - {fileID: 5956721176902146702, guid: 0484df7bad6e00044b8d5e7155deed7a, type: 3}
   - {fileID: 1609370456669826762, guid: 72c1529b610ba5042bb53d928056e9ee, type: 3}
-  enemies: {fileID: 0}
   chance: 130
-  numberOfEnemies: 0

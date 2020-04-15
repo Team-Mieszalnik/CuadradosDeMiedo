@@ -183,6 +183,7 @@ MonoBehaviour:
   spawnable: {fileID: 0}
   distance: 1
   move: 30
+  Exp: 1
   alternativeBulletPrefab: {fileID: 8529288225209641873, guid: f9af2fe138bb42a4892e455289edc6cf,
     type: 3}
 --- !u!114 &4311555175726294535
@@ -210,7 +211,7 @@ MonoBehaviour:
   - {x: -0.8630295, y: 0.85784817, z: 0}
   m_ShapePathHash: 920864149
   m_Mesh: {fileID: 0}
-  m_InstanceId: 129184
+  m_InstanceId: 181312
 --- !u!114 &8298806512269498912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,4 +226,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootWeapons:
   - {fileID: 3796136698500015009, guid: 3e1c76054ccc0c847b86e51e081168cc, type: 3}
-  chance: 10
+  chance: 15

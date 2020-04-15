@@ -181,8 +181,10 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 5659481989795792469, guid: 693d4d8442023c74aa4785283bb69a34,
     type: 3}
+  spawnable: {fileID: 0}
   distance: 0
   move: 10
+  Exp: 1
   alternativeBulletPrefab: {fileID: 8529288225209641873, guid: f9af2fe138bb42a4892e455289edc6cf,
     type: 3}
 --- !u!114 &1726763118647584068
@@ -210,7 +212,7 @@ MonoBehaviour:
   - {x: -0.8630295, y: 0.85784817, z: 0}
   m_ShapePathHash: 920864149
   m_Mesh: {fileID: 0}
-  m_InstanceId: 90268
+  m_InstanceId: 181404
 --- !u!114 &1830626557366547157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,6 +268,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootWeapons:
   - {fileID: 6894152017762640877, guid: 198d468f62889ff47b658e926cd25bdf, type: 3}
-  enemies: {fileID: 0}
   chance: 15
-  numberOfEnemies: 0

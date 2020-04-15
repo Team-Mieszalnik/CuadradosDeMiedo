@@ -26,6 +26,8 @@ public class Enemy : Creature
     public float distance;
     public float move;
 
+    public int Exp;
+
 
     // Update is called once per frame
     void Update()
@@ -147,7 +149,7 @@ public class Enemy : Creature
 
         Destroy(gameObject);
 
-        Experience.addDefeatedOpponents(1);
+        Experience.addDefeatedOpponents(Exp);
         LevelController.DecrementEnemyCounter();
 
                 var loot = GetComponent<Loot>();
