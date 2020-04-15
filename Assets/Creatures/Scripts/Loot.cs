@@ -5,9 +5,7 @@ using UnityEngine;
 public class Loot : MonoBehaviour
 {
     public GameObject[] lootWeapons;
-    public GameObject enemies;
     public float chance;
-    public int numberOfEnemies; // how many enemies to be spawned
 
     public void LootItem()
     {
@@ -17,15 +15,6 @@ public class Loot : MonoBehaviour
 
             Instantiate(lootWeapons[item], transform.position, Quaternion.identity);
 
-        }
-
-        for(int i=0; i<numberOfEnemies; i++)
-        {
-            Vector3 newPosition = new Vector3();
-            newPosition = transform.position;
-            newPosition.x += (i - (numberOfEnemies/2)) * 2;
-            newPosition.y += (i - (numberOfEnemies/2)) * 2;
-            Instantiate(enemies, newPosition, Quaternion.identity);
         }
     }
 

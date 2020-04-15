@@ -382,6 +382,8 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 2983138913376166895, guid: baeddc4f97b01314795910e61e3e15f6,
     type: 3}
+  spawnable: {fileID: 1406142646245717400, guid: e40638a06d1145d479473fc9d328d8fa,
+    type: 3}
   distance: 2
   move: 80
 --- !u!114 &3392186448647905651
