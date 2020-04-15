@@ -44,11 +44,11 @@ public class Skills : MonoBehaviour
 
     private void Control()
     {
-        if (Input.GetKey(KeyCode.Space) && SkillsReady) 
+        if (Input.GetKey(KeyCode.LeftShift) && SkillsReady) 
         {
             StartCoroutine(SprintSkill());
         }
-        if (Input.GetKey(KeyCode.LeftShift) && SkillsReady) 
+        if (Input.GetKey(KeyCode.Space) && SkillsReady) 
         {
             StartCoroutine(DefenseSkill());
         }
