@@ -328,6 +328,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4830698573579912972, guid: b7ba8055dc8a0b14c86f7576987fdea2,
     type: 3}
   distance: 10
+  spawnable: {fileID: 4350575759247743059, guid: 801530a370420b04986f36421931d95c,
+    type: 3}
   move: 80
 --- !u!114 &-9037411315446332368
 MonoBehaviour:

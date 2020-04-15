@@ -12,7 +12,8 @@ public class Hero : Creature
 
     //[SerializeField]
     //public Dictionary<string, AudioClip> audioClips;
-    public AudioClip[] audioClips;
+    public AudioClip damageClip;
+    public AudioClip[] deathClips;
     public AudioSource audioSource;
 
     protected Ray ray;
@@ -63,7 +64,7 @@ public class Hero : Creature
     {
         health -= damage / damageReduction;
 
-        audioSource.PlayOneShot(audioClips[0]);
+        audioSource.PlayOneShot(damageClip);
 
         StartCoroutine(GetDamageAnimation());
     }
@@ -72,6 +73,8 @@ public class Hero : Creature
     {
         yield return new WaitForSeconds(0.5F);
         animator.SetBool("dead", false);
+
+        audioSource.PlayOneShot(deathClips[Random.Range(0,deathClips.Length-1)]);
 
         for (int i = 0; i < 801; i++)
         {

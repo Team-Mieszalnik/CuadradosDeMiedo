@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Skills : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip healClip;
+    public AudioClip shieldClip;
+
     private bool SkillsReady = true;
     [HideInInspector]
     public bool CureReady = true;
@@ -81,6 +85,9 @@ public class Skills : MonoBehaviour
             hero.energy -= defenseEnergy;
             hero.damageReduction *= defensePower;
 
+
+            audioSource.PlayOneShot(shieldClip);
+
             yield return new WaitForSeconds(1);//animation time and skill time
 
             hero.damageReduction /= defensePower;
@@ -106,6 +113,9 @@ public class Skills : MonoBehaviour
             {
                 hero.health += curePower;
             }
+
+
+            audioSource.PlayOneShot(healClip);
 
             yield return new WaitForSeconds(1);//animation time;
 

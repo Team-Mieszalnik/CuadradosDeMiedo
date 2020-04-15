@@ -384,6 +384,8 @@ MonoBehaviour:
     type: 3}
   distance: 8
   move: 60
+  spawnable: {fileID: 1406142646245717400, guid: e40638a06d1145d479473fc9d328d8fa,
+    type: 3}
 --- !u!114 &3392186448647905651
 MonoBehaviour:
   m_ObjectHideFlags: 0

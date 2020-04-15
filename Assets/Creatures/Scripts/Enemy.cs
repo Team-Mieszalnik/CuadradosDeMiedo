@@ -6,6 +6,7 @@ public class Enemy : Creature
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject spawnable;
     protected Transform hero;
 
     Vector2 moveDirection;
@@ -58,7 +59,7 @@ public class Enemy : Creature
         yield return new WaitForSeconds(0.1F);
     }
 
-    protected IEnumerator StandardAttack()
+    protected virtual IEnumerator StandardAttack()
     {
         attack = true;
         animator.SetBool("attack", true);

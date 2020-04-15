@@ -556,6 +556,8 @@ MonoBehaviour:
     type: 3}
   distance: 0
   move: 10
+  spawnable: {fileID: 7310637247756992671, guid: eeba2acc911e16c40ac83b2adc040ca3,
+    type: 3}
   alternativeBulletPrefab: {fileID: 8529288225209641873, guid: f9af2fe138bb42a4892e455289edc6cf,
     type: 3}
 --- !u!114 &-8806703347335463989
