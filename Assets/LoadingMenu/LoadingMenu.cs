@@ -38,6 +38,8 @@ public class LoadingMenu : MonoBehaviour
                 return mapPrevies[2];
             case "Vesuvio":
                 return mapPrevies[3];
+            case "Boss":
+                return mapPrevies[4];
 
         }
         return mapPrevies[0];
