@@ -53,6 +53,7 @@ public class TriangleBoss : Triangle
         newPosition.x += 3;
         newPosition.y += 3;
         Instantiate(spawnable, newPosition, Quaternion.identity);
+        LevelController.IncrementEnemyCounter();
 
         animator.SetBool("attack", false);
         light2D.intensity = 0;

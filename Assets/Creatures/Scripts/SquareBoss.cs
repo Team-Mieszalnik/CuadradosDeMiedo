@@ -44,6 +44,7 @@ public class SquareBoss : Square
         newPosition.x += 3;
         newPosition.y += 3;
         Instantiate(spawnable, newPosition, Quaternion.identity);
+        LevelController.IncrementEnemyCounter();
 
         animator.SetBool("attack", false);
         yield return new WaitForSeconds(Random.Range(1F, 2F));//attack time
