@@ -10,7 +10,7 @@ public class HUD : MonoBehaviour
     //public Text heroEnergyText;
 
     public Image cureCooldown;
-    public TextMeshProUGUI enemyLeft;
+    public TextMeshProUGUI enemiesLeft;
     public Text heroAmmoText;
     public Image weaponsImage;
 
@@ -64,15 +64,15 @@ public class HUD : MonoBehaviour
         weaponsImage.SetNativeSize();
 
 
-        enemyLeft.text = LevelController.enemyCounter.ToString();
+        enemiesLeft.text = LevelController.enemyCounter.ToString();
         cureCooldown.color = skills.CureReady ? Color.green : Color.gray;
 
 
-        //HealthUpgarade.image.color = experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
-        //EnergyUpgarade.image.color = experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
-        //MovementUpgrade.image.color = experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
-        //CureUpgarade.image.color = experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
-        //ArmorUpgarade.image.color = experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
+        HealthUpgarade.image.color = experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
+        EnergyUpgarade.image.color = experience.CanEnergyUpgrade() ? Color.yellow : Color.grey;
+        MovementUpgrade.image.color = experience.CanMovementUpgrade() ? Color.yellow : Color.grey;
+        CureUpgarade.image.color = experience.CanCureUpgrade() ? Color.yellow : Color.grey;
+        ArmorUpgarade.image.color = experience.CanArmorUpgrade() ? Color.yellow : Color.grey;
 
 
         //HealthUpgarade.image.color = experience.MaxHealthUpgare ? Color.blue : experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
@@ -103,7 +103,7 @@ public class HUD : MonoBehaviour
 
     public void UpgradeEnergy()
     {
-        experience.HealthLevelUpgrade();
+        experience.EnergyLevelUpgrade();
         heroHealthBar.maxValue = hero.healthMax;
     }
 
@@ -112,14 +112,14 @@ public class HUD : MonoBehaviour
         experience.MovementLevellUpgrade();
     }
 
-    public void UpgradeArmor()
-    {
-        experience.MoveLevellUpgrade();
-    }
-
     public void UpgradeCure()
     {
-        experience.MoveLevellUpgrade();
+        experience.CureLevellUpgrade();
+    }
+
+    public void UpgradeArmor()
+    {
+        experience.ArmorLevellUpgrade();
     }
 
 
