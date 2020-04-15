@@ -86,4 +86,10 @@ public class Hero : Creature
 
         GameObject.Find("UserInterface").GetComponent<UserInterface>().DeathScreen();
     }
+
+    public void Regenerate()
+    {
+        health = healthMax;
+        energy = energyMax;
+    }
 }

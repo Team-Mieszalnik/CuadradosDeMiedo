@@ -4,7 +4,7 @@ using UnityEngine;
 
 using UnityEngine.Experimental.Rendering.Universal;
 
-public class NextLevelDoor : MonoBehaviour
+public class NextLevelPrimavera : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
     CircleCollider2D circleCollider2D;
@@ -26,13 +26,13 @@ public class NextLevelDoor : MonoBehaviour
         light2.enabled = false;
 
         nextAnimation = true;
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (LevelController.enemyCounter <= 0) 
+        if (LevelController.enemyCounter <= 0)
         {
             spriteRenderer.enabled = true;
             circleCollider2D.enabled = true;
@@ -40,7 +40,7 @@ public class NextLevelDoor : MonoBehaviour
         }
 
 
-        if (nextAnimation == true) 
+        if (nextAnimation == true)
         {
             //StartCoroutine(DoorAnimation());
             DoorAnimation();
@@ -68,6 +68,8 @@ public class NextLevelDoor : MonoBehaviour
 
         if (target != null)
         {
+            target.speed += 3.5f;
+
             target.Regenerate();
 
             MapController.EndLevel();
