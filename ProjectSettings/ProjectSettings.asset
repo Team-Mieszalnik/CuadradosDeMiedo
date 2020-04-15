@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: Team Mieszalnik
   productName: Cuadrados De Miedo
-  defaultCursor: {fileID: 2800000, guid: 835126cfd2521e84686cc30633d439fb, type: 3}
+  defaultCursor: {fileID: 2800000, guid: b430ef5824f79654eb31f187bdeac258, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_ShowUnitySplashScreen: 1
