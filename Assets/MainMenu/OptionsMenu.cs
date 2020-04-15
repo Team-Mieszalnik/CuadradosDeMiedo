@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
@@ -13,7 +14,10 @@ public class OptionsMenu : MonoBehaviour
 
     private void Start()
     {
-        resolutions = Screen.resolutions;
+        //resolutions = Screen.resolutions;
+        resolutions = Screen.resolutions.Select(resolution => new Resolution { width = resolution.width, height = resolution.height }).Distinct().ToArray();
+
+
         resolutionDropdown.ClearOptions();
 
         List<string> resolutionsString = new List<string>();
@@ -23,7 +27,7 @@ public class OptionsMenu : MonoBehaviour
         for (int i = 0; i < resolutions.Length; i++)
         {
             resolutionsString.Add(resolutions[i].width + " x " + resolutions[i].height);
-            if (Screen.currentResolution.width == resolutions[i].width && Screen.currentResolution.height == resolutions[i].height)
+            if (Screen.width == resolutions[i].width && Screen.height == resolutions[i].height)
             {
                 currentRes = i;
             }
@@ -36,17 +40,17 @@ public class OptionsMenu : MonoBehaviour
 
     public void SetVolume(float volume)
     {
-        audioMixer.SetFloat("Volume", volume);
+        audioMixer.SetFloat("Volume", 20 * Mathf.Log10(volume));
     }
 
     public void SetMusic(float volume)
     {
-        audioMixer.SetFloat("Music", volume);
+        audioMixer.SetFloat("Music", 20 * Mathf.Log10(volume));
     }
 
     public void SetEffects(float volume)
     {
-        audioMixer.SetFloat("SoundEffects", volume);
+        audioMixer.SetFloat("SoundEffects", 20 * Mathf.Log10(volume));
     }
 
     public void SetQuality(float quality)
