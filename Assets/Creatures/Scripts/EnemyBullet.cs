@@ -8,6 +8,21 @@ public class EnemyBullet : Bullet
     {
         IGetDamaged target = collision.GetComponent<IGetDamaged>();
 
+        if(collision.gameObject.tag == "Square")
+        {
+            return;
+        }
+
+        if(collision.gameObject.tag == "Triangle")
+        {
+            return;
+        }
+
+        if(collision.gameObject.tag == "Ciercle")
+        {
+            return;
+        }
+
         if(collision.gameObject.tag == "Enemy")
         {
             return;
