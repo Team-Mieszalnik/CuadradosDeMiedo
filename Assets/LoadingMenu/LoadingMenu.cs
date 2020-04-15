@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LoadingMenu : MonoBehaviour
 {
-    public void ContinueGame()
+
+    public TextMeshProUGUI mapName;
+
+    public void Update()
     {
-        MapController.GoNextLevel();
+        mapName.text = MapController.SceneName;
     }
 }
