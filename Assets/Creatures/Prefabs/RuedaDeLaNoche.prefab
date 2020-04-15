@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3106329594436764472}
   - component: {fileID: 911394897377466104}
   - component: {fileID: 4271130161372526621}
+  - component: {fileID: 3021874391177915540}
   m_Layer: 0
   m_Name: RuedaDeLaNoche
   m_TagString: Enemy
@@ -284,7 +285,7 @@ MonoBehaviour:
   - {x: -0.52455693, y: -0.7182689, z: 0}
   m_ShapePathHash: 1246413008
   m_Mesh: {fileID: 0}
-  m_InstanceId: 73960
+  m_InstanceId: 90084
 --- !u!114 &911394897377466104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1f913d9a074f34e9d694c531458933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 6
   healthMax: 70
   health: 70
   healthRegeneration: 2
@@ -352,3 +353,21 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &3021874391177915540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8483311717547107744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff1c28f631bf8848923a57a5c1b8ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootWeapons:
+  - {fileID: 1609370456669826762, guid: 72c1529b610ba5042bb53d928056e9ee, type: 3}
+  - {fileID: 5956721176902146702, guid: 0484df7bad6e00044b8d5e7155deed7a, type: 3}
+  enemies: {fileID: 0}
+  chance: 15
+  numberOfEnemies: 0

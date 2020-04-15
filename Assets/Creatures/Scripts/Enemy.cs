@@ -23,8 +23,8 @@ public class Enemy : Creature
     protected attackDelegate attacking;
 
 
-    public float distance = 2;
-    public float move = 80;
+    public float distance;
+    public float move;
 
 
     // Update is called once per frame

@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Maps/Vesuvio.unity
     guid: a434b0d7146cb8345ad4aa48fc7f061c
+  - enabled: 1
+    path: Assets/Scenes/Maps/Boss.unity
+    guid: b38e9b69dd9381445ba2e81829a711fb
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: e69ca7dcf99902e458384657569cdc06
   m_configObjects: {}

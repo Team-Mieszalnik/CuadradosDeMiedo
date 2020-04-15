@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 3106769973862395955}
   - component: {fileID: 8631768829783856564}
   - component: {fileID: 3219167140739407592}
-  - component: {fileID: 6084210774523558709}
+  - component: {fileID: 338393397568989499}
+  - component: {fileID: 4816385705766277048}
   m_Layer: 0
   m_Name: Triangulo
   m_TagString: Triangle
@@ -205,6 +206,7 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 6151726827928093468, guid: 731d8abf855e3ed4abf9d7bbd613430d,
     type: 3}
+  spawnable: {fileID: 0}
   distance: 12
   move: 60
 --- !u!114 &3219167140739407592
@@ -253,8 +255,8 @@ MonoBehaviour:
   - {x: -0.89479303, y: -0.89002156, z: 0}
   m_ShapePathHash: -1754626425
   m_Mesh: {fileID: 0}
-  m_InstanceId: -115680
---- !u!114 &6084210774523558709
+  m_InstanceId: 30000
+--- !u!114 &338393397568989499
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -295,3 +297,18 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &4816385705766277048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4350575759247743059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff1c28f631bf8848923a57a5c1b8ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootWeapons:
+  - {fileID: 3831509487082657746, guid: abff1cdf38a27da44a5a14822c86aef0, type: 3}
+  chance: 10
