@@ -9,6 +9,11 @@ public class LoadingMenu : MonoBehaviour
 
     public TextMeshProUGUI mapName;
 
+    public void ContinueGame()
+    {
+        MapController.GoNextLevel();
+    }
+
     public void Update()
     {
         mapName.text = MapController.SceneName;
