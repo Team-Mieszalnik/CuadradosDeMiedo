@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class UserInterface : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class UserInterface : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject deathScreen;
     public GameObject musicManagerInterface;
+
+    public AudioMixer audioMixer;
 
     private delegate void ChangeMenuState();
     private ChangeMenuState changeMenuState;
@@ -55,6 +58,21 @@ public class UserInterface : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
         //SceneManager.UnloadScene(SceneManager.GetActiveScene());
+    }
+
+    public void SetVolume(float volume)
+    {
+        audioMixer.SetFloat("Volume", 20 * Mathf.Log10(volume));
+    }
+
+    public void SetMusic(float volume)
+    {
+        audioMixer.SetFloat("Music", 20 * Mathf.Log10(volume));
+    }
+
+    public void SetEffects(float volume)
+    {
+        audioMixer.SetFloat("SoundEffects", 20 * Mathf.Log10(volume));
     }
 
 }

@@ -30,7 +30,7 @@ public class PickUp : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         Weapon target = collision.GetComponent<Weapon>();
-        if (target != null && Input.GetMouseButtonDown(1))
+        if (target != null && Input.GetKeyDown(KeyCode.E))
         {
             //if (weapon != null)
             //{
