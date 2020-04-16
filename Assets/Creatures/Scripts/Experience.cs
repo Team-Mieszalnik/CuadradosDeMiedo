@@ -56,6 +56,12 @@ public class Experience : MonoBehaviour
         points += number;
     }
 
+    public static void ResetDefeatedOpponents()
+    {
+        DefeatedOpponents = 0;
+        points = 0;
+    }
+
 
     public bool CanHealthUpgrade()
     {

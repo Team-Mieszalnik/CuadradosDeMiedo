@@ -78,6 +78,7 @@ public class LevelController : MonoBehaviour
     public static void ResetLevel()
     {
         Level = 1;
+        Experience.ResetDefeatedOpponents();
     }
 
 
