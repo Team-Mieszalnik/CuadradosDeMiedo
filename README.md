@@ -1,8 +1,7 @@
 # *Malos triángulos y cuadrados de miedo ( ͡° ͜ʖ ͡°)*
 
 
-## [Play for yourself](https://team-mieszalnik.github.io/CuadradosDeMiedo/)
-
+## [Play for yourself](https://team-mieszalnik.github.io/CuadradosDeMiedo/) ![Version](https://img.shields.io/github/v/release/PawZawDev/kwadraty)
 
 
 This game was developed as a Computer Graphics project at Silesial University of Technology.
