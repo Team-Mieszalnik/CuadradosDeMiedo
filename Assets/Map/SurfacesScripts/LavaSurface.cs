@@ -22,6 +22,11 @@ public class LavaSurface : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Gun")
+        {
+            return;
+        }
+
         if (ignite == true)
         {
             StartCoroutine(Fire(collision));
@@ -30,7 +35,7 @@ public class LavaSurface : MonoBehaviour
 
     private IEnumerator Fire(Collider2D collision)
     {
-        if(collision.gameObject.tag != "Triangle")
+        if (collision.gameObject.tag != "Triangle")
         {
             IGetDamaged target = collision.GetComponent<IGetDamaged>();
             if (target != null)
