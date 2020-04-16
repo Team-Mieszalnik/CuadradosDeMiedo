@@ -1,4 +1,4 @@
-<img src="readme/u_died.png" height="300px">
+<img src="readme/logoCDM.png" height="300px">
 
 ## [Play for yourself](https://team-mieszalnik.github.io/CuadradosDeMiedo/)
 
