@@ -18,8 +18,12 @@ We hope you like it and manage to rid this world of those damn squares
 
 ## Our team:
 [Michał Lampel](https://github.com/Swagsen)
+
 [Dominik Bistyga](https://github.com/dominikbis)
+
 [Paweł Zawierucha](https://github.com/PawZawDev)
+
 [Michał Szopa](https://github.com/SchopenXD)
+
 
 ###### Team Mieszalnik 2020
