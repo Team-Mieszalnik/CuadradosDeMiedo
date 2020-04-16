@@ -1,6 +1,6 @@
 <p align="center"><img src="readme/logoCDM.png" height="300px"></p>
 
-## [Play for yourself!](https://team-mieszalnik.github.io/CuadradosDeMiedo/)  ![Version](https://img.shields.io/github/v/release/PawZawDev/kwadraty)
+## [Play for yourself](https://team-mieszalnik.github.io/CuadradosDeMiedo/) ![Version](https://img.shields.io/github/v/release/PawZawDev/kwadraty)
 
 
 ## Description
