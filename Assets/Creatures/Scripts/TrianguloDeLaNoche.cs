@@ -4,16 +4,16 @@ using UnityEngine;
 
 using UnityEngine.Experimental.Rendering.Universal;
 
-public class Triangle : Enemy
+public class TrianguloDeLaNoche : Enemy
 {
     protected Light2D light2D;
 
     protected override IEnumerator AlternativeAttack()
     {
-        light2D = GetComponent<Light2D>();
+
         attack = true;
         animator.SetBool("attack", true);
-        light2D.intensity = 1;
+        //light2D.intensity = 1;
         yield return new WaitForSeconds(1.5F);//animation time
 
         for(int i=0; i<8; i++)
@@ -24,7 +24,7 @@ public class Triangle : Enemy
         }
 
         animator.SetBool("attack", false);
-        light2D.intensity = 0;
+        //light2D.intensity = 0;
         yield return new WaitForSeconds(Random.Range(2F, 4F));//attack time
         attack = false;
     }
