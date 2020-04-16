@@ -188,6 +188,12 @@ public class LevelController : MonoBehaviour
         enemyCounterWave--;
     }
 
+    public static void IncrementEnemyCounter()
+    {
+        enemyCounter++;
+        enemyCounterWave++;
+    }
+
 
 
 
