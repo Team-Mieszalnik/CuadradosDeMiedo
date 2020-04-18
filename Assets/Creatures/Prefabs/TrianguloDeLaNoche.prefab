@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 8581523956178932971}
   - component: {fileID: 8581523956178932970}
   - component: {fileID: 6947538946729786509}
-  - component: {fileID: 4376899659656960266}
   - component: {fileID: 7483624121684595286}
   - component: {fileID: 6486464806842368407}
   - component: {fileID: 4199185142766795688}
+  - component: {fileID: 6011646615087808461}
   m_Layer: 0
   m_Name: TrianguloDeLaNoche
   m_TagString: Triangle
@@ -183,33 +183,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4376899659656960266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8581523956178932973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42411033dfd59cf40aee9579a9896aa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  healthMax: 40
-  health: 40
-  healthRegeneration: 4
-  energyMax: 0
-  energy: 0
-  energyRegeneration: 0
-  rb: {fileID: 0}
-  firePoint: {fileID: 0}
-  bulletPrefab: {fileID: 6151726827928093468, guid: 731d8abf855e3ed4abf9d7bbd613430d,
-    type: 3}
-  spawnable: {fileID: 0}
-  distance: 5
-  move: 80
-  Exp: 1
 --- !u!114 &7483624121684595286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,3 +287,30 @@ MonoBehaviour:
   lootWeapons:
   - {fileID: 3831509487082657746, guid: abff1cdf38a27da44a5a14822c86aef0, type: 3}
   chance: 30
+--- !u!114 &6011646615087808461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8581523956178932973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3488bac9cec52084eb448d459e209d85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  healthMax: 40
+  health: 40
+  healthRegeneration: 4
+  energyMax: 0
+  energy: 0
+  energyRegeneration: 0
+  rb: {fileID: 0}
+  firePoint: {fileID: 0}
+  bulletPrefab: {fileID: 6151726827928093468, guid: 731d8abf855e3ed4abf9d7bbd613430d,
+    type: 3}
+  spawnable: {fileID: 0}
+  distance: 5
+  move: 80
+  Exp: 1

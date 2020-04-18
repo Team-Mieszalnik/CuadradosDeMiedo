@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class HUD : MonoBehaviour
 {
 
+    public GameObject miniMap;
+
     public Image cureCooldown;
     public TextMeshProUGUI enemiesLeft;
     public Text heroAmmoText;
@@ -30,6 +32,8 @@ public class HUD : MonoBehaviour
     private PickUp pickUpWeapon;
     private Skills skills;
     private Experience experience;
+
+    private static bool isMiniMapVisible = false;
 
     // Start is called before the first frame update
     void Start()
@@ -73,10 +77,10 @@ public class HUD : MonoBehaviour
 
 
         HealthUpgarade.image.color = experience.healthLevel == experience.healthMaxLevel ? Color.magenta : experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
-        EnergyUpgarade.image.color = experience.energyLevel == experience.energyhMaxLevel ? Color.magenta : experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
-        MovementUpgrade.image.color = experience.movementLevel == experience.movementMaxLevel ? Color.magenta : experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
-        CureUpgarade.image.color = experience.cureLevel == experience.cureMaxLevel ? Color.magenta : experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
-        ArmorUpgarade.image.color = experience.armorLevel == experience.armorMaxLevel ? Color.magenta : experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
+        EnergyUpgarade.image.color = experience.energyLevel == experience.energyhMaxLevel ? Color.magenta : experience.CanEnergyUpgrade() ? Color.yellow : Color.grey;
+        MovementUpgrade.image.color = experience.movementLevel == experience.movementMaxLevel ? Color.magenta : experience.CanMovementUpgrade() ? Color.yellow : Color.grey;
+        CureUpgarade.image.color = experience.cureLevel == experience.cureMaxLevel ? Color.magenta : experience.CanCureUpgrade() ? Color.yellow : Color.grey;
+        ArmorUpgarade.image.color = experience.armorLevel == experience.armorMaxLevel ? Color.magenta : experience.CanArmorUpgrade() ? Color.yellow : Color.grey;
 
 
         heroHealthBar.value = hero.health;
@@ -89,6 +93,13 @@ public class HUD : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha3)) UpgradeMovement();
         if (Input.GetKeyDown(KeyCode.Alpha4)) UpgradeCure();
         if (Input.GetKeyDown(KeyCode.Alpha5)) UpgradeArmor();
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            isMiniMapVisible = !isMiniMapVisible;
+            miniMap.SetActive(isMiniMapVisible);
+        }
+
     }
 
     public void UpgradeHealth()

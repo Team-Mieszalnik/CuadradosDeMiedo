@@ -11,27 +11,35 @@ public class UserInterface : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject deathScreen;
     public GameObject musicManagerInterface;
+    public GameObject mapPreview;
 
     public AudioMixer audioMixer;
 
     private delegate void ChangeMenuState();
     private ChangeMenuState changeMenuState;
+    private ChangeMenuState changeMapState;
 
     // Start is called before the first frame update
     void Start()
     {
         changeMenuState = PauseMenu;
+        changeMapState = MapPreview;
     }
 
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
             changeMenuState();
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+            changeMapState();
+
     }
 
     public void PauseMenu()
     {
         pauseMenu.SetActive(true);
+        mapPreview.SetActive(false);
         musicManagerInterface.SetActive(true);
         Time.timeScale = 0;
         changeMenuState = ContinueGame;
@@ -40,14 +48,17 @@ public class UserInterface : MonoBehaviour
     public void ContinueGame()
     {
         pauseMenu.SetActive(false);
+        mapPreview.SetActive(false);
         musicManagerInterface.SetActive(false);
         Time.timeScale = 1;
         changeMenuState = PauseMenu;
+        changeMapState = MapPreview;
     }
 
     public void DeathScreen()
     {
         changeMenuState = null;
+        changeMapState = null;
         deathScreen.SetActive(true);
         //pauseMenu.SetActive(false);
         Time.timeScale = 0;
@@ -59,6 +70,14 @@ public class UserInterface : MonoBehaviour
         SceneManager.LoadScene(0);
         //SceneManager.UnloadScene(SceneManager.GetActiveScene());
     }
+
+    public void MapPreview()
+    {
+        mapPreview.SetActive(true);
+        Time.timeScale = 0;
+        changeMapState = ContinueGame;
+    }
+
 
     public void SetVolume(float volume)
     {

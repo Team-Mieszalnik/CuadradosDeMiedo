@@ -91,6 +91,7 @@ public class MapController : MonoBehaviour
         if (LevelController.Level == 16)
         {
             SceneName = "Credits";
+            return;
         }
 
         if (LevelController.Level % 5 != 0) 
