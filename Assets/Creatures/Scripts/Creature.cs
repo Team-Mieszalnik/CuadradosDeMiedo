@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class Creature : MonoBehaviour, IGetDamaged
+public abstract class Creature : MonoBehaviour, IGetDamaged, ICanSetOnFire
 {
-
     public float speed;
 
     public int healthMax;
@@ -19,12 +18,18 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     public Rigidbody2D rb;
     protected Animator animator;
 
+    protected bool ignite;
+    protected float fireTime;
+
+
 
     // Start is called before the first frame update
     protected void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        ignite = true;
     }
 
     // Update is called once per frame
@@ -87,5 +92,28 @@ public abstract class Creature : MonoBehaviour, IGetDamaged
     protected virtual IEnumerator AfterDeath()
     {
         yield return new WaitForSeconds(0.01F);//animation time
+    }
+
+
+
+    public IEnumerator GetFireDamage(float damage, float time)
+    {
+        fireTime = time;
+
+        if (ignite) 
+        {
+            ignite = false;
+
+            while (fireTime > 0) 
+            {
+                health -= damage;
+                StartCoroutine(GetDamageAnimation());
+                yield return new WaitForSeconds(0.1F);//animation time
+
+                fireTime -= 0.1F;//animation time
+            }
+
+            ignite = true;
+        }
     }
 }

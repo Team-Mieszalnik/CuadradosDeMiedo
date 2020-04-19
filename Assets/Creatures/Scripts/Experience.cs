@@ -52,7 +52,7 @@ public class Experience : MonoBehaviour
 
     public static void addDefeatedOpponents(int number)
     {
-        DefeatedOpponents += number;
+        DefeatedOpponents++;
         points += number;
     }
 

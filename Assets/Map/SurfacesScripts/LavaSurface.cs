@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class LavaSurface : MonoBehaviour
 {
-    bool ignite;
-
     // Start is called before the first frame update
     void Start()
     {
-        ignite = true;
+
     }
 
     // Update is called once per frame
@@ -22,42 +20,16 @@ public class LavaSurface : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Gun")
+        if (collision.gameObject.tag == "Gun" || collision.gameObject.tag == "Triangle")
         {
             return;
         }
 
-        if (ignite == true)
+        ICanSetOnFire target = collision.GetComponent<ICanSetOnFire>();
+
+        if (target != null) 
         {
-            StartCoroutine(Fire(collision));
+            StartCoroutine(target.GetFireDamage(0.5f, 2));
         }
-    }
-
-    private IEnumerator Fire(Collider2D collision)
-    {
-        if (collision.gameObject.tag != "Triangle")
-        {
-            IGetDamaged target = collision.GetComponent<IGetDamaged>();
-            if (target != null)
-            {
-                target.GetDamage(1);
-            }
-        }
-
-
-        ignite = false;
-        yield return new WaitForSeconds(0.2f);
-
-        ignite = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        ignite = true;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        ignite = true;
     }
 }
