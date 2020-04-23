@@ -50,7 +50,6 @@ public class LevelController : MonoBehaviour
         spawnPointsEnemy.AddRange(GameObject.FindGameObjectsWithTag("SpawnPointEnemy"));
         spawnPointsHero.AddRange(GameObject.FindGameObjectsWithTag("SpawnPointHero"));
 
-
         SpawnSettings();
 
         Spawn();
@@ -202,6 +201,8 @@ public class LevelController : MonoBehaviour
 
     protected void SpawnSettings()
     {
+        SpawnObstacleSettings();
+
         switch (Level)
         {
             case 1:
@@ -216,11 +217,6 @@ public class LevelController : MonoBehaviour
                 enemiesCounter[1][2] = 1;//s1
 
                 enemiesToNextWave = 0;
-
-
-                obstaclesCounter[0] = 40;//rock
-                obstaclesCounter[1] = 0;//tree
-                obstaclesCounter[2] = 1;//tower
                 break;
             case 2:
                 AddEnemiesWave();
@@ -234,11 +230,6 @@ public class LevelController : MonoBehaviour
                 enemiesCounter[1][2] = 1;//s1
 
                 enemiesToNextWave = 2;
-
-
-                obstaclesCounter[0] = 70;//rock
-                obstaclesCounter[1] = 0;//tree
-                obstaclesCounter[2] = 0;//tower
                 break;
             case 3:
                 AddEnemiesWave();
@@ -257,11 +248,6 @@ public class LevelController : MonoBehaviour
                 enemiesCounter[2][2] = 2;//s1
 
                 enemiesToNextWave = 4;
-
-
-                obstaclesCounter[0] = 10;//rock
-                obstaclesCounter[1] = 30;//tree
-                obstaclesCounter[2] = 0;//tower
                 break;
             case 4:
                 AddEnemiesWave();
@@ -274,17 +260,10 @@ public class LevelController : MonoBehaviour
                 enemiesCounter[2][2] = 5;//s1
 
                 enemiesToNextWave = 2;
-
-
-                obstaclesCounter[0] = 20;//rock
-                obstaclesCounter[1] = 40;//tree
-                obstaclesCounter[2] = 0;//tower
                 break;
             case 5://BOSS
                 AddEnemiesWave();
                 enemiesCounter[0][9] = 1;//bc1
-
-                obstaclesCounter[0] = 20;//rock
                 break;
             case 6:
                 AddEnemiesWave();
@@ -303,11 +282,6 @@ public class LevelController : MonoBehaviour
                 enemiesCounter[2][2] = 2;//s1
 
                 enemiesToNextWave = 0;
-
-
-                obstaclesCounter[0] = 40;//rock
-                obstaclesCounter[1] = 30;//tree
-                obstaclesCounter[2] = 3;//tower
                 break;
 
             case 7:
@@ -327,11 +301,6 @@ public class LevelController : MonoBehaviour
                 enemiesCounter[2][5] = 2;//s2
 
                 enemiesToNextWave = 2;
-
-
-                obstaclesCounter[0] = 100;//rock
-                obstaclesCounter[1] = 10;//tree
-                obstaclesCounter[2] = 0;//tower
                 break;
             case 8:
                 AddEnemiesWave();
@@ -351,11 +320,6 @@ public class LevelController : MonoBehaviour
                 enemiesCounter[1][5] = 2;//s2
 
                 enemiesToNextWave = 0;
-
-
-                obstaclesCounter[0] = 100;//rock
-                obstaclesCounter[1] = 40;//tree
-                obstaclesCounter[2] = 0;//tower
                 break;
             case 9:
                 AddEnemiesWave();
@@ -368,18 +332,10 @@ public class LevelController : MonoBehaviour
                 enemiesCounter[1][5] = 5;//s2
 
                 enemiesToNextWave = 1;
-
-
-                obstaclesCounter[0] = 20;//rock
-                obstaclesCounter[1] = 8;//tree
-                obstaclesCounter[2] = 1;//tower
                 break;
             case 10://BOSS
                 AddEnemiesWave();
                 enemiesCounter[0][10] = 1;//bt1
-
-                obstaclesCounter[0] = 10;//rock
-                obstaclesCounter[1] = 3;//tree
                 break;
             case 11:
                 AddEnemiesWave();
@@ -407,11 +363,6 @@ public class LevelController : MonoBehaviour
                 enemiesCounter[2][5] = 1;//s2
 
                 enemiesToNextWave = 0;
-
-
-                obstaclesCounter[0] = 20;//rock
-                obstaclesCounter[1] = 10;//tree
-                obstaclesCounter[2] = 1;//tower
                 break;
             case 12:
                 AddEnemiesWave();
@@ -430,11 +381,6 @@ public class LevelController : MonoBehaviour
                 enemiesCounter[2][8] = 2;//s3
 
                 enemiesToNextWave = 3;
-
-
-                obstaclesCounter[0] = 200;//rock
-                obstaclesCounter[1] = 0;//tree
-                obstaclesCounter[2] = 0;//tower
                 break;
             case 13:
                 AddEnemiesWave();
@@ -453,11 +399,6 @@ public class LevelController : MonoBehaviour
                 enemiesCounter[1][8] = 3;//s3
 
                 enemiesToNextWave = 1;
-
-
-                obstaclesCounter[0] = 20;//rock
-                obstaclesCounter[1] = 10;//tree
-                obstaclesCounter[2] = 1;//tower
                 break;
 
             case 14:
@@ -483,18 +424,10 @@ public class LevelController : MonoBehaviour
                 enemiesCounter[1][8] = 3;//s3
 
                 enemiesToNextWave = 1;
-
-
-                obstaclesCounter[0] = 30;//rock
-                obstaclesCounter[1] = 10;//tree
-                obstaclesCounter[2] = 2;//tower
                 break;
             case 15://BOSS
                 AddEnemiesWave();
                 enemiesCounter[0][11] = 1;//bs1
-
-                obstaclesCounter[0] = 10;//rock
-                obstaclesCounter[1] = 4;//tree
                 break;
             default:
                 break;
@@ -506,6 +439,45 @@ public class LevelController : MonoBehaviour
             {
                 enemyCounter += count;
             }
+        }
+    }
+
+    protected void SpawnObstacleSettings()
+    {
+        if (Level % 5 != 0)
+        {
+            int areaType = Random.Range(0, 4);
+            switch (areaType)
+            {
+                case 0://few obstacles
+                    obstaclesCounter[0] = Random.Range(0, 40);
+                    obstaclesCounter[1] = Random.Range(0, 10);
+                    obstaclesCounter[2] = Random.Range(0, 2);
+                    break;
+                case 1://forest
+                    obstaclesCounter[0] = Random.Range(0, 60);
+                    obstaclesCounter[1] = Random.Range(50, 130);
+                    obstaclesCounter[2] = Random.Range(0, 2);
+                    break;
+                case 2://mix
+                    obstaclesCounter[0] = Random.Range(20, 80);
+                    obstaclesCounter[1] = Random.Range(10, 80);
+                    obstaclesCounter[2] = Random.Range(1, 5);
+                    break;
+                case 3://a lot of small obstacles
+                    obstaclesCounter[0] = Random.Range(50, 130);
+                    obstaclesCounter[1] = Random.Range(0, 40);
+                    obstaclesCounter[2] = Random.Range(0, 2);
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            obstaclesCounter[0] = Random.Range(0, 5);
+            obstaclesCounter[1] = Random.Range(0, 2);
+            obstaclesCounter[2] = 0;
         }
     }
 }

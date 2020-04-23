@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class FireSurface : MonoBehaviour
 {
-    bool ignite;
-
     // Start is called before the first frame update
     void Start()
     {
-        ignite = true;
+
     }
 
     // Update is called once per frame
@@ -20,33 +18,16 @@ public class FireSurface : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (ignite == true) 
+        if (collision.gameObject.tag == "Gun" || collision.gameObject.tag == "Triangle")
         {
-            StartCoroutine(Fire(collision));
+            return;
         }
-    }
 
-    private IEnumerator Fire(Collider2D collision)
-    {
-        IGetDamaged target = collision.GetComponent<IGetDamaged>();
+        ICanSetOnFire target = collision.GetComponent<ICanSetOnFire>();
+
         if (target != null)
         {
-            target.GetDamage(1);
+            StartCoroutine(target.GetFireDamage(0.2f, 3));
         }
-
-        ignite = false;
-        yield return new WaitForSeconds(0.5f);
-
-        ignite = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        ignite = true;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        ignite = true;
     }
 }
