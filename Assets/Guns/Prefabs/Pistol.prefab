@@ -176,6 +176,7 @@ MonoBehaviour:
   isActive: 0
   attackSpeed: 0.5
   ammo: Infinity
+  sprite: {fileID: 21300000, guid: b2b9904890a840e41bda4092e860525b, type: 3}
   firePoint: {fileID: 1343430424215957567}
   bulletPrefab: {fileID: 5297232439948692029, guid: b4b7443ba2fbda24c94282650712c8c5,
     type: 3}

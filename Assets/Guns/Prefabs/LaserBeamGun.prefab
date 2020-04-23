@@ -332,6 +332,7 @@ MonoBehaviour:
   isActive: 0
   attackSpeed: 0
   ammo: 200
+  sprite: {fileID: 21300000, guid: 46d2ea677f2f303408d1423f001d942a, type: 3}
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 0}
   cast: {fileID: 6894152016832411908}

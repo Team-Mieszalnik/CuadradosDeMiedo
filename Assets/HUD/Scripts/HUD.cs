@@ -64,23 +64,24 @@ public class HUD : MonoBehaviour
 
         heroAmmoText.text = ammo;
 
-        weaponsImage.sprite = pickUpWeapon.weapon.GetComponent<SpriteRenderer>().sprite;
+        //weaponsImage.sprite = pickUpWeapon.weapon.GetComponent<SpriteRenderer>().sprite;
+        weaponsImage.sprite = pickUpWeapon.weapon.GetComponent<Weapon>().sprite;
         weaponsImage.SetNativeSize();
 
 
         enemiesLeft.text = LevelController.enemyCounter.ToString();
         cureCooldown.color = skills.CureReady ? Color.green : Color.gray;
 
-        heroHealthText.text =  ((int)hero.health).ToString() + " / " + ((int)hero.healthMax).ToString();
+        heroHealthText.text = ((int)hero.health).ToString() + " / " + ((int)hero.healthMax).ToString();
         heroEnergyText.text = ((int)hero.energy).ToString() + " / " + ((int)hero.energyMax).ToString();
         heroExpirienceText.text = Experience.points.ToString() + " / 10";
 
 
-        HealthUpgarade.image.color = experience.healthLevel == experience.healthMaxLevel ? Color.magenta : experience.CanHealthUpgrade() ? Color.yellow : Color.grey;
-        EnergyUpgarade.image.color = experience.energyLevel == experience.energyhMaxLevel ? Color.magenta : experience.CanEnergyUpgrade() ? Color.yellow : Color.grey;
-        MovementUpgrade.image.color = experience.movementLevel == experience.movementMaxLevel ? Color.magenta : experience.CanMovementUpgrade() ? Color.yellow : Color.grey;
-        CureUpgarade.image.color = experience.cureLevel == experience.cureMaxLevel ? Color.magenta : experience.CanCureUpgrade() ? Color.yellow : Color.grey;
-        ArmorUpgarade.image.color = experience.armorLevel == experience.armorMaxLevel ? Color.magenta : experience.CanArmorUpgrade() ? Color.yellow : Color.grey;
+        HealthUpgarade.image.color = experience.healthLevel == experience.healthMaxLevel ? new Color(0.29f, 0.0f, 0.5f) : experience.CanHealthUpgrade() ? new Color(1f, 0.84f, 0f) : Color.grey;
+        EnergyUpgarade.image.color = experience.energyLevel == experience.energyhMaxLevel ? new Color(0.29f, 0.0f, 0.5f) : experience.CanEnergyUpgrade() ? new Color(1f, 0.84f, 0f) : Color.grey;
+        MovementUpgrade.image.color = experience.movementLevel == experience.movementMaxLevel ? new Color(0.29f, 0.0f, 0.5f) : experience.CanMovementUpgrade() ? new Color(1f, 0.84f, 0f) : Color.grey;
+        CureUpgarade.image.color = experience.cureLevel == experience.cureMaxLevel ? new Color(0.29f, 0.0f, 0.5f) : experience.CanCureUpgrade() ? new Color(1f, 0.84f, 0f) : Color.grey;
+        ArmorUpgarade.image.color = experience.armorLevel == experience.armorMaxLevel ? new Color(0.29f, 0.0f, 0.5f) : experience.CanArmorUpgrade() ? new Color(1f, 0.84f, 0f) : Color.grey;
 
 
         heroHealthBar.value = hero.health;
@@ -99,6 +100,8 @@ public class HUD : MonoBehaviour
             isMiniMapVisible = !isMiniMapVisible;
             miniMap.SetActive(isMiniMapVisible);
         }
+
+        //if (Input.GetKeyDown(KeyCode.O)) Experience.points++;
 
     }
 
