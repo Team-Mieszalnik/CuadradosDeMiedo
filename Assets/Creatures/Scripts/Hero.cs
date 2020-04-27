@@ -8,7 +8,8 @@ using UnityEngine.Audio;
 public class Hero : Creature
 {
     [HideInInspector] 
-    public float damageReduction = 1;
+    public float damageReduction = 0;
+    public float armor = 1;
 
     //[SerializeField]
     //public Dictionary<string, AudioClip> audioClips;
@@ -62,7 +63,7 @@ public class Hero : Creature
 
     public override void GetDamage(float damage)
     {
-        health -= damage / damageReduction;
+        health -= damage / (armor + damageReduction);
 
         audioSource.PlayOneShot(damageClip);
 

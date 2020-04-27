@@ -71,13 +71,15 @@ public abstract class Creature : MonoBehaviour, IGetDamaged, ICanSetOnFire
     {
         if (health <= 0)
         {
-            gameObject.GetComponent<PolygonCollider2D>().enabled = false;
-            animator.SetBool("dead", true);
+            if (gameObject.GetComponent<PolygonCollider2D>().enabled == true) 
+            {
+                gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+                animator.SetBool("dead", true);
 
-            //postac umarla i nie zyje
-            //i co dalej?
-            StartCoroutine(AfterDeath());
-
+                //postac umarla i nie zyje
+                //i co dalej?
+                StartCoroutine(AfterDeath());
+            }
         }
         else
         {
@@ -103,6 +105,8 @@ public abstract class Creature : MonoBehaviour, IGetDamaged, ICanSetOnFire
         if (ignite) 
         {
             ignite = false;
+            Debug.Log(gameObject.GetComponentInChildren<ParticleSystem>());
+            gameObject.GetComponentInChildren<ParticleSystem>().enableEmission = true;
 
             while (fireTime > 0) 
             {
@@ -113,6 +117,7 @@ public abstract class Creature : MonoBehaviour, IGetDamaged, ICanSetOnFire
                 fireTime -= 0.1F;//animation time
             }
 
+            gameObject.GetComponentInChildren<ParticleSystem>().enableEmission = false;
             ignite = true;
         }
     }

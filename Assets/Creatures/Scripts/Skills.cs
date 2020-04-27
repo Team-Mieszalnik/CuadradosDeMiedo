@@ -13,13 +13,13 @@ public class Skills : MonoBehaviour
     public bool CureReady = true;
 
     public float curePower = 20;
-    public float cureEnergy = 30;
+    public float cureEnergy = 40;
     public float cureDelay = 5;
 
     public float sprintPower = 5;
     public float sprintEnergy = 10;
 
-    public float defensePower = 2;
+    public float defensePower = 1;
     public float defenseEnergy = 5;
 
 

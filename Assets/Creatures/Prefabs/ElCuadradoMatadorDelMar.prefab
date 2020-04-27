@@ -530,7 +530,7 @@ MonoBehaviour:
   - {x: -0.8630295, y: 0.85784817, z: 0}
   m_ShapePathHash: 920864149
   m_Mesh: {fileID: 0}
-  m_InstanceId: 182140
+  m_InstanceId: 72194
 --- !u!114 &2044817348689638411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,7 +558,7 @@ MonoBehaviour:
     type: 3}
   distance: 0
   move: 10
-  Exp: 10
+  Exp: 20
   alternativeBulletPrefab: {fileID: 8529288225209641873, guid: f9af2fe138bb42a4892e455289edc6cf,
     type: 3}
 --- !u!114 &-8806703347335463989

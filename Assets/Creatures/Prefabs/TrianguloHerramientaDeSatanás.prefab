@@ -303,7 +303,7 @@ MonoBehaviour:
   - {x: -0.89479303, y: -0.89002156, z: 0}
   m_ShapePathHash: -1754626425
   m_Mesh: {fileID: 0}
-  m_InstanceId: 181814
+  m_InstanceId: 72402
 --- !u!114 &1346418999732950558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,7 +331,7 @@ MonoBehaviour:
     type: 3}
   distance: 10
   move: 80
-  Exp: 10
+  Exp: 20
 --- !u!114 &-9037411315446332368
 MonoBehaviour:
   m_ObjectHideFlags: 0

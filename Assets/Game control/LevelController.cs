@@ -205,7 +205,7 @@ public class LevelController : MonoBehaviour
 
         switch (Level)
         {
-            case 1:
+            case 1://8exp
                 AddEnemiesWave();
                 enemiesCounter[0][0] = 1;//c1
                 enemiesCounter[0][1] = 2;//t1
@@ -218,7 +218,7 @@ public class LevelController : MonoBehaviour
 
                 enemiesToNextWave = 0;
                 break;
-            case 2:
+            case 2://9exp
                 AddEnemiesWave();
                 enemiesCounter[0][0] = 1;//c1
                 enemiesCounter[0][1] = 2;//t1
@@ -227,11 +227,11 @@ public class LevelController : MonoBehaviour
                 AddEnemiesWave();
                 enemiesCounter[1][0] = 2;//c1
                 enemiesCounter[1][1] = 1;//t1
-                enemiesCounter[1][2] = 1;//s1
+                enemiesCounter[1][2] = 2;//s1
 
                 enemiesToNextWave = 2;
                 break;
-            case 3:
+            case 3://15exp
                 AddEnemiesWave();
                 enemiesCounter[0][0] = 2;//c1
                 enemiesCounter[0][1] = 1;//t1
@@ -249,7 +249,7 @@ public class LevelController : MonoBehaviour
 
                 enemiesToNextWave = 4;
                 break;
-            case 4:
+            case 4://15exp
                 AddEnemiesWave();
                 enemiesCounter[0][0] = 5;//c1
 
@@ -261,11 +261,11 @@ public class LevelController : MonoBehaviour
 
                 enemiesToNextWave = 2;
                 break;
-            case 5://BOSS
+            case 5://BOSS 20exp
                 AddEnemiesWave();
                 enemiesCounter[0][9] = 1;//bc1
                 break;
-            case 6:
+            case 6://18exp
                 AddEnemiesWave();
                 enemiesCounter[0][0] = 2;//c1
                 enemiesCounter[0][1] = 2;//t1
@@ -277,14 +277,14 @@ public class LevelController : MonoBehaviour
                 enemiesCounter[1][2] = 2;//s1
 
                 AddEnemiesWave();
-                enemiesCounter[2][3] = 2;//c2
-                enemiesCounter[2][1] = 1;//t1
+                enemiesCounter[2][3] = 1;//c2
+                enemiesCounter[2][1] = 2;//t1
                 enemiesCounter[2][2] = 2;//s1
 
                 enemiesToNextWave = 0;
                 break;
 
-            case 7:
+            case 7://32exp
                 AddEnemiesWave();
                 enemiesCounter[0][0] = 2;//c1
                 enemiesCounter[0][4] = 2;//t2
@@ -302,7 +302,7 @@ public class LevelController : MonoBehaviour
 
                 enemiesToNextWave = 2;
                 break;
-            case 8:
+            case 8://30exp
                 AddEnemiesWave();
                 enemiesCounter[0][0] = 2;//c1
                 enemiesCounter[0][1] = 2;//t1
@@ -321,7 +321,7 @@ public class LevelController : MonoBehaviour
 
                 enemiesToNextWave = 0;
                 break;
-            case 9:
+            case 9://30exp
                 AddEnemiesWave();
                 enemiesCounter[0][3] = 5;//c2
 
@@ -333,11 +333,11 @@ public class LevelController : MonoBehaviour
 
                 enemiesToNextWave = 1;
                 break;
-            case 10://BOSS
+            case 10://BOSS 20exp
                 AddEnemiesWave();
                 enemiesCounter[0][10] = 1;//bt1
                 break;
-            case 11:
+            case 11://41exp
                 AddEnemiesWave();
                 enemiesCounter[0][6] = 2;//c3
                 enemiesCounter[0][1] = 1;//t1
@@ -364,7 +364,7 @@ public class LevelController : MonoBehaviour
 
                 enemiesToNextWave = 0;
                 break;
-            case 12:
+            case 12://54exp
                 AddEnemiesWave();
                 enemiesCounter[0][6] = 2;//c3
                 enemiesCounter[0][7] = 2;//t3
@@ -382,7 +382,7 @@ public class LevelController : MonoBehaviour
 
                 enemiesToNextWave = 3;
                 break;
-            case 13:
+            case 13://45exp
                 AddEnemiesWave();
                 enemiesCounter[0][0] = 2;//c1
                 enemiesCounter[0][3] = 2;//c2
@@ -401,7 +401,7 @@ public class LevelController : MonoBehaviour
                 enemiesToNextWave = 1;
                 break;
 
-            case 14:
+            case 14://72exp
                 AddEnemiesWave();
                 enemiesCounter[0][3] = 2;//c2
                 enemiesCounter[0][4] = 2;//t2
@@ -425,7 +425,7 @@ public class LevelController : MonoBehaviour
 
                 enemiesToNextWave = 1;
                 break;
-            case 15://BOSS
+            case 15://BOSS 20exp
                 AddEnemiesWave();
                 enemiesCounter[0][11] = 1;//bs1
                 break;

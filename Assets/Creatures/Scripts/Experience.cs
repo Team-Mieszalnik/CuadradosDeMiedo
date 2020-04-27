@@ -8,7 +8,12 @@ public class Experience : MonoBehaviour
     public static int DefeatedOpponents { get; private set; }
 
     public static int points;
-    private int upgradeCost = 10;
+
+    private int healthUpgradeCost = 10;
+    private int energyUpgradeCost = 10;
+    private int movementUpgradeCost = 10;
+    private int cureUpgradeCost = 10;
+    private int armorUpgradeCost = 10;
 
     [HideInInspector]
     public int healthLevel;
@@ -65,27 +70,27 @@ public class Experience : MonoBehaviour
 
     public bool CanHealthUpgrade()
     {
-        return ((points >= upgradeCost) && (healthLevel < healthMaxLevel));
+        return ((points >= healthUpgradeCost) && (healthLevel < healthMaxLevel));
     }
 
     public bool CanEnergyUpgrade()
     {
-        return ((points >= upgradeCost) && (energyLevel < energyhMaxLevel));
+        return ((points >= energyUpgradeCost) && (energyLevel < energyhMaxLevel));
     }
 
     public bool CanMovementUpgrade()
     {
-        return (points >= upgradeCost && movementLevel < movementMaxLevel);
+        return (points >= movementUpgradeCost && movementLevel < movementMaxLevel);
     }
 
     public bool CanCureUpgrade()
     {
-        return (points >= upgradeCost && cureLevel < cureMaxLevel);
+        return (points >= cureUpgradeCost && cureLevel < cureMaxLevel);
     }
 
     public bool CanArmorUpgrade()
     {
-        return (points >= upgradeCost && armorLevel < armorMaxLevel);
+        return (points >= armorUpgradeCost && armorLevel < armorMaxLevel);
     }
 
 
@@ -120,7 +125,8 @@ public class Experience : MonoBehaviour
             }
 
             healthLevel++;
-            points -= upgradeCost;
+            points -= healthUpgradeCost;
+            healthUpgradeCost += 9;
         }
     }
 
@@ -155,7 +161,8 @@ public class Experience : MonoBehaviour
             }
 
             energyLevel++;
-            points -= upgradeCost;
+            points -= energyUpgradeCost;
+            energyUpgradeCost += 9;
         }
     }
 
@@ -181,17 +188,18 @@ public class Experience : MonoBehaviour
             {
                 skills.sprintEnergy -= 1;
                 skills.sprintPower += 0.5f;
-                hero.speed += 0.5f;
+                hero.speed += 0.4f;
             }
             if (movementLevel == 4)
             {
                 skills.sprintEnergy -= 1;
                 skills.sprintPower += 0.5f;
-                hero.speed += 0.5f;
+                hero.speed += 0.6f;
             }
 
             movementLevel++;
-            points -= upgradeCost;
+            points -= movementUpgradeCost;
+            movementUpgradeCost += 9;
         }
     }
 
@@ -201,33 +209,34 @@ public class Experience : MonoBehaviour
         {
             if (cureLevel == 0)
             {
-                skills.cureEnergy -= 2;
+                skills.cureEnergy -= 4;
             }
             if (cureLevel == 1)
             {
-                skills.cureEnergy -= 2;
+                skills.cureEnergy -= 4;
                 skills.curePower += 4;
             }
             if (cureLevel == 2)
             {
-                skills.cureEnergy -= 2;
+                skills.cureEnergy -= 4;
                 skills.curePower += 4;
             }
             if (cureLevel == 3)
             {
-                skills.cureEnergy -= 2;
+                skills.cureEnergy -= 4;
                 skills.curePower += 4;
                 skills.cureDelay -= 0.5f;
             }
             if (cureLevel == 4)
             {
-                skills.cureEnergy -= 2;
+                skills.cureEnergy -= 4;
                 skills.curePower += 8;
                 skills.cureDelay -= 0.5f;
             }
 
             cureLevel++;
-            points -= upgradeCost;
+            points -= cureUpgradeCost;
+            cureUpgradeCost += 9;
         }
     }
 
@@ -252,16 +261,17 @@ public class Experience : MonoBehaviour
             if (armorLevel == 3)
             {
                 skills.defenseEnergy -= 0.4f;
-                skills.defensePower += 1f;
+                hero.armor += 0.5f;
             }
             if (armorLevel == 4)
             {
                 skills.defenseEnergy -= 0.4f;
-                skills.defensePower += 2f;
+                hero.armor += 0.5f;
             }
 
             armorLevel++;
-            points -= upgradeCost;
+            points -= armorUpgradeCost;
+            armorUpgradeCost += 9;
         }
     }
 

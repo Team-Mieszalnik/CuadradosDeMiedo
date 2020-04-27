@@ -18,6 +18,8 @@ TagManager:
   - EnemyBullet
   - Surface
   - Triangle
+  - MusicManager
+  - FlameThrower
   layers:
   - Default
   - TransparentFX
