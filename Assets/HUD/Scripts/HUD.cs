@@ -101,7 +101,7 @@ public class HUD : MonoBehaviour
             miniMap.SetActive(isMiniMapVisible);
         }
 
-        //if (Input.GetKeyDown(KeyCode.O)) Experience.points++;
+        if (Input.GetKeyDown(KeyCode.O)) Experience.points++;
 
     }
 
