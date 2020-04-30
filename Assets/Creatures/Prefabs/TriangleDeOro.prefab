@@ -210,7 +210,7 @@ MonoBehaviour:
   spawnable: {fileID: 0}
   distance: 3
   move: 70
-  Exp: 1
+  Exp: 3
 --- !u!114 &1852682782495342013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,7 +257,7 @@ MonoBehaviour:
   - {x: -0.89479303, y: -0.89002156, z: 0}
   m_ShapePathHash: -1754626425
   m_Mesh: {fileID: 0}
-  m_InstanceId: 181650
+  m_InstanceId: 30460
 --- !u!114 &7876753338622336327
 MonoBehaviour:
   m_ObjectHideFlags: 0

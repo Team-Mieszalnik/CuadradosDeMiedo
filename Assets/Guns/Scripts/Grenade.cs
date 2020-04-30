@@ -16,12 +16,6 @@ public class Grenade : Bullet
             target.GetDamage(damage);
             Explosion();
         }
-
-        if (collision.GetComponent<IBulletDestroyable>() != null)
-        {
-            Explosion();
-        }
-
     }
 
     private void Explosion()

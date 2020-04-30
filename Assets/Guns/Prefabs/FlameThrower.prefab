@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 973677329}
   m_Layer: 0
   m_Name: Fire Point
-  m_TagString: Untagged
+  m_TagString: FlameThrower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4959,6 +4959,7 @@ MonoBehaviour:
   isActive: 0
   attackSpeed: 0
   ammo: 200
+  sprite: {fileID: 21300000, guid: c0ab6c49ac17d70418bb586af24d7fd5, type: 3}
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 0}
   cast: {fileID: 3796136698089617736}

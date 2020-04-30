@@ -8,6 +8,7 @@ public abstract class Weapon : MonoBehaviour
     public bool isActive;
     public float attackSpeed;
     public float ammo;
+    public Sprite sprite;
 
     public Transform firePoint;
     public GameObject bulletPrefab;
