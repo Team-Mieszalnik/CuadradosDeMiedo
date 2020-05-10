@@ -19,6 +19,8 @@ public abstract class Weapon : MonoBehaviour
 
     protected float time;
 
+    protected bool isShooting;
+
     // Start is called before the first frame update
     protected void Start()
     {
@@ -30,21 +32,14 @@ public abstract class Weapon : MonoBehaviour
     // Update is called once per frame
     protected void Update()
     {
-        if (isActive)
-        {
-            mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (!isActive) return;
+        if (ammo <= 0) Destroy(gameObject);
+        if (Input.GetMouseButtonDown(0)) StartShooting();
+        if (isShooting) Shooting();
+        if (Input.GetMouseButtonUp(0)) StopShooting();
 
-            Control();
-
-            time += Time.deltaTime;
-
-            if (ammo <= 0)
-            {
-                Destroy(gameObject);
-            }
-
-        }
-
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        time += Time.deltaTime;
     }
 
     protected void FixedUpdate()
@@ -65,9 +60,12 @@ public abstract class Weapon : MonoBehaviour
         }
     }
 
-    protected virtual void Control()
+    protected virtual void StartShooting() => isShooting = true;
+    protected virtual void StopShooting() => isShooting = false;
+
+    protected virtual void Shooting()
     {
-        if (Input.GetMouseButton(0) && time > attackSpeed)
+        if (time > attackSpeed)
         {
             audioSource.Play();
             time = 0;
@@ -77,10 +75,8 @@ public abstract class Weapon : MonoBehaviour
         }
     }
 
-    protected virtual void Shoot()
-    {
 
-    }
+    protected virtual void Shoot() { }
 
 
     protected virtual IEnumerator ShootAnimation()
