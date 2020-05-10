@@ -74,7 +74,7 @@ public class HUD : MonoBehaviour
 
         heroHealthText.text = ((int)hero.health).ToString() + " / " + ((int)hero.healthMax).ToString();
         heroEnergyText.text = ((int)hero.energy).ToString() + " / " + ((int)hero.energyMax).ToString();
-        heroExpirienceText.text = Experience.points.ToString() + " / 10";
+        heroExpirienceText.text = "EXPERIENCE: " + Experience.points.ToString();
 
 
         HealthUpgarade.image.color = experience.healthLevel == experience.healthMaxLevel ? new Color(0.29f, 0.0f, 0.5f) : experience.CanHealthUpgrade() ? new Color(1f, 0.84f, 0f) : Color.grey;
@@ -86,7 +86,7 @@ public class HUD : MonoBehaviour
 
         heroHealthBar.value = hero.health;
         heroEnergyBar.value = hero.energy;
-        heroExpirienceBar.value = Experience.points;
+        //heroExpirienceBar.value = Experience.points;
 
 
         if (Input.GetKeyDown(KeyCode.Alpha1)) UpgradeHealth();
