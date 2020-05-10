@@ -7,34 +7,53 @@ using UnityEngine.UI;
 
 public class MusicManager : MonoBehaviour
 {
-    public static bool isThereAnInstance = false;
-
-    public AudioClip[] audioClips;
+    //Singleton
+    private static MusicManager _instance;
+    public static MusicManager Instance
+    {
+        get
+        {
+            return _instance;
+        }
+    }
     private AudioSource audioSource;
 
+    //Order of songs:
+    // 1 Square it up
+    // 2 Hex bells
+    public AudioClip[] audioClips_Primavera;    //map 1
+    public AudioClip[] audioClips_Invierno;    //map 2
+    public AudioClip[] audioClips_Arena;
+    public AudioClip[] audioClips_Vesuvio;
+
+    private int bigLevel;
+
     private bool isPlaying = true;
-    private int currentClipNumber;
+
+    private string currentMapName;
+    public void LoadingScreen(string newMapName = "UNDEFINED")
+    {
+        currentMapName = newMapName;
+        StopMusic();
+    }
+    public static void StartMap() => Instance.PlayMusic();
 
     // Start is called before the first frame update
     void Start()
     {
-        if (isThereAnInstance)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        isThereAnInstance = true;
         audioSource = GetComponent<AudioSource>();
-        DontDestroyOnLoad(gameObject);              //This makes sure that the music manager stays between the scenes
-        currentClipNumber = 0;
+        if (_instance == null) _instance = this;
+        else return;
+        bigLevel = 0;
         PlayMusic();
+        DontDestroyOnLoad(gameObject);
     }
 
     public void StartStopFunction()
     {
-        Text buttonText= EventSystem.current.currentSelectedGameObject.GetComponentInChildren<Text>();
+        Text buttonText = EventSystem.current.currentSelectedGameObject.GetComponentInChildren<Text>();
         if (isPlaying)
-        { 
+        {
             PauseMusic();
             buttonText.text = "Start Music";
         }
@@ -48,9 +67,16 @@ public class MusicManager : MonoBehaviour
     private void PauseMusic()
     {
         isPlaying = false;
-        StopCoroutine("WaitForMusicEnd");
+        //StopCoroutine("WaitForMusicEnd");
         //audioSource.Stop();
         audioSource.Pause();
+    }
+
+    private void StopMusic()
+    {
+        isPlaying = false;
+        //StopCoroutine("WaitForMusicEnd");
+        audioSource.Stop();
     }
 
     private void PlayMusic()
@@ -58,25 +84,46 @@ public class MusicManager : MonoBehaviour
         isPlaying = true;
         //audioSource.Stop();
         audioSource.Pause();
-        audioSource.clip = audioClips[currentClipNumber];
+        switch (currentMapName)
+        {
+            case "Primavera":
+                audioSource.clip = audioClips_Primavera[bigLevel];
+                break;
+            case "Invierno":
+                audioSource.clip = audioClips_Invierno[bigLevel];
+                break;
+            case "Arena":
+                audioSource.clip = audioClips_Arena[bigLevel];
+                break;
+            case "Vesuvio":
+                audioSource.clip = audioClips_Vesuvio[bigLevel];
+                break;
+            case "Boss":
+                audioSource.clip = audioClips_Primavera[bigLevel];
+                bigLevel++;
+                break;
+            default:
+                audioSource.clip = audioClips_Primavera[bigLevel];
+                break;
+        }
         audioSource.Play();
-        StartCoroutine("WaitForMusicEnd");
+        //StartCoroutine("WaitForMusicEnd");
     }
 
     public void NextClip()
     {
-        if (++currentClipNumber >= audioClips.Length) currentClipNumber = 0;
+        if (++bigLevel > audioClips_Primavera.Length - 1) bigLevel = 0;
         if (isPlaying) PlayMusic();
     }
     public void PreviousClip()
     {
-        if (--currentClipNumber < 0) currentClipNumber = audioClips.Length-1;
+        if (--bigLevel < 0) bigLevel = audioClips_Primavera.Length - 1;
         if (isPlaying) PlayMusic();
     }
 
-    IEnumerator WaitForMusicEnd()
-    {
-        while (audioSource.isPlaying) yield return null;
-        NextClip();
-    }
+    //IEnumerator WaitForMusicEnd()
+    //{
+    //    while (audioSource.isPlaying) yield return null;
+    //    NextClip();
+    //}
 }

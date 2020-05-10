@@ -72,6 +72,8 @@ public class MapController : MonoBehaviour
     {
         SceneSetings();
 
+        MusicManager.Instance.LoadingScreen(SceneName);
+
         if (GameObject.Find("Hero") != null)
         {
             GameObject.Find("Hero").transform.parent = null;
@@ -94,7 +96,7 @@ public class MapController : MonoBehaviour
             return;
         }
 
-        if (LevelController.Level % 5 != 0) 
+        if (LevelController.Level % 5 != 0)
         {
             switch (Random.Range(1, 5))
             {

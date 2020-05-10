@@ -15,6 +15,7 @@ public class LoadingMenu : MonoBehaviour
 
     public void ContinueGame()
     {
+        MusicManager.StartMap();
         MapController.GoNextLevel();
     }
 
