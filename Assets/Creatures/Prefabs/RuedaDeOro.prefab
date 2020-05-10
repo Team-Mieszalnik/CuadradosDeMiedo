@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &6460974396529315419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7156510250544237898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5288bff712907714dadf1142555b479d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6686775825369388648
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +286,7 @@ MonoBehaviour:
   - {x: -0.52455693, y: -0.7182689, z: 0}
   m_ShapePathHash: 1246413008
   m_Mesh: {fileID: 0}
-  m_InstanceId: 322106
+  m_InstanceId: 272400
 --- !u!114 &2725549637699872048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +308,7 @@ MonoBehaviour:
   energyRegeneration: 0
   rb: {fileID: 0}
   firePoint: {fileID: 0}
-  bulletPrefab: {fileID: 2049254497997105686, guid: 13cb8480bc2610947b37ebd90c8b6ff7,
+  bulletPrefab: {fileID: 1345353457841224299, guid: 299fe081f1d6e9f409b903696f83e02f,
     type: 3}
   spawnable: {fileID: 0}
   distance: 5
@@ -384,6 +372,18 @@ MonoBehaviour:
   - {fileID: 1609370456669826762, guid: 72c1529b610ba5042bb53d928056e9ee, type: 3}
   - {fileID: 5956721176902146702, guid: 0484df7bad6e00044b8d5e7155deed7a, type: 3}
   chance: 30
+--- !u!114 &6460974396529315419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156510250544237898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5288bff712907714dadf1142555b479d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3334120212006277711
 PrefabInstance:
   m_ObjectHideFlags: 0

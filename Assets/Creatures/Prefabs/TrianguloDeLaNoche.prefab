@@ -229,7 +229,7 @@ MonoBehaviour:
   - {x: -0.89479303, y: -0.89002156, z: 0}
   m_ShapePathHash: -1754626425
   m_Mesh: {fileID: 0}
-  m_InstanceId: 30416
+  m_InstanceId: 273128
 --- !u!114 &6486464806842368407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,7 +308,7 @@ MonoBehaviour:
   energyRegeneration: 0
   rb: {fileID: 0}
   firePoint: {fileID: 0}
-  bulletPrefab: {fileID: 6151726827928093468, guid: 731d8abf855e3ed4abf9d7bbd613430d,
+  bulletPrefab: {fileID: 5469898938540487657, guid: e7e76767610975a4a986d5177f32cbc5,
     type: 3}
   spawnable: {fileID: 0}
   distance: 5
