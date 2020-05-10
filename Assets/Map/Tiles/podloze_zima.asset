@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: podloze_zima
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 5477bcf078a32994dba265c51812eea1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f26be92a22f1a49469db58f733d95d19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
