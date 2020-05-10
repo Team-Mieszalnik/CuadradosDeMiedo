@@ -5,56 +5,29 @@ using UnityEngine;
 public class CastWeapons : Weapon
 {
     public GameObject cast;
-    private bool isLoop = false;
     public AudioClip startClip;
     public AudioClip loopClip;
 
-    private AudioSource ASstart;
-    private AudioSource ASloop;
-
-
-    private void Awake()
+    protected override void StartShooting()
     {
+        base.StartShooting();
+        cast.SetActive(true);
+        audioSource.PlayOneShot(startClip);
+        audioSource.loop = false;
+    }
+
+    protected override void StopShooting()
+    {
+        base.StopShooting();
         cast.SetActive(false);
-        ASstart = gameObject.AddComponent<AudioSource>();
-        ASstart.clip = startClip;
-        ASstart.loop = false;
-        ASloop = gameObject.AddComponent<AudioSource>();
-        ASloop.clip = loopClip;
-        ASloop.loop = true;
+        audioSource.Stop();
     }
 
-    protected override void Control()
+    protected override void Shooting()
     {
-        if (Input.GetMouseButton(0))
-        {
-            cast.SetActive(true);
-            Loop();
-            // Shoot();
-            //StartCoroutine(ShootAnimation());
-            ammo -= 10 * Time.deltaTime;
-        }
-        else
-        {
-            StopLoop();
-            cast.SetActive(false);
-        }
+        ammo -= 10 * Time.deltaTime;
+
+        if (!audioSource.isPlaying) { audioSource.PlayOneShot(loopClip); audioSource.loop = true; }
     }
 
-    float initialDelay = 0.1f;
-    private void Loop()
-    {
-        if (isLoop == false)
-        {
-            isLoop = true;
-            ASstart.Play();
-            ASloop.PlayDelayed(startClip.length-initialDelay);
-        }
-    }
-    private void StopLoop()
-    {
-        isLoop = false;
-        ASstart.Stop();
-        ASloop.Stop();
-    }
 }
