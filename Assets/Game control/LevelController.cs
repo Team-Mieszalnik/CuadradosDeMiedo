@@ -25,8 +25,11 @@ public class LevelController : MonoBehaviour
     public List<GameObject> enemies;
     [HideInInspector] public List<List<int>> enemiesCounter;
 
-    public List<GameObject> obstacles;
-    [HideInInspector] public List<int> obstaclesCounter;
+    public List<GameObject> obstaclesSmall;
+    public List<GameObject> obstaclesTrees;
+    public List<GameObject> obstaclesBig;
+    //[HideInInspector] public List<int> obstaclesCounter;
+    public int[] obstaclesCounter;
 
 
     // Start is called before the first frame update
@@ -38,8 +41,9 @@ public class LevelController : MonoBehaviour
         enemiesToNextWave = 0;
         waveNumber = 0;
 
-        obstaclesCounter = new List<int>();
-        obstaclesCounter.AddRange(Enumerable.Repeat<int>(0, obstacles.Count));
+        //obstaclesCounter = new List<int>();
+        //obstaclesCounter.AddRange(Enumerable.Repeat<int>(0, obstacles.Count));
+        obstaclesCounter = new int[3] { 0, 0, 0 };
 
 
         spawnPointsObstacle = new List<GameObject>();
@@ -140,24 +144,77 @@ public class LevelController : MonoBehaviour
     protected void SpawnObstacles()
     {
         int positionNumber;
+        int obstacleVariant;
 
-        for (int i = 0; i < obstacles.Count; i++)
+        for (int i = 0; i < obstaclesCounter[0]; i++)//SMALL OBSTACLES
         {
-            for (int j = 0; j < obstaclesCounter[i]; j++)
+            obstacleVariant = Random.Range(0, obstaclesSmall.Count);
+
+            if (spawnPointsObstacle.Count <= 0)//check the availability of spawn points
             {
-                if (spawnPointsObstacle.Count <= 0)//check the availability of spawn points
-                {
-                    Debug.Log("MISSED SPAWN POINTS - OBSTACLE");
-                    return;
-                }
-
-
-                positionNumber = Random.Range(0, spawnPointsObstacle.Count - 1);
-                Instantiate(obstacles[i], spawnPointsObstacle[positionNumber].transform);
-
-                spawnPointsObstacle.RemoveAt(positionNumber);
+                Debug.Log("MISSED SPAWN POINTS - OBSTACLE");
+                return;
             }
+
+            positionNumber = Random.Range(0, spawnPointsObstacle.Count);
+            Instantiate(obstaclesSmall[obstacleVariant], spawnPointsObstacle[positionNumber].transform);
+
+            spawnPointsObstacle.RemoveAt(positionNumber);
         }
+
+        for (int i = 0; i < obstaclesCounter[1]; i++)//TREES
+        {
+            obstacleVariant = Random.Range(0, obstaclesTrees.Count);
+
+            if (spawnPointsObstacle.Count <= 0)//check the availability of spawn points
+            {
+                Debug.Log("MISSED SPAWN POINTS - OBSTACLE");
+                return;
+            }
+
+            positionNumber = Random.Range(0, spawnPointsObstacle.Count);
+            Instantiate(obstaclesTrees[obstacleVariant], spawnPointsObstacle[positionNumber].transform);
+
+            spawnPointsObstacle.RemoveAt(positionNumber);
+        }
+
+        for (int i = 0; i < obstaclesCounter[2]; i++)//BIG OBSTACLES
+        {
+            obstacleVariant = Random.Range(0, obstaclesBig.Count);
+
+            if (spawnPointsObstacle.Count <= 0)//check the availability of spawn points
+            {
+                Debug.Log("MISSED SPAWN POINTS - OBSTACLE");
+                return;
+            }
+
+            positionNumber = Random.Range(0, spawnPointsObstacle.Count);
+            Instantiate(obstaclesBig[obstacleVariant], spawnPointsObstacle[positionNumber].transform);
+
+            spawnPointsObstacle.RemoveAt(positionNumber);
+        }
+
+
+
+
+
+        //for (int i = 0; i < obstacles.Count; i++)
+        //{
+        //    for (int j = 0; j < obstaclesCounter[i]; j++)
+        //    {
+        //        if (spawnPointsObstacle.Count <= 0)//check the availability of spawn points
+        //        {
+        //            Debug.Log("MISSED SPAWN POINTS - OBSTACLE");
+        //            return;
+        //        }
+
+
+        //        positionNumber = Random.Range(0, spawnPointsObstacle.Count - 1);
+        //        Instantiate(obstacles[i], spawnPointsObstacle[positionNumber].transform);
+
+        //        spawnPointsObstacle.RemoveAt(positionNumber);
+        //    }
+        //}
     }
 
 
