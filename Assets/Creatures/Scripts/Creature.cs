@@ -105,7 +105,6 @@ public abstract class Creature : MonoBehaviour, IGetDamaged, ICanSetOnFire
         if (ignite) 
         {
             ignite = false;
-            Debug.Log(gameObject.GetComponentInChildren<ParticleSystem>());
             gameObject.GetComponentInChildren<ParticleSystem>().enableEmission = true;
 
             while (fireTime > 0) 

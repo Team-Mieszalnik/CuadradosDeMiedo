@@ -98,7 +98,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -205,8 +205,10 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 6151726827928093468, guid: 731d8abf855e3ed4abf9d7bbd613430d,
     type: 3}
+  spawnable: {fileID: 0}
   distance: 0
   move: 0
+  Exp: 0
 --- !u!114 &8450411637154309475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +255,7 @@ MonoBehaviour:
   - {x: -0.89479303, y: -0.89002156, z: 0}
   m_ShapePathHash: -1754626425
   m_Mesh: {fileID: 0}
-  m_InstanceId: 177832
+  m_InstanceId: 99026
 --- !u!114 &-4576005375783155284
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4218011854417256747}
   - component: {fileID: 5108327152209632326}
   - component: {fileID: 3664019286969664539}
-  - component: {fileID: 3698046747927520428}
+  - component: {fileID: 7646675046343646367}
   m_Layer: 0
   m_Name: ObstacleTowerWinter
   m_TagString: Untagged
@@ -145,9 +145,9 @@ MonoBehaviour:
   - {x: -0.5595469, y: 0.6911726, z: 0}
   m_ShapePathHash: 109717130
   m_Mesh: {fileID: 0}
-  m_InstanceId: 55714
---- !u!68 &3698046747927520428
-EdgeCollider2D:
+  m_InstanceId: 47518
+--- !u!60 &7646675046343646367
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -160,11 +160,22 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: -0.019664133, y: -0.61818546}
-  - {x: -0.779602, y: -0.60884136}
-  - {x: -0.84031147, y: -1.0141301}
-  - {x: 0.8332909, y: -1.0189782}
-  - {x: 0.7706267, y: -0.60785663}
-  - {x: -0.018641999, y: -0.6190237}
+    m_Paths:
+    - - {x: 0.6574257, y: -0.94060254}
+      - {x: 0.3902709, y: -0.9430615}
+      - {x: 0.55871284, y: -0.99420863}
+    - - {x: 0.7709137, y: -0.6368292}
+      - {x: -0.78650707, y: -0.6486073}
+      - {x: -0.8414696, y: -1.017635}
+      - {x: 0.24670643, y: -1.0344812}
+      - {x: 0.83767056, y: -1.0223498}

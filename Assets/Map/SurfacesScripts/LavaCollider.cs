@@ -24,8 +24,11 @@ public class LavaCollider : MonoBehaviour
     {
         if (collision.gameObject.tag == "Hero") 
         {
-            Debug.Log("hhhhhhhh");
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<TilemapCollider2D>());
+        }
 
+        if (collision.gameObject.tag == "Triangle")
+        {
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<TilemapCollider2D>());
         }
     }

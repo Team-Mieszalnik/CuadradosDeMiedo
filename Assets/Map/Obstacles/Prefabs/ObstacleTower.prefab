@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7582315143558510682}
   - component: {fileID: 1537069317718525239}
   - component: {fileID: 7019315477724929386}
-  - component: {fileID: 6981338020338335197}
+  - component: {fileID: 7147979002540939755}
   m_Layer: 0
   m_Name: ObstacleTower
   m_TagString: Untagged
@@ -145,9 +145,9 @@ MonoBehaviour:
   - {x: -0.5595469, y: 0.6911726, z: 0}
   m_ShapePathHash: 109717130
   m_Mesh: {fileID: 0}
-  m_InstanceId: 55760
---- !u!68 &6981338020338335197
-EdgeCollider2D:
+  m_InstanceId: 46962
+--- !u!60 &7147979002540939755
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -160,11 +160,19 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: -0.019664133, y: -0.61818546}
-  - {x: -0.779602, y: -0.60884136}
-  - {x: -0.84031147, y: -1.0141301}
-  - {x: 0.8332909, y: -1.0189782}
-  - {x: 0.7706267, y: -0.60785663}
-  - {x: -0.018641999, y: -0.6190237}
+    m_Paths:
+    - - {x: 0.75599897, y: -0.5544861}
+      - {x: -0.7692659, y: -0.5506018}
+      - {x: -0.84038234, y: -1.0217144}
+      - {x: 0.2644678, y: -1.0329683}
+      - {x: 0.83080107, y: -1.0237252}

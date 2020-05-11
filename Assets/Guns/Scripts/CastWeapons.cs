@@ -30,4 +30,20 @@ public class CastWeapons : Weapon
         if (!audioSource.isPlaying) { audioSource.PlayOneShot(loopClip); audioSource.loop = true; }
     }
 
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    Debug.Log("TAG: " + collision.gameObject.tag);
+    //    Debug.Log("isActive: " + isActive);
+
+    //    //if (collision.gameObject.tag == "Tringle" && isActive == true)
+    //    {
+    //        ICanSetOnFire target = collision.GetComponent<ICanSetOnFire>();
+
+    //        if (target != null)
+    //        {
+    //            StartCoroutine(target.GetFireDamage(0.5f, 2));
+    //        }
+    //    }
+    //}
+
 }

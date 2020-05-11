@@ -10,6 +10,10 @@ public class LaserBeam : MonoBehaviour
     public float Cooldown;
     private float time;
 
+    private Vector3 endPosition;
+    private Vector2 mousePosition;
+    private Vector3 auxiliaryOriginVector;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,16 +23,25 @@ public class LaserBeam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 endPosition = transform.position + (transform.right * beamLength);
+        endPosition = transform.position + (transform.right * beamLength);
         lineRenderer.SetPositions(new Vector3[] { transform.position, endPosition });
 
 
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(1,0,0), transform.right * beamLength);
-
-        if (hit)
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (mousePosition.x > transform.position.x) 
         {
+            auxiliaryOriginVector = new Vector3(1, 0, 0);
+        }
+        else
+        {
+            auxiliaryOriginVector = new Vector3(-1, 0, 0);
+        }
 
+
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position + auxiliaryOriginVector, transform.right * beamLength, beamLength);
+
+        foreach (RaycastHit2D hit in hits)
+        {
             var target = hit.transform.GetComponent<IGetDamaged>();
             if (target != null)
             {

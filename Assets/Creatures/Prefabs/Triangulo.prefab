@@ -99,7 +99,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -256,7 +256,7 @@ MonoBehaviour:
   - {x: -0.89479303, y: -0.89002156, z: 0}
   m_ShapePathHash: -1754626425
   m_Mesh: {fileID: 0}
-  m_InstanceId: 366388
+  m_InstanceId: 98772
 --- !u!114 &338393397568989499
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4827,6 +4827,7 @@ GameObject:
   - component: {fileID: 4893414215349636072}
   - component: {fileID: 710817231573738934}
   - component: {fileID: 8470425356130559151}
+  - component: {fileID: 9122723231562144699}
   m_Layer: 0
   m_Name: FlameThrower
   m_TagString: Gun
@@ -5062,3 +5063,38 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!60 &9122723231562144699
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3796136698500015009}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0.5}
+    oldSize: {x: 1.74, y: 0.66}
+    newSize: {x: 1.74, y: 0.66}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.6799998, y: -0.09902624}
+      - {x: 5.7301416, y: -1.8275374}
+      - {x: 7.1831336, y: -0.7332513}
+      - {x: 7.1246943, y: 0.7861092}
+      - {x: 5.689301, y: 1.643426}
+      - {x: 1.7050037, y: 0.08841171}
+    - - {x: 0.38, y: 0.02}
+      - {x: 0.42, y: 0.02}
+      - {x: 0.37, y: 0.01}
+      - {x: 0.38, y: 0.01}
