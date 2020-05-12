@@ -4776,7 +4776,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3796136698089617736}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
@@ -4825,9 +4825,9 @@ GameObject:
   - component: {fileID: 3796136698500015071}
   - component: {fileID: -532513103695756220}
   - component: {fileID: 4893414215349636072}
-  - component: {fileID: 710817231573738934}
   - component: {fileID: 8470425356130559151}
   - component: {fileID: 9122723231562144699}
+  - component: {fileID: 2760434421028190236}
   m_Layer: 0
   m_Name: FlameThrower
   m_TagString: Gun
@@ -4945,27 +4945,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.89, y: 0.66}
   m_EdgeRadius: 0
---- !u!114 &710817231573738934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3796136698500015009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02abbc2824d756745aa2be700652284b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isActive: 0
-  attackSpeed: 0
-  ammo: 200
-  sprite: {fileID: 21300000, guid: c0ab6c49ac17d70418bb586af24d7fd5, type: 3}
-  firePoint: {fileID: 0}
-  bulletPrefab: {fileID: 0}
-  cast: {fileID: 3796136698089617736}
-  startClip: {fileID: 8300000, guid: b9134bcc4a69f5a4cabea1029385569a, type: 3}
-  loopClip: {fileID: 8300000, guid: 53c29600adeb70e49b8a3e5d67def1eb, type: 3}
 --- !u!82 &8470425356130559151
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5088,13 +5067,34 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.6799998, y: -0.09902624}
-      - {x: 5.7301416, y: -1.8275374}
-      - {x: 7.1831336, y: -0.7332513}
-      - {x: 7.1246943, y: 0.7861092}
-      - {x: 5.689301, y: 1.643426}
-      - {x: 1.7050037, y: 0.08841171}
+    - - {x: 1.712549, y: -0.014399104}
+      - {x: 4.892091, y: -1.1351672}
+      - {x: 5.998011, y: -0.5978088}
+      - {x: 6.020017, y: 0.8150038}
+      - {x: 4.934832, y: 1.5252922}
+      - {x: 1.7115133, y: 0.19256821}
     - - {x: 0.38, y: 0.02}
       - {x: 0.42, y: 0.02}
       - {x: 0.37, y: 0.01}
       - {x: 0.38, y: 0.01}
+--- !u!114 &2760434421028190236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3796136698500015009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 860811237d775ad4b824633433e0a1a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
+  attackSpeed: 0
+  ammo: 200
+  sprite: {fileID: 21300000, guid: c0ab6c49ac17d70418bb586af24d7fd5, type: 3}
+  firePoint: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  cast: {fileID: 3796136698089617736}
+  startClip: {fileID: 8300000, guid: b9134bcc4a69f5a4cabea1029385569a, type: 3}
+  loopClip: {fileID: 8300000, guid: 53c29600adeb70e49b8a3e5d67def1eb, type: 3}

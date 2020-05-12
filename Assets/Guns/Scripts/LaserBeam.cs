@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.Experimental.Rendering.Universal;
+
 public class LaserBeam : MonoBehaviour
 {
+    protected Light2D light2D;
+
     private LineRenderer lineRenderer;
     public float beamLength;
     public float Damage;
@@ -18,6 +22,7 @@ public class LaserBeam : MonoBehaviour
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
+        light2D = GetComponent<Light2D>();
     }
 
     // Update is called once per frame
@@ -53,5 +58,10 @@ public class LaserBeam : MonoBehaviour
                 time += Time.deltaTime;
             }
         }
+    }
+
+    private void FixedUpdate()
+    {
+        light2D.intensity = Random.Range(1f, 3f);
     }
 }

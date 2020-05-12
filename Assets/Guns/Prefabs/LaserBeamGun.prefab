@@ -143,9 +143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8911c897a19d57a4594eccc3b2338f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beamLength: 15
-  Damage: 10
-  Cooldown: 0.3
+  beamLength: 20
+  Damage: 2
+  Cooldown: 0.1
 --- !u!114 &967813084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,13 +180,13 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffSize: 0.3
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -0.1562649, y: -0.038583733, z: 0}
-  - {x: 14.976607, y: -0.020513058, z: 0}
-  - {x: 14.9962, y: 0.17210221, z: 0}
-  - {x: -0.14730227, y: 0.14776573, z: 0}
+  - {x: -0.1623354, y: -0.068935394, z: 0}
+  - {x: 20.048824, y: -0.07299423, z: 0}
+  - {x: 20.050194, y: 0.07694626, z: 0}
+  - {x: -0.14730263, y: 0.12955475, z: 0}
 --- !u!114 &1529445345
 MonoBehaviour:
   m_ObjectHideFlags: 0
