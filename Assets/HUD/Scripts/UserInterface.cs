@@ -10,7 +10,6 @@ public class UserInterface : MonoBehaviour
     public GameObject hud;
     public GameObject pauseMenu;
     public GameObject deathScreen;
-    public GameObject musicManagerInterface;
     public GameObject mapPreview;
 
     public AudioMixer audioMixer;
@@ -40,7 +39,6 @@ public class UserInterface : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         mapPreview.SetActive(false);
-        musicManagerInterface.SetActive(true);
         Time.timeScale = 0;
         changeMenuState = ContinueGame;
     }
@@ -49,7 +47,6 @@ public class UserInterface : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         mapPreview.SetActive(false);
-        musicManagerInterface.SetActive(false);
         Time.timeScale = 1;
         changeMenuState = PauseMenu;
         changeMapState = MapPreview;
@@ -79,17 +76,17 @@ public class UserInterface : MonoBehaviour
     }
 
 
-    public void SetVolume(float volume)
+    public void SetGlobalVolume(float volume)
     {
         audioMixer.SetFloat("Volume", 20 * Mathf.Log10(volume));
     }
 
-    public void SetMusic(float volume)
+    public void SetMusicVolume(float volume)
     {
         audioMixer.SetFloat("Music", 20 * Mathf.Log10(volume));
     }
 
-    public void SetEffects(float volume)
+    public void SetEffectsVolume(float volume)
     {
         audioMixer.SetFloat("SoundEffects", 20 * Mathf.Log10(volume));
     }
