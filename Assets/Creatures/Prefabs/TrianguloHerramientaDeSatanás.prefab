@@ -324,6 +324,7 @@ MonoBehaviour:
   energy: 0
   energyRegeneration: 0
   rb: {fileID: 0}
+  alternativeAttackChance: 100
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 4830698573579912972, guid: b7ba8055dc8a0b14c86f7576987fdea2,
     type: 3}
@@ -332,6 +333,7 @@ MonoBehaviour:
   distance: 10
   move: 80
   Exp: 20
+  attacksInSeries: 14
 --- !u!114 &-9037411315446332368
 MonoBehaviour:
   m_ObjectHideFlags: 0

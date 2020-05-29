@@ -6,6 +6,7 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class Triangle : Enemy
 {
+    public int attacksInSeries;
     protected Light2D light2D;
 
     protected override IEnumerator AlternativeAttack()
@@ -16,7 +17,7 @@ public class Triangle : Enemy
         light2D.intensity = 1;
         yield return new WaitForSeconds(1.5F);//animation time
 
-        for(int i=0; i<8; i++)
+        for(int i=0; i< attacksInSeries; i++)
         {
             float angle = i * Mathf.PI * 14;
             Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, angle)); // obiekt, pozycja startowa, kierunek

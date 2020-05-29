@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Circle : Enemy
 {
+    public int attacksInSeries;
+
     protected override IEnumerator AlternativeAttack()
     {
         attack = true;
-        for(int i=0; i<3; i++)
+        for(int i=0; i< attacksInSeries; i++)
         {
             animator.SetBool("attack", true);
             yield return new WaitForSeconds(0.5F);//animation time
