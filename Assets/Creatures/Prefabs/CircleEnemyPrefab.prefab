@@ -300,11 +300,16 @@ MonoBehaviour:
   healthMax: 100
   health: 100
   healthRegeneration: 0.1
-  healthDisplay: {fileID: 0}
   energyMax: 0
   energy: 0
   energyRegeneration: 0
   rb: {fileID: 0}
+  alternativeAttackChance: 30
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 2049254497997105686, guid: 13cb8480bc2610947b37ebd90c8b6ff7,
     type: 3}
+  spawnable: {fileID: 0}
+  distance: 0
+  move: 0
+  Exp: 0
+  attacksInSeries: 5

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : Creature
 {
+    public int alternativeAttackChance;
     public Transform firePoint;
     public GameObject bulletPrefab;
     public GameObject spawnable;
@@ -51,7 +52,7 @@ public class Enemy : Creature
     {
         switch (Random.Range(0, 100))
         {
-            case int n when (n > 30):
+            case int n when (n > alternativeAttackChance):
                 attacking = StandardAttack;
                 break;
             default:
