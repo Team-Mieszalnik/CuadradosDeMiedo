@@ -98,7 +98,7 @@ public class MapController : MonoBehaviour
 
         if (LevelController.Level % 5 != 0)
         {
-            switch (Random.Range(1, 5))
+            switch (Random.Range(1, 6))
             {
                 case 1:
                     SceneName = "Arena";
@@ -111,6 +111,9 @@ public class MapController : MonoBehaviour
                     break;
                 case 4:
                     SceneName = "Vesuvio";
+                    break;
+                case 5:
+                    SceneName = "Cueva";
                     break;
                 default:
                     SceneName = "Arena";

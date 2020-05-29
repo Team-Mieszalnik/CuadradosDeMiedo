@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: e69ca7dcf99902e458384657569cdc06
+  - enabled: 1
+    path: Assets/Scenes/Maps/Cueva.unity
+    guid: 7d837abfc5d75f34d8bf67a4fd794df4
   m_configObjects: {}
