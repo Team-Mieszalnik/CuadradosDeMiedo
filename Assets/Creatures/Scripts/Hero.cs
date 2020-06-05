@@ -76,6 +76,7 @@ public class Hero : Creature
         animator.SetBool("dead", false);
 
         audioSource.PlayOneShot(deathClips[Random.Range(0,deathClips.Length-1)]);
+        MusicManager.PlayMusic("Death");
 
         for (int i = 0; i < 801; i++)
         {

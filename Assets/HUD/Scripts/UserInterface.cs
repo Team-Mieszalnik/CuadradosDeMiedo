@@ -63,6 +63,7 @@ public class UserInterface : MonoBehaviour
 
     public void BackToMainMenu()
     {
+        MusicManager.PlayMusic("MainMenu");
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
         //SceneManager.UnloadScene(SceneManager.GetActiveScene());

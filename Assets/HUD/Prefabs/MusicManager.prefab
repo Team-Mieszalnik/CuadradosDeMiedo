@@ -44,9 +44,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27ce543cd4bc5e46ba7e308891a346b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClips:
-  - {fileID: 8300000, guid: 249241730af16864abcb3b447fd92c18, type: 3}
-  - {fileID: 8300000, guid: 92a3d11d87bb6854f99a8e873a483a83, type: 3}
+  audioClip_MainMenu: {fileID: 8300000, guid: 249241730af16864abcb3b447fd92c18, type: 3}
+  audioClip_Death: {fileID: 8300000, guid: 92a3d11d87bb6854f99a8e873a483a83, type: 3}
+  audioClips_Primavera:
+  - {fileID: 8300000, guid: 9219275470ccea240bd91dbb6f9dd2dd, type: 3}
+  - {fileID: 8300000, guid: 5f3375082f207474284eeb8ea8ef3da5, type: 3}
+  - {fileID: 8300000, guid: 4590d378497b3fd4c82d3f35f7c3cd96, type: 3}
+  - {fileID: 8300000, guid: 1aa777a017a677643b1c6bfdae64da4b, type: 3}
+  audioClips_Invierno:
+  - {fileID: 8300000, guid: 39e1ff5e909b12f41b3c49b3bb6169d2, type: 3}
+  - {fileID: 8300000, guid: 7af6ad73ffd700542b4300e641d8dfbd, type: 3}
+  - {fileID: 8300000, guid: baaf4c632956d1643821571f82e75657, type: 3}
+  - {fileID: 8300000, guid: df109b7dd6eb44e48bf4814a3f04ae96, type: 3}
+  audioClips_Arena:
+  - {fileID: 8300000, guid: 9219275470ccea240bd91dbb6f9dd2dd, type: 3}
+  - {fileID: 8300000, guid: 5f3375082f207474284eeb8ea8ef3da5, type: 3}
+  - {fileID: 8300000, guid: 4590d378497b3fd4c82d3f35f7c3cd96, type: 3}
+  - {fileID: 8300000, guid: 1aa777a017a677643b1c6bfdae64da4b, type: 3}
+  audioClips_Vesuvio:
+  - {fileID: 8300000, guid: 39e1ff5e909b12f41b3c49b3bb6169d2, type: 3}
+  - {fileID: 8300000, guid: 7af6ad73ffd700542b4300e641d8dfbd, type: 3}
+  - {fileID: 8300000, guid: baaf4c632956d1643821571f82e75657, type: 3}
+  - {fileID: 8300000, guid: df109b7dd6eb44e48bf4814a3f04ae96, type: 3}
+  audioClips_Cueva:
+  - {fileID: 8300000, guid: d427fb712e506484384ed2c80000bcfd, type: 3}
+  - {fileID: 8300000, guid: a6c0375890577ff4daf13f2594aa8c8f, type: 3}
+  - {fileID: 8300000, guid: ae68c25b1127b2a498ea95adf40cfb3e, type: 3}
+  - {fileID: 8300000, guid: 60e13acc278e91a439155da0349932f0, type: 3}
 --- !u!82 &646750997
 AudioSource:
   m_ObjectHideFlags: 0

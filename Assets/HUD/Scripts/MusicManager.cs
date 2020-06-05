@@ -21,10 +21,13 @@ public class MusicManager : MonoBehaviour
     //Order of songs:
     // 1 Square it up
     // 2 Hex bells
+    public AudioClip audioClip_MainMenu;
+    public AudioClip audioClip_Death;
     public AudioClip[] audioClips_Primavera;    //map 1
     public AudioClip[] audioClips_Invierno;    //map 2
     public AudioClip[] audioClips_Arena;
     public AudioClip[] audioClips_Vesuvio;
+    public AudioClip[] audioClips_Cueva;
 
     private int bigLevel;
 
@@ -42,10 +45,11 @@ public class MusicManager : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.loop = true;
         if (_instance == null) _instance = this;
         else return;
         bigLevel = 0;
-        PlayMusic();
+        PlayMusic("MainMenu");
         DontDestroyOnLoad(gameObject);
     }
 
@@ -79,6 +83,12 @@ public class MusicManager : MonoBehaviour
         audioSource.Stop();
     }
 
+    public static void PlayMusic(string map)
+    {
+        Instance.currentMapName = map;
+        Instance.PlayMusic();
+    }
+
     private void PlayMusic()
     {
         isPlaying = true;
@@ -86,6 +96,15 @@ public class MusicManager : MonoBehaviour
         audioSource.Pause();
         switch (currentMapName)
         {
+            case "MainMenu":
+                audioSource.clip = audioClip_MainMenu;
+                bigLevel=0;
+                break;
+            case "Death":
+                audioSource.clip = audioClip_Death;
+                bigLevel=0;
+                break;
+
             case "Primavera":
                 audioSource.clip = audioClips_Primavera[bigLevel];
                 break;
@@ -100,6 +119,10 @@ public class MusicManager : MonoBehaviour
                 break;
             case "Boss":
                 audioSource.clip = audioClips_Primavera[bigLevel];
+                bigLevel++;
+                break;
+            case "Cueva":
+                audioSource.clip = audioClips_Cueva[bigLevel];
                 bigLevel++;
                 break;
             default:
