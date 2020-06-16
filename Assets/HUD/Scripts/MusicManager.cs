@@ -21,7 +21,7 @@ public class MusicManager : MonoBehaviour
     }
     private AudioSource audioSource;
 
-    //Order of songs:
+    //Kolejność utworów:
     // 1 Square it up
     // 2 Hex bells
     public AudioClip audioClip_MainMenu;
@@ -33,16 +33,15 @@ public class MusicManager : MonoBehaviour
     public AudioClip[] audioClips_Cueva;
     private string currentMapName;
     /**
-     * number of levels completed by player
+     * ilość poziomów ukończonych przez gracza
      */
     private int bigLevel;
 
     private bool isPlaying = true;
 
     /**
-     * @brief Sets next music track and stops the music
-     * Called only on LoadingScreen
-     * @param newMapName name of map to be loaded
+     * @brief Ustawia następny utwór i zatrzymuje muzykę
+     * @param newMapName nazwa nadchodzącej mapy
      */
     public void LoadingScreen(string newMapName = "UNDEFINED")
     {
@@ -51,12 +50,12 @@ public class MusicManager : MonoBehaviour
     }
 
     /**
-     * @brief Starts music on map
+     * @brief Rozpoczyna muzykę na mapie lub w menu
      */
     public static void StartMap() => Instance.PlayMusic();
 
     /**
-     * @brief Initializes all parameters, sets music to MainMenu
+     * @brief inicjalizacja
      */
     void Start()
     {
@@ -70,7 +69,7 @@ public class MusicManager : MonoBehaviour
     }
 
     /**
-     * @brief Starts or stops music - called from MusicManagerInterface
+     * @brief Startuje lub zatrzymuje muzykę, zależnie od tego czy gra
      */
     public void StartStopFunction()
     {
@@ -109,7 +108,7 @@ public class MusicManager : MonoBehaviour
     }
 
     /**
-     * @brief called by static PlayMusic, plays music depending on current map
+     * @brief wywołana przez statyczne PlayMusic, gra muzykę zależnie od aktualnej mapy
      */
     private void PlayMusic()
     {

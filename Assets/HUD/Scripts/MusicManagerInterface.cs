@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 
 /**
- * @brief Graphical Interface for managing music
- * Sends commands to MusicManager MusicManager
+ * @brief Klasa zarządzająca graficznym interfejsem muzyki
+ * Wysyła komendo do MusicManagerInterface
  */
 public class MusicManagerInterface : MonoBehaviour
 {
