@@ -4,6 +4,10 @@ using UnityEngine;
 
 using UnityEngine.Experimental.Rendering.Universal;
 
+/**
+    * @brief
+    * Klasa zarzadzajaca ogniskiem
+    */
 public class Campfire : MonoBehaviour
 {
     protected Light2D light2D;
@@ -26,6 +30,10 @@ public class Campfire : MonoBehaviour
         }
     }
 
+    /**
+        * @brief
+        * Metoda ustawiajaca ogien w ognisku
+        */
     protected IEnumerator Fire()
     {
         next = false;

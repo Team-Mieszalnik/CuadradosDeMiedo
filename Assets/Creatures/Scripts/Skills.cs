@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+         * @brief
+         * Klasa do zarzadzania umiejetnosciami bohatera 
+         */
 public class Skills : MonoBehaviour
 {
     public AudioSource audioSource;
@@ -42,6 +46,10 @@ public class Skills : MonoBehaviour
     }
 
 
+    /**
+         * @brief
+         * Metoda do sterowania umiejetnosciami 
+         */
     private void Control()
     {
         if (Input.GetKey(KeyCode.LeftShift) && SkillsReady) 
@@ -59,6 +67,10 @@ public class Skills : MonoBehaviour
     }
 
 
+    /**
+         * @brief
+         * Metoda do obslugi umiejetnosci sprintu 
+         */
     private IEnumerator SprintSkill()
     {
         if (hero.energy > sprintEnergy)
@@ -76,6 +88,10 @@ public class Skills : MonoBehaviour
         }
     }
 
+    /**
+     * @brief
+     * Metoda do obslugi umiejetnosci obrony 
+     */
     private IEnumerator DefenseSkill()
     {
         if (hero.energy > defenseEnergy)
@@ -96,6 +112,10 @@ public class Skills : MonoBehaviour
         }
     }
 
+    /**
+        * @brief
+        * Metoda do obslugi umiejetnosci leczenia 
+        */
     private IEnumerator CureSkill()
     {
         if (hero.energy > cureEnergy)

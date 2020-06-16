@@ -4,6 +4,10 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/**
+         * @brief
+         * Kontroler do zarzadzania poziomami
+         */
 public class LevelController : MonoBehaviour
 {
     public static int Level { get; private set; }
@@ -66,7 +70,10 @@ public class LevelController : MonoBehaviour
     }
 
 
-
+    /**
+         * @brief
+         * Sprawdza czy poziom zostal ukonczony
+         */
     public static bool LevelCompleted()
     {
         if (enemyCounter <= 0)
@@ -78,13 +85,20 @@ public class LevelController : MonoBehaviour
         return false;
     }
 
+    /**
+         * @brief
+         * Ustawia poziom na 1 i resetuje statystyki bohatera 
+         */
     public static void ResetLevel()
     {
         Level = 1;
         Experience.ResetDefeatedOpponents();
     }
 
-
+    /**
+         * @brief
+         * Metoda do tworzenia obiektow na mapie
+         */
     protected void Spawn()
     {
         SpawnHero();
@@ -94,6 +108,10 @@ public class LevelController : MonoBehaviour
         SpawnObstacles();
     }
 
+    /**
+     * @brief
+     * Metoda do tworzenia bohatera w losowych wyznaczonym punkcie na mapie
+     */
     protected void SpawnHero()
     {
         if (spawnPointsHero.Count <= 0)//check the availability of spawn points
@@ -115,6 +133,10 @@ public class LevelController : MonoBehaviour
         }
     }
 
+    /**
+     * @brief
+     * Metoda do tworzenia przeciwnikow w losowych wyznaczonych punktach na mapie
+     */
     protected void SpawnEnemy(int wave)
     {
         List<int> enemiesWave = enemiesCounter[wave];
@@ -141,6 +163,10 @@ public class LevelController : MonoBehaviour
         }
     }
 
+    /**
+     * @brief
+     * Metoda do tworzenia przeszkod w losowych wyznaczonych punktach na mapie
+     */
     protected void SpawnObstacles()
     {
         int positionNumber;
@@ -218,13 +244,20 @@ public class LevelController : MonoBehaviour
     }
 
 
-
+    /**
+     * @brief
+     * Metoda do dodawania fali przeciwnikow
+     */
     protected void AddEnemiesWave()
     {
         enemiesCounter.Add(new List<int>());
         enemiesCounter[enemiesCounter.Count - 1].AddRange(Enumerable.Repeat<int>(0, enemies.Count));
     }
 
+    /**
+     * @brief
+     * Metoda zarzadzania falami
+     */
     protected void WaveController()
     {
         if (enemiesToNextWave >= enemyCounterWave) 
@@ -237,7 +270,6 @@ public class LevelController : MonoBehaviour
             }
         }
     }
-
 
     public static void DecrementEnemyCounter()
     {
@@ -255,7 +287,10 @@ public class LevelController : MonoBehaviour
 
 
 
-
+    /**
+     * @brief
+     * Metoda wczytujaca ustawienia przeciwnikow i fal danego poziomu
+     */
     protected void SpawnSettings()
     {
         SpawnObstacleSettings();
@@ -499,6 +534,10 @@ public class LevelController : MonoBehaviour
         }
     }
 
+    /**
+        * @brief
+        * Metoda wczytujaca ustawienia przeszkod danego poziomu
+        */
     protected void SpawnObstacleSettings()
     {
         if (Level % 5 != 0)

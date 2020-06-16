@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/**
+         * @brief
+         * Kontroler do zarzadzania mapami 
+         */
 public class MapController : MonoBehaviour
 {
     public static string SceneName { get; private set; }
@@ -29,6 +33,10 @@ public class MapController : MonoBehaviour
     }
 
 
+    /**
+         * @brief
+         * Metoda do zakonczenia poziomu 
+         */
     public static void EndLevel()
     {
         if (LevelController.LevelCompleted())
@@ -38,6 +46,10 @@ public class MapController : MonoBehaviour
     }
 
 
+    /**
+         * @brief
+         * Metoda do tworzenia nowego poziomu 
+         */
     public static void GoNextLevel()
     {
         CreateScene();
@@ -45,7 +57,10 @@ public class MapController : MonoBehaviour
 
 
 
-
+    /**
+         * @brief
+         * Metoda do tworzenia pierwszego poziomu 
+         */
     public static void CreateFirstLevel()
     {
         LevelController.ResetLevel();
@@ -55,6 +70,10 @@ public class MapController : MonoBehaviour
 
 
 
+    /**
+         * @brief
+         * Metoda tworzaca scene z danym poziomem 
+         */
     protected static void CreateScene()
     {
         if (GameObject.Find("Hero") != null)
@@ -68,6 +87,10 @@ public class MapController : MonoBehaviour
         SceneManager.MoveGameObjectToScene(GameObject.Find("Hero"), SceneManager.GetSceneByName(SceneName));
     }
 
+    /**
+         * @brief
+         * Metoda tworzaca scene ladowania 
+         */
     protected static void CreateLoadingScene()
     {
         SceneSetings();
@@ -87,7 +110,10 @@ public class MapController : MonoBehaviour
 
 
 
-
+    /**
+         * @brief
+         * Metoda wczytujaca ustawienia nastepnej mapy
+         */
     protected static void SceneSetings()
     {
         if (LevelController.Level == 16)

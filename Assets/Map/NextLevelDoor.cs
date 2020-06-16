@@ -4,6 +4,10 @@ using UnityEngine;
 
 using UnityEngine.Experimental.Rendering.Universal;
 
+/**
+    * @brief
+    * Klasa do obslugi przejscia do nastepnego poziomu
+    */
 public class NextLevelDoor : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
@@ -47,6 +51,10 @@ public class NextLevelDoor : MonoBehaviour
         }
     }
 
+    /**
+        * @brief
+        * metoda animujaca drzwi
+        */
     private void DoorAnimation()
     {
         nextAnimation = false;

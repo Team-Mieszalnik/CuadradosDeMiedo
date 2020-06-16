@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+/**
+    * @brief
+    * Klasa do zarzadzania doswiadczeniem gracza oraz ulepszania umiejetnosci 
+    */
 public class Experience : MonoBehaviour
 {
     public static int DefeatedOpponents { get; private set; }
@@ -94,7 +98,10 @@ public class Experience : MonoBehaviour
     }
 
 
-
+    /**
+        * @brief
+        * Metoda zarzadzajaca ulepszaniem zycia 
+        */
     public void HealthLevelUpgrade()
     {
         if (CanHealthUpgrade()) 
@@ -131,6 +138,10 @@ public class Experience : MonoBehaviour
     }
 
 
+    /**
+        * @brief
+        * Metoda zarzadzajaca ulepszaniem energii 
+        */
     public void EnergyLevelUpgrade()
     {
         if (CanEnergyUpgrade())
@@ -166,6 +177,10 @@ public class Experience : MonoBehaviour
         }
     }
 
+    /**
+        * @brief
+        * Metoda zarzadzajaca ulepszaniem poruszaniem sie bohatera 
+        */
     public void MovementLevellUpgrade()
     {
         if (CanMovementUpgrade())
@@ -203,6 +218,10 @@ public class Experience : MonoBehaviour
         }
     }
 
+    /**
+        * @brief
+        * Metoda zarzadzajaca ulepszaniem leczenia 
+        */
     public void CureLevellUpgrade()
     {
         if (CanCureUpgrade())
@@ -240,6 +259,10 @@ public class Experience : MonoBehaviour
         }
     }
 
+    /**
+        * @brief
+        * Metoda zarzadzajaca ulepszaniem obrony 
+        */
     public void ArmorLevellUpgrade()
     {
         if (CanArmorUpgrade())
