@@ -3,18 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+/**
+ * @brief Graphical Interface for managing music
+ * Sends commands to MusicManager MusicManager
+ */
 public class MusicManagerInterface : MonoBehaviour
 {
     public Button startStopMusicButton;
     public Button nextClipButton;
     public Button previousClipButton;
-    //public Text startStopButtonText;
     private MusicManager musicManager;
-    // Start is called before the first frame update
+
+    /**
+     * @brief Initializes all buttons and connects them to MusicManager
+     */
     void Start()
     {
         musicManager = GameObject.FindGameObjectWithTag("MusicManager").GetComponent<MusicManager>();
-        //gameObject.transform.Find("StartStopMusic Button").GetComponent<Button>().onClick.AddListener(musicManager.StartStopFunction);
         startStopMusicButton = startStopMusicButton.GetComponent<Button>();
         nextClipButton = nextClipButton.GetComponent<Button>();
         previousClipButton = previousClipButton.GetComponent<Button>();
