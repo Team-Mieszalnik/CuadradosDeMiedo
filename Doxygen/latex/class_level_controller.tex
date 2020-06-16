@@ -1,0 +1,120 @@
+\hypertarget{class_level_controller}{}\doxysection{Level\+Controller Class Reference}
+\label{class_level_controller}\index{LevelController@{LevelController}}
+
+
+Kontroler do zarzadzania poziomami.  
+
+
+Inheritance diagram for Level\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_level_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_level_controller_a78fbf1ef55754060e63d5be7ede54451}\label{class_level_controller_a78fbf1ef55754060e63d5be7ede54451}} 
+static bool \mbox{\hyperlink{class_level_controller_a78fbf1ef55754060e63d5be7ede54451}{Level\+Completed}} ()
+\begin{DoxyCompactList}\small\item\em Sprawdza czy poziom zostal ukonczony. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_level_controller_a37d0e926e11833a7a9aa9bfb3d948e8d}\label{class_level_controller_a37d0e926e11833a7a9aa9bfb3d948e8d}} 
+static void \mbox{\hyperlink{class_level_controller_a37d0e926e11833a7a9aa9bfb3d948e8d}{Reset\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Ustawia poziom na 1 i resetuje statystyki bohatera. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_level_controller_ad2656cc8507483605c2779dfc3b4d2c1}\label{class_level_controller_ad2656cc8507483605c2779dfc3b4d2c1}} 
+static void {\bfseries Decrement\+Enemy\+Counter} ()
+\item 
+\mbox{\Hypertarget{class_level_controller_a73c114b25533021fbb5325ce00fda065}\label{class_level_controller_a73c114b25533021fbb5325ce00fda065}} 
+static void {\bfseries Increment\+Enemy\+Counter} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_level_controller_abdf46cfc75c9e0bb6e4ec69b2540d047}\label{class_level_controller_abdf46cfc75c9e0bb6e4ec69b2540d047}} 
+Game\+Object {\bfseries hero}
+\item 
+\mbox{\Hypertarget{class_level_controller_a2a34ce841ab4549afce267f41143f91a}\label{class_level_controller_a2a34ce841ab4549afce267f41143f91a}} 
+List$<$ Game\+Object $>$ {\bfseries enemies}
+\item 
+\mbox{\Hypertarget{class_level_controller_a7b4f8194babc54cf16f6819b673a0cb8}\label{class_level_controller_a7b4f8194babc54cf16f6819b673a0cb8}} 
+List$<$ List$<$ int $>$ $>$ {\bfseries enemies\+Counter}
+\item 
+\mbox{\Hypertarget{class_level_controller_a6505243213761a6b025b5fe3ba51a92a}\label{class_level_controller_a6505243213761a6b025b5fe3ba51a92a}} 
+List$<$ Game\+Object $>$ {\bfseries obstacles\+Small}
+\item 
+\mbox{\Hypertarget{class_level_controller_aeb84ddaf5da1b73c4bb2b0223b39f24e}\label{class_level_controller_aeb84ddaf5da1b73c4bb2b0223b39f24e}} 
+List$<$ Game\+Object $>$ {\bfseries obstacles\+Trees}
+\item 
+\mbox{\Hypertarget{class_level_controller_a4de01fae2a95302fd45aab7be5b0250e}\label{class_level_controller_a4de01fae2a95302fd45aab7be5b0250e}} 
+List$<$ Game\+Object $>$ {\bfseries obstacles\+Big}
+\item 
+\mbox{\Hypertarget{class_level_controller_a2b476b4230fc21a472d6cd7cf33980a5}\label{class_level_controller_a2b476b4230fc21a472d6cd7cf33980a5}} 
+int\mbox{[}$\,$\mbox{]} {\bfseries obstacles\+Counter}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_level_controller_a16bdb0e47c937e7ca631a872149b4a56}\label{class_level_controller_a16bdb0e47c937e7ca631a872149b4a56}} 
+static int {\bfseries enemy\+Counter}
+\item 
+\mbox{\Hypertarget{class_level_controller_aba21b15165a212f9a2b6e1d84a556a29}\label{class_level_controller_aba21b15165a212f9a2b6e1d84a556a29}} 
+static int {\bfseries enemy\+Counter\+Wave}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_level_controller_a40db4128fbf3ca2559388de2eee57c4c}\label{class_level_controller_a40db4128fbf3ca2559388de2eee57c4c}} 
+void \mbox{\hyperlink{class_level_controller_a40db4128fbf3ca2559388de2eee57c4c}{Spawn}} ()
+\begin{DoxyCompactList}\small\item\em Metoda do tworzenia obiektow na mapie. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_level_controller_a2cdf7c861344a0e49a6a5ec51d9d1108}\label{class_level_controller_a2cdf7c861344a0e49a6a5ec51d9d1108}} 
+void \mbox{\hyperlink{class_level_controller_a2cdf7c861344a0e49a6a5ec51d9d1108}{Spawn\+Hero}} ()
+\begin{DoxyCompactList}\small\item\em Metoda do tworzenia bohatera w losowych wyznaczonym punkcie na mapie. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_level_controller_a951deaba8762437cb036745c890921cc}\label{class_level_controller_a951deaba8762437cb036745c890921cc}} 
+void \mbox{\hyperlink{class_level_controller_a951deaba8762437cb036745c890921cc}{Spawn\+Enemy}} (int wave)
+\begin{DoxyCompactList}\small\item\em Metoda do tworzenia przeciwnikow w losowych wyznaczonych punktach na mapie. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_level_controller_accf331d85826ea55bb9e3e1cf6a4d1d0}\label{class_level_controller_accf331d85826ea55bb9e3e1cf6a4d1d0}} 
+void \mbox{\hyperlink{class_level_controller_accf331d85826ea55bb9e3e1cf6a4d1d0}{Spawn\+Obstacles}} ()
+\begin{DoxyCompactList}\small\item\em Metoda do tworzenia przeszkod w losowych wyznaczonych punktach na mapie. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_level_controller_a009099369c48f61d28029ac0b5e6caa6}\label{class_level_controller_a009099369c48f61d28029ac0b5e6caa6}} 
+void \mbox{\hyperlink{class_level_controller_a009099369c48f61d28029ac0b5e6caa6}{Add\+Enemies\+Wave}} ()
+\begin{DoxyCompactList}\small\item\em Metoda do dodawania fali przeciwnikow. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_level_controller_adb84420a8494780a3c56c58a043f0b98}\label{class_level_controller_adb84420a8494780a3c56c58a043f0b98}} 
+void \mbox{\hyperlink{class_level_controller_adb84420a8494780a3c56c58a043f0b98}{Wave\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em Metoda zarzadzania falami. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_level_controller_a5bd1e2db8d8179f018ba365cd336a1ba}\label{class_level_controller_a5bd1e2db8d8179f018ba365cd336a1ba}} 
+void \mbox{\hyperlink{class_level_controller_a5bd1e2db8d8179f018ba365cd336a1ba}{Spawn\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em Metoda wczytujaca ustawienia przeciwnikow i fal danego poziomu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_level_controller_a6ec1397b99b99054da4dece0b43bfe58}\label{class_level_controller_a6ec1397b99b99054da4dece0b43bfe58}} 
+void \mbox{\hyperlink{class_level_controller_a6ec1397b99b99054da4dece0b43bfe58}{Spawn\+Obstacle\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em Metoda wczytujaca ustawienia przeszkod danego poziomu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_level_controller_a2a417c582d1ddd7dbd7fce3c51dddd90}\label{class_level_controller_a2a417c582d1ddd7dbd7fce3c51dddd90}} 
+int {\bfseries enemies\+To\+Next\+Wave}
+\item 
+\mbox{\Hypertarget{class_level_controller_a4be2d5c2b0818d1e36d31b34e5082307}\label{class_level_controller_a4be2d5c2b0818d1e36d31b34e5082307}} 
+int {\bfseries wave\+Number}
+\item 
+\mbox{\Hypertarget{class_level_controller_a71a1b85cdd73258b4d08c2893c3df234}\label{class_level_controller_a71a1b85cdd73258b4d08c2893c3df234}} 
+List$<$ Game\+Object $>$ {\bfseries spawn\+Points\+Enemy}
+\item 
+\mbox{\Hypertarget{class_level_controller_a38484206de590164daf5511c1bf22864}\label{class_level_controller_a38484206de590164daf5511c1bf22864}} 
+List$<$ Game\+Object $>$ {\bfseries spawn\+Points\+Hero}
+\item 
+\mbox{\Hypertarget{class_level_controller_a8e894e21510fc5d0eefd598f6b47f4da}\label{class_level_controller_a8e894e21510fc5d0eefd598f6b47f4da}} 
+List$<$ Game\+Object $>$ {\bfseries spawn\+Points\+Obstacle}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_level_controller_a11af0cd7016c57e39a54144bdb9a4718}\label{class_level_controller_a11af0cd7016c57e39a54144bdb9a4718}} 
+static int {\bfseries Level}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Kontroler do zarzadzania poziomami. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Moj\+Folder/uczelnia/\+G\+K/projekt/\+Cuadrados\+De\+Miedo/\+Assets/\+Game control/Level\+Controller.\+cs\end{DoxyCompactItemize}

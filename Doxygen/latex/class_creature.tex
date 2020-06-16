@@ -1,0 +1,90 @@
+\hypertarget{class_creature}{}\doxysection{Creature Class Reference}
+\label{class_creature}\index{Creature@{Creature}}
+
+
+klasa odpowiedzialna \char`\"{}żyjące\char`\"{} obiekty  
+
+
+Inheritance diagram for Creature\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_creature}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_creature_a6872b94d9b4697ee6e29b3b8abdf17d7}\label{class_creature_a6872b94d9b4697ee6e29b3b8abdf17d7}} 
+virtual void \mbox{\hyperlink{class_creature_a6872b94d9b4697ee6e29b3b8abdf17d7}{Get\+Damage}} (float damage)
+\begin{DoxyCompactList}\small\item\em metoda odpowiedzialna za otrzymywanie obrażeń \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_creature_a373934fe6f6cccba27563bae107322b6}\label{class_creature_a373934fe6f6cccba27563bae107322b6}} 
+I\+Enumerator \mbox{\hyperlink{class_creature_a373934fe6f6cccba27563bae107322b6}{Get\+Fire\+Damage}} (float damage, float time)
+\begin{DoxyCompactList}\small\item\em metoda odpowiedzialna za otrzymanie obrażeń od ognia \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_creature_a84e596639185520a5da4ba4f89dc4d15}\label{class_creature_a84e596639185520a5da4ba4f89dc4d15}} 
+float {\bfseries speed}
+\item 
+\mbox{\Hypertarget{class_creature_abca724d98f12f975dbcbb3b6e61513b1}\label{class_creature_abca724d98f12f975dbcbb3b6e61513b1}} 
+int {\bfseries health\+Max}
+\item 
+\mbox{\Hypertarget{class_creature_a3c0b32a41569e073d4dd717f25262d56}\label{class_creature_a3c0b32a41569e073d4dd717f25262d56}} 
+float {\bfseries health}
+\item 
+\mbox{\Hypertarget{class_creature_aa032db7b4ff108799000768ba6a00c9b}\label{class_creature_aa032db7b4ff108799000768ba6a00c9b}} 
+float {\bfseries health\+Regeneration}
+\item 
+\mbox{\Hypertarget{class_creature_a2d2e9a716e56f772425748f08b7130cc}\label{class_creature_a2d2e9a716e56f772425748f08b7130cc}} 
+int {\bfseries energy\+Max}
+\item 
+\mbox{\Hypertarget{class_creature_aee7213a65f44aa2c594e0fef869fabcd}\label{class_creature_aee7213a65f44aa2c594e0fef869fabcd}} 
+float {\bfseries energy}
+\item 
+\mbox{\Hypertarget{class_creature_a3da34e3aa15e93ab8efad4150d551869}\label{class_creature_a3da34e3aa15e93ab8efad4150d551869}} 
+float {\bfseries energy\+Regeneration}
+\item 
+\mbox{\Hypertarget{class_creature_a2e75a7422e3b57243cd1ad8714c1ccf4}\label{class_creature_a2e75a7422e3b57243cd1ad8714c1ccf4}} 
+Rigidbody2D {\bfseries rb}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_creature_a8c49af0091dd16b9b54664464c22a487}\label{class_creature_a8c49af0091dd16b9b54664464c22a487}} 
+void {\bfseries Start} ()
+\item 
+\mbox{\Hypertarget{class_creature_aa19824fff6a641b2e845c5b22d867374}\label{class_creature_aa19824fff6a641b2e845c5b22d867374}} 
+void {\bfseries Fixed\+Update} ()
+\item 
+\mbox{\Hypertarget{class_creature_a7edf51b20a0d8aaf1f8264c69e4dae70}\label{class_creature_a7edf51b20a0d8aaf1f8264c69e4dae70}} 
+virtual void \mbox{\hyperlink{class_creature_a7edf51b20a0d8aaf1f8264c69e4dae70}{Charging\+Energy}} ()
+\begin{DoxyCompactList}\small\item\em metoda odpowiedzialna za ładowanie energii \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_creature_ac7a2e022cd0068a57181a615fff062a8}\label{class_creature_ac7a2e022cd0068a57181a615fff062a8}} 
+virtual void \mbox{\hyperlink{class_creature_ac7a2e022cd0068a57181a615fff062a8}{Charging\+Health}} ()
+\begin{DoxyCompactList}\small\item\em metoda odpowiedzialna za ładowanie życia \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_creature_aeb1e430b3a929c49c373962bb001ac7a}\label{class_creature_aeb1e430b3a929c49c373962bb001ac7a}} 
+virtual I\+Enumerator \mbox{\hyperlink{class_creature_aeb1e430b3a929c49c373962bb001ac7a}{Get\+Damage\+Animation}} ()
+\begin{DoxyCompactList}\small\item\em metoda odpowiedzialna za wywołanie animacji otrzymania obrażeń \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_creature_a945e2ef94c30c13a27a1d0baa0da8322}\label{class_creature_a945e2ef94c30c13a27a1d0baa0da8322}} 
+virtual I\+Enumerator \mbox{\hyperlink{class_creature_a945e2ef94c30c13a27a1d0baa0da8322}{After\+Death}} ()
+\begin{DoxyCompactList}\small\item\em metoda odpowiedzialna za zachowanie po śmierci \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_creature_a24cc6684739b6234776a0af858385f34}\label{class_creature_a24cc6684739b6234776a0af858385f34}} 
+Animator {\bfseries animator}
+\item 
+\mbox{\Hypertarget{class_creature_ace5daa6dfd2e82070b4be6aadab11b4f}\label{class_creature_ace5daa6dfd2e82070b4be6aadab11b4f}} 
+bool {\bfseries ignite}
+\item 
+\mbox{\Hypertarget{class_creature_a6b976026385e28f29edf39ad8a153282}\label{class_creature_a6b976026385e28f29edf39ad8a153282}} 
+float {\bfseries fire\+Time}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+klasa odpowiedzialna \char`\"{}żyjące\char`\"{} obiekty 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Moj\+Folder/uczelnia/\+G\+K/projekt/\+Cuadrados\+De\+Miedo/\+Assets/\+Creatures/\+Scripts/Creature.\+cs\end{DoxyCompactItemize}

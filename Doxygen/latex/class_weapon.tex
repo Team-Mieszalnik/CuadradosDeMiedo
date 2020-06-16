@@ -1,0 +1,87 @@
+\hypertarget{class_weapon}{}\doxysection{Weapon Class Reference}
+\label{class_weapon}\index{Weapon@{Weapon}}
+
+
+klasa odpowiedzialna za ogolne dzialanie broni, kazda inna bron dziedziczy z tej klasy  
+
+
+Inheritance diagram for Weapon\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.642277cm]{class_weapon}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_weapon_a52ad3b60efc01e0afe1b9a1240169309}\label{class_weapon_a52ad3b60efc01e0afe1b9a1240169309}} 
+bool {\bfseries is\+Active}
+\item 
+\mbox{\Hypertarget{class_weapon_ae391f9e963203e2fcc97b9947c9a8fa0}\label{class_weapon_ae391f9e963203e2fcc97b9947c9a8fa0}} 
+float {\bfseries attack\+Speed}
+\item 
+\mbox{\Hypertarget{class_weapon_aef1ef5edb77a990fbf038adf9314a2e0}\label{class_weapon_aef1ef5edb77a990fbf038adf9314a2e0}} 
+float {\bfseries ammo}
+\item 
+\mbox{\Hypertarget{class_weapon_a73ff8a4c76e637bf06db84206ff32a50}\label{class_weapon_a73ff8a4c76e637bf06db84206ff32a50}} 
+Sprite {\bfseries sprite}
+\item 
+\mbox{\Hypertarget{class_weapon_a86863145ff0b0b17dcef8f0e9fe605c0}\label{class_weapon_a86863145ff0b0b17dcef8f0e9fe605c0}} 
+Transform {\bfseries fire\+Point}
+\item 
+\mbox{\Hypertarget{class_weapon_a73ee48d0f5693409927382407f403508}\label{class_weapon_a73ee48d0f5693409927382407f403508}} 
+Game\+Object {\bfseries bullet\+Prefab}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_weapon_ae4f517eead254a905b55b9d9cd9b651c}\label{class_weapon_ae4f517eead254a905b55b9d9cd9b651c}} 
+void {\bfseries Start} ()
+\item 
+\mbox{\Hypertarget{class_weapon_a7c7b901870c742eb854eff9312ce6a33}\label{class_weapon_a7c7b901870c742eb854eff9312ce6a33}} 
+void \mbox{\hyperlink{class_weapon_a7c7b901870c742eb854eff9312ce6a33}{Update}} ()
+\begin{DoxyCompactList}\small\item\em sprawdzenie czy bron jest aktywna czy wcisniety jest przycisk odpowiedzilany za strzal dekrementowanie amunicji i wykonywanie metody odpowiadajacej za strzelanie \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_weapon_a24896e5f6156ada54586e846fe8d259f}\label{class_weapon_a24896e5f6156ada54586e846fe8d259f}} 
+void \mbox{\hyperlink{class_weapon_a24896e5f6156ada54586e846fe8d259f}{Fixed\+Update}} ()
+\begin{DoxyCompactList}\small\item\em ustawienie broni w kierunku strzalu czyli kursora myszki \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_weapon_a4ccb1e975689fc02fef4799a8dcc2863}\label{class_weapon_a4ccb1e975689fc02fef4799a8dcc2863}} 
+virtual void {\bfseries Start\+Shooting} ()
+\item 
+\mbox{\Hypertarget{class_weapon_a83e4d508c96a9f73e985d8f580535dcc}\label{class_weapon_a83e4d508c96a9f73e985d8f580535dcc}} 
+virtual void {\bfseries Stop\+Shooting} ()
+\item 
+\mbox{\Hypertarget{class_weapon_a57f1bd9b4613e9cb0eeabb662ee03869}\label{class_weapon_a57f1bd9b4613e9cb0eeabb662ee03869}} 
+virtual void \mbox{\hyperlink{class_weapon_a57f1bd9b4613e9cb0eeabb662ee03869}{Shooting}} ()
+\begin{DoxyCompactList}\small\item\em metoda wywolywana w trakcie strzelania bronia \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_weapon_a87d0811cb4be424a859f70040a0b4110}\label{class_weapon_a87d0811cb4be424a859f70040a0b4110}} 
+virtual void {\bfseries Shoot} ()
+\item 
+\mbox{\Hypertarget{class_weapon_ade50e72b840efef705246fe8d55e2a4c}\label{class_weapon_ade50e72b840efef705246fe8d55e2a4c}} 
+virtual I\+Enumerator \mbox{\hyperlink{class_weapon_ade50e72b840efef705246fe8d55e2a4c}{Shoot\+Animation}} ()
+\begin{DoxyCompactList}\small\item\em metoda wywolywana w do animacji strzalu \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_weapon_a0e1df1b8f48b9dcb6dac41e0e53f959a}\label{class_weapon_a0e1df1b8f48b9dcb6dac41e0e53f959a}} 
+Animator {\bfseries animator}
+\item 
+\mbox{\Hypertarget{class_weapon_a1975ae6174aa17a2d8b7e67405253ab0}\label{class_weapon_a1975ae6174aa17a2d8b7e67405253ab0}} 
+Vector2 {\bfseries mouse\+Position}
+\item 
+\mbox{\Hypertarget{class_weapon_a8a3f5ec546b90c80d0126c23265bb411}\label{class_weapon_a8a3f5ec546b90c80d0126c23265bb411}} 
+Audio\+Source {\bfseries audio\+Source}
+\item 
+\mbox{\Hypertarget{class_weapon_acaa4aef0a490a2ea601ea59b25edb7d0}\label{class_weapon_acaa4aef0a490a2ea601ea59b25edb7d0}} 
+float {\bfseries time}
+\item 
+\mbox{\Hypertarget{class_weapon_acf325eeedf0fa9b181f9ebee47926444}\label{class_weapon_acf325eeedf0fa9b181f9ebee47926444}} 
+bool {\bfseries is\+Shooting}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+klasa odpowiedzialna za ogolne dzialanie broni, kazda inna bron dziedziczy z tej klasy 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Moj\+Folder/uczelnia/\+G\+K/projekt/\+Cuadrados\+De\+Miedo/\+Assets/\+Guns/\+Scripts/Weapon.\+cs\end{DoxyCompactItemize}

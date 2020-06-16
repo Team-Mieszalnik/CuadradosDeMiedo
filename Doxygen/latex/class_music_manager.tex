@@ -1,0 +1,92 @@
+\hypertarget{class_music_manager}{}\doxysection{Music\+Manager Class Reference}
+\label{class_music_manager}\index{MusicManager@{MusicManager}}
+
+
+Singleton zarządzający muzyką na mapach oraz w menu.  
+
+
+Inheritance diagram for Music\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_music_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_music_manager_ad85a4515752069cfa0c03c7afcb1f1fe}{Loading\+Screen}} (string new\+Map\+Name=\char`\"{}U\+N\+D\+E\+F\+I\+N\+ED\char`\"{})
+\begin{DoxyCompactList}\small\item\em Ustawia następny utwór i zatrzymuje muzykę \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_music_manager_a5bc6a20eea5b3da368818f976acf795b}\label{class_music_manager_a5bc6a20eea5b3da368818f976acf795b}} 
+void \mbox{\hyperlink{class_music_manager_a5bc6a20eea5b3da368818f976acf795b}{Start\+Stop\+Function}} ()
+\begin{DoxyCompactList}\small\item\em Startuje lub zatrzymuje muzykę, zależnie od tego czy gra. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_music_manager_a3e520b4045a6c3a72d07aaf32a0f8ad4}\label{class_music_manager_a3e520b4045a6c3a72d07aaf32a0f8ad4}} 
+void {\bfseries Next\+Clip} ()
+\item 
+\mbox{\Hypertarget{class_music_manager_a3965902278db8fc9a941e9c6d02fff76}\label{class_music_manager_a3965902278db8fc9a941e9c6d02fff76}} 
+void {\bfseries Previous\+Clip} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_music_manager_ac0eb9e0c42b813ab68d15e36d4417a60}\label{class_music_manager_ac0eb9e0c42b813ab68d15e36d4417a60}} 
+static void \mbox{\hyperlink{class_music_manager_ac0eb9e0c42b813ab68d15e36d4417a60}{Start\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Rozpoczyna muzykę na mapie lub w menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_music_manager_a369d8bf9507dc15f2c494bfe6f1d27c0}\label{class_music_manager_a369d8bf9507dc15f2c494bfe6f1d27c0}} 
+static void {\bfseries Play\+Music} (string map)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_music_manager_a5b24f8c33963186b73e68eb858f1f502}\label{class_music_manager_a5b24f8c33963186b73e68eb858f1f502}} 
+Audio\+Clip {\bfseries audio\+Clip\+\_\+\+Main\+Menu}
+\item 
+\mbox{\Hypertarget{class_music_manager_a8bd59bd90c5a256e0fb81551bb6dcd87}\label{class_music_manager_a8bd59bd90c5a256e0fb81551bb6dcd87}} 
+Audio\+Clip {\bfseries audio\+Clip\+\_\+\+Death}
+\item 
+\mbox{\Hypertarget{class_music_manager_ad8f17ce0e5f126e95429fcee686be597}\label{class_music_manager_ad8f17ce0e5f126e95429fcee686be597}} 
+Audio\+Clip\mbox{[}$\,$\mbox{]} {\bfseries audio\+Clips\+\_\+\+Primavera}
+\item 
+\mbox{\Hypertarget{class_music_manager_a55c2132319309a1a85c2dc41856acdff}\label{class_music_manager_a55c2132319309a1a85c2dc41856acdff}} 
+Audio\+Clip\mbox{[}$\,$\mbox{]} {\bfseries audio\+Clips\+\_\+\+Invierno}
+\item 
+\mbox{\Hypertarget{class_music_manager_afd537c46f278bf1a5ab0803e9d72cc4f}\label{class_music_manager_afd537c46f278bf1a5ab0803e9d72cc4f}} 
+Audio\+Clip\mbox{[}$\,$\mbox{]} {\bfseries audio\+Clips\+\_\+\+Arena}
+\item 
+\mbox{\Hypertarget{class_music_manager_aa816aa1b24c8f9f96c70024bae8fb63e}\label{class_music_manager_aa816aa1b24c8f9f96c70024bae8fb63e}} 
+Audio\+Clip\mbox{[}$\,$\mbox{]} {\bfseries audio\+Clips\+\_\+\+Vesuvio}
+\item 
+\mbox{\Hypertarget{class_music_manager_aa1c76a7c656d2995252526032bdd52e6}\label{class_music_manager_aa1c76a7c656d2995252526032bdd52e6}} 
+Audio\+Clip\mbox{[}$\,$\mbox{]} {\bfseries audio\+Clips\+\_\+\+Cueva}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_music_manager_ac0568155a26e23e2624d19011baf2840}\label{class_music_manager_ac0568155a26e23e2624d19011baf2840}} 
+static \mbox{\hyperlink{class_music_manager}{Music\+Manager}} {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton zarządzający muzyką na mapach oraz w menu. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_music_manager_ad85a4515752069cfa0c03c7afcb1f1fe}\label{class_music_manager_ad85a4515752069cfa0c03c7afcb1f1fe}} 
+\index{MusicManager@{MusicManager}!LoadingScreen@{LoadingScreen}}
+\index{LoadingScreen@{LoadingScreen}!MusicManager@{MusicManager}}
+\doxysubsubsection{\texorpdfstring{LoadingScreen()}{LoadingScreen()}}
+{\footnotesize\ttfamily void Music\+Manager.\+Loading\+Screen (\begin{DoxyParamCaption}\item[{string}]{new\+Map\+Name = {\ttfamily \char`\"{}UNDEFINED\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Ustawia następny utwór i zatrzymuje muzykę 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Map\+Name} & nazwa nadchodzącej mapy \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Moj\+Folder/uczelnia/\+G\+K/projekt/\+Cuadrados\+De\+Miedo/\+Assets/\+H\+U\+D/\+Scripts/Music\+Manager.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,97 @@
+\hypertarget{class_enemy}{}\doxysection{Enemy Class Reference}
+\label{class_enemy}\index{Enemy@{Enemy}}
+
+
+Klasa odpowiedzialna za reprezentację przeciwnika.  
+
+
+Inheritance diagram for Enemy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_enemy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_enemy_aa23bc38eb2c8871ab7477ed950362c5d}\label{class_enemy_aa23bc38eb2c8871ab7477ed950362c5d}} 
+int {\bfseries alternative\+Attack\+Chance}
+\item 
+\mbox{\Hypertarget{class_enemy_a3f4a37b71c06cd1b86121bdc5e370c61}\label{class_enemy_a3f4a37b71c06cd1b86121bdc5e370c61}} 
+Transform {\bfseries fire\+Point}
+\item 
+\mbox{\Hypertarget{class_enemy_a83698116f96de1b09fbf1c5ce7507caf}\label{class_enemy_a83698116f96de1b09fbf1c5ce7507caf}} 
+Game\+Object {\bfseries bullet\+Prefab}
+\item 
+\mbox{\Hypertarget{class_enemy_a24e3090887ed6bc10048958297234ea7}\label{class_enemy_a24e3090887ed6bc10048958297234ea7}} 
+Game\+Object {\bfseries spawnable}
+\item 
+\mbox{\Hypertarget{class_enemy_a093fed3bd35753551b694e890b12a2f8}\label{class_enemy_a093fed3bd35753551b694e890b12a2f8}} 
+float {\bfseries distance}
+\item 
+\mbox{\Hypertarget{class_enemy_a59a5a94186a82a5c36c577cf5abd7ea3}\label{class_enemy_a59a5a94186a82a5c36c577cf5abd7ea3}} 
+float {\bfseries move}
+\item 
+\mbox{\Hypertarget{class_enemy_a3478a097b1a2a1232a7fed5a9b6320de}\label{class_enemy_a3478a097b1a2a1232a7fed5a9b6320de}} 
+int {\bfseries Exp}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_enemy_a898e47d5477f3abbb229d2dbf53cac4e}\label{class_enemy_a898e47d5477f3abbb229d2dbf53cac4e}} 
+delegate I\+Enumerator {\bfseries moving\+Delegate} ()
+\item 
+\mbox{\Hypertarget{class_enemy_a6b421098ae963fb164daa3587b7e1730}\label{class_enemy_a6b421098ae963fb164daa3587b7e1730}} 
+delegate I\+Enumerator {\bfseries attack\+Delegate} ()
+\item 
+\mbox{\Hypertarget{class_enemy_a91e88e7596e4bf47a32525715fe2665d}\label{class_enemy_a91e88e7596e4bf47a32525715fe2665d}} 
+virtual I\+Enumerator \mbox{\hyperlink{class_enemy_a91e88e7596e4bf47a32525715fe2665d}{Attack}} ()
+\begin{DoxyCompactList}\small\item\em metoda odpowiedzialna za wykonanie ataku, losuje wykonanie odpowiedniej akcji \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_ac131f903274c1c8f3715f5b96abe993c}\label{class_enemy_ac131f903274c1c8f3715f5b96abe993c}} 
+virtual I\+Enumerator \mbox{\hyperlink{class_enemy_ac131f903274c1c8f3715f5b96abe993c}{Standard\+Attack}} ()
+\begin{DoxyCompactList}\small\item\em metoda odpowiedzialna za podstawowy atak \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_ad1f925e697cd32819b045e4286ef157d}\label{class_enemy_ad1f925e697cd32819b045e4286ef157d}} 
+virtual I\+Enumerator \mbox{\hyperlink{class_enemy_ad1f925e697cd32819b045e4286ef157d}{Alternative\+Attack}} ()
+\begin{DoxyCompactList}\small\item\em metoda odpowiedzialna za alternatywny atak każdy z potworów ma swoją własną implementację alternatywnego ataku \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_a5706914fd9467113e4b13c0783d8295a}\label{class_enemy_a5706914fd9467113e4b13c0783d8295a}} 
+I\+Enumerator \mbox{\hyperlink{class_enemy_a5706914fd9467113e4b13c0783d8295a}{Move}} ()
+\begin{DoxyCompactList}\small\item\em metoda odpowiedzialna za ruch przeciwnika \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_a5ecc4219cbb901398c1678ebca3f9fc0}\label{class_enemy_a5ecc4219cbb901398c1678ebca3f9fc0}} 
+I\+Enumerator \mbox{\hyperlink{class_enemy_a5ecc4219cbb901398c1678ebca3f9fc0}{Standard\+Move}} ()
+\begin{DoxyCompactList}\small\item\em metoda odpowiedzialna za podstawowy ruch przeciwnika \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_a6f6b8e42b8654c5f5cf5101e42cc7a97}\label{class_enemy_a6f6b8e42b8654c5f5cf5101e42cc7a97}} 
+I\+Enumerator \mbox{\hyperlink{class_enemy_a6f6b8e42b8654c5f5cf5101e42cc7a97}{Alternative\+Move}} ()
+\begin{DoxyCompactList}\small\item\em metoda odpowiedzialna za alternatywny ruch przeciwnika \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_a3199ddc3a83a7a5b1f5304d15b9b298f}\label{class_enemy_a3199ddc3a83a7a5b1f5304d15b9b298f}} 
+override I\+Enumerator \mbox{\hyperlink{class_enemy_a3199ddc3a83a7a5b1f5304d15b9b298f}{After\+Death}} ()
+\begin{DoxyCompactList}\small\item\em metoda odpowiedzialna za zachowanie potwora po śmierci \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_enemy_a05443e990140e1fad5b97d0c8a62917d}\label{class_enemy_a05443e990140e1fad5b97d0c8a62917d}} 
+Transform {\bfseries hero}
+\item 
+\mbox{\Hypertarget{class_enemy_a202c63ea00604a2c9e1be587c5946920}\label{class_enemy_a202c63ea00604a2c9e1be587c5946920}} 
+bool {\bfseries attack} = false
+\item 
+\mbox{\Hypertarget{class_enemy_a70340a2d943fefff2802caf2a2f7922a}\label{class_enemy_a70340a2d943fefff2802caf2a2f7922a}} 
+bool {\bfseries alternate\+Move} = false
+\item 
+\mbox{\Hypertarget{class_enemy_ad88d15a5678c2c77c70542dfcdca1684}\label{class_enemy_ad88d15a5678c2c77c70542dfcdca1684}} 
+bool {\bfseries move\+Randomizer} = false
+\item 
+\mbox{\Hypertarget{class_enemy_ad83a60a38f6b5cd1759bff303f076385}\label{class_enemy_ad83a60a38f6b5cd1759bff303f076385}} 
+moving\+Delegate {\bfseries moving}
+\item 
+\mbox{\Hypertarget{class_enemy_a4eee0f47018ae917147841eec11b2a08}\label{class_enemy_a4eee0f47018ae917147841eec11b2a08}} 
+attack\+Delegate {\bfseries attacking}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Klasa odpowiedzialna za reprezentację przeciwnika. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Moj\+Folder/uczelnia/\+G\+K/projekt/\+Cuadrados\+De\+Miedo/\+Assets/\+Creatures/\+Scripts/Enemy.\+cs\end{DoxyCompactItemize}
