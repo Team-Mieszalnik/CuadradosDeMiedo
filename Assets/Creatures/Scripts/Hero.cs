@@ -4,7 +4,11 @@ using UnityEngine;
 using UnityEngine.Audio;
 
 
-
+/**
+ * @brief
+ * klasa odpowiedzialna za reprezentację bohatera
+ * 
+ */
 public class Hero : Creature
 {
     [HideInInspector] 
@@ -27,6 +31,10 @@ public class Hero : Creature
     }
 
 
+    /**
+     * @brief
+     * metoda odpowiedzialna za sterowanie
+     */
     private void Control()
     {
         if (Input.GetKey(KeyCode.W))
@@ -60,7 +68,10 @@ public class Hero : Creature
         Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
     }
 
-
+    /**
+     * @brief
+     * metoda odpowiedzialna za otrzymywanie obrażeń
+     */
     public override void GetDamage(float damage)
     {
         health -= damage / (armor + damageReduction);
@@ -70,6 +81,10 @@ public class Hero : Creature
         StartCoroutine(GetDamageAnimation());
     }
 
+    /**
+     * @brief
+     * metoda odpowiedzialna za zachowanie po śmierci bohatera
+     */
     protected override IEnumerator AfterDeath()
     {
         yield return new WaitForSeconds(0.5F);
@@ -89,6 +104,10 @@ public class Hero : Creature
         GameObject.Find("UserInterface").GetComponent<UserInterface>().DeathScreen();
     }
 
+    /**
+     * @brief
+     * metoda odpowiedzialna za regenerację życia i energii
+     */
     public void Regenerate()
     {
         health = healthMax;

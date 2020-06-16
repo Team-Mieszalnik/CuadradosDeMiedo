@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/**
+ * @brief
+ * 
+ * Klasa odpowiedzialna za reprezentację przeciwnika
+ */
 public class Enemy : Creature
 {
     public int alternativeAttackChance;
@@ -48,6 +54,13 @@ public class Enemy : Creature
         }
     }
 
+    /**
+     * 
+     * @brief
+     * metoda odpowiedzialna za wykonanie ataku,
+     * losuje wykonanie odpowiedniej akcji
+     */
+
     protected virtual IEnumerator Attack()
     {
         switch (Random.Range(0, 100))
@@ -62,6 +75,10 @@ public class Enemy : Creature
         yield return new WaitForSeconds(0.1F);
     }
 
+    /**
+     * @brief
+     * metoda odpowiedzialna za podstawowy atak
+     */
     protected virtual IEnumerator StandardAttack()
     {
         attack = true;
@@ -79,6 +96,12 @@ public class Enemy : Creature
         attack = false;
     }
 
+    /**
+     * @brief
+     * metoda odpowiedzialna za alternatywny atak
+     * każdy z potworów ma swoją własną implementację
+     * alternatywnego ataku
+     */
     protected virtual IEnumerator AlternativeAttack()
     {
         attack = true;
@@ -96,6 +119,10 @@ public class Enemy : Creature
         attack = false;
     }
 
+    /**
+     * @brief
+     * metoda odpowiedzialna za ruch przeciwnika
+     */
     protected IEnumerator Move()
     {
         moveRandomizer = true;
@@ -117,7 +144,10 @@ public class Enemy : Creature
 
 
 
-
+    /**
+     * @brief
+     * metoda odpowiedzialna za podstawowy ruch przeciwnika
+     */
     protected IEnumerator StandardMove()
     {
         Vector2 moveDirection = new Vector2(hero.position.x, hero.position.y) - new Vector2(transform.position.x, transform.position.y);
@@ -128,6 +158,10 @@ public class Enemy : Creature
         yield return new WaitForSeconds(0);
     }
 
+    /**
+     * @brief
+     * metoda odpowiedzialna za alternatywny ruch przeciwnika
+     */
     protected IEnumerator AlternativeMove()
     {
         if(!alternateMove)
@@ -138,10 +172,13 @@ public class Enemy : Creature
         rb.velocity = moveDirection.normalized * speed;
         yield return new WaitForSeconds(0);
     }
-    
-   
 
 
+
+    /**
+     * @brief
+     * metoda odpowiedzialna za zachowanie potwora po śmierci
+     */
     protected override IEnumerator AfterDeath()
     {
         yield return new WaitForSeconds(1F);//animation time

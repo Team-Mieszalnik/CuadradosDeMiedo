@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/**
+     * @brief
+     * klasa odpowiedzialna "żyjące" obiekty
+     */
 public abstract class Creature : MonoBehaviour, IGetDamaged, ICanSetOnFire
 {
     public float speed;
@@ -44,6 +48,10 @@ public abstract class Creature : MonoBehaviour, IGetDamaged, ICanSetOnFire
     }
 
 
+    /**
+     * @brief
+     * metoda odpowiedzialna za ładowanie energii
+     */
     protected virtual void ChargingEnergy()
     {
         if (energyMax > energy)
@@ -52,6 +60,10 @@ public abstract class Creature : MonoBehaviour, IGetDamaged, ICanSetOnFire
         }
     }
 
+    /**
+     * @brief
+     * metoda odpowiedzialna za ładowanie życia
+     */
     protected virtual void ChargingHealth()
     {
         if (healthMax > health)
@@ -61,12 +73,20 @@ public abstract class Creature : MonoBehaviour, IGetDamaged, ICanSetOnFire
     }
 
 
+    /**
+     * @brief
+     * metoda odpowiedzialna za otrzymywanie obrażeń
+     */
     public virtual void GetDamage(float damage)
     {
         health -= damage;
         StartCoroutine(GetDamageAnimation());
     }
 
+    /**
+     * @brief
+     * metoda odpowiedzialna za wywołanie animacji otrzymania obrażeń
+     */
     protected virtual IEnumerator GetDamageAnimation()
     {
         if (health <= 0)
@@ -91,6 +111,10 @@ public abstract class Creature : MonoBehaviour, IGetDamaged, ICanSetOnFire
         }
     }
 
+    /**
+     * @brief
+     * metoda odpowiedzialna za zachowanie po śmierci
+     */
     protected virtual IEnumerator AfterDeath()
     {
         yield return new WaitForSeconds(0.01F);//animation time
@@ -98,6 +122,10 @@ public abstract class Creature : MonoBehaviour, IGetDamaged, ICanSetOnFire
 
 
 
+    /**
+     * @brief
+     * metoda odpowiedzialna za otrzymanie obrażeń od ognia
+     */
     public IEnumerator GetFireDamage(float damage, float time)
     {
         fireTime = time;
