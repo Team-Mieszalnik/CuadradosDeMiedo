@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+/**
+    * @brief
+    * klasa odpowiadajaca za wyswietlania opisow umiejetenosci do ulepszenia (tooltip)
+*/
 public class SkillsDescription : MonoBehaviour
 {
     TextMeshProUGUI meshProUGUI;

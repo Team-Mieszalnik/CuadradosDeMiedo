@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+/**
+    * @brief
+    * klasa odpowiadajaca za wyswietlania wszsytkich potrzebnych informacji na ekranie 
+*/
 public class HUD : MonoBehaviour
 {
 

@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-
+/**
+* @brief
+* klasa odpowiedzialna za ogolne dzialanie broni, kazda inna bron dziedziczy z tej klasy
+*/
 public abstract class Weapon : MonoBehaviour
 {
     public bool isActive;
@@ -29,7 +32,11 @@ public abstract class Weapon : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
+    // Update is called once per frame]
+    /**
+    * @brief
+    * sprawdzenie czy bron jest aktywna czy wcisniety jest przycisk odpowiedzilany za strzal dekrementowanie amunicji i wykonywanie metody odpowiadajacej za strzelanie
+    */
     protected void Update()
     {
         if (!isActive) return;
@@ -42,6 +49,10 @@ public abstract class Weapon : MonoBehaviour
         time += Time.deltaTime;
     }
 
+    /**
+    * @brief
+    * ustawienie broni w kierunku strzalu czyli kursora myszki
+    */
     protected void FixedUpdate()
     {
         if (isActive)
@@ -63,6 +74,10 @@ public abstract class Weapon : MonoBehaviour
     protected virtual void StartShooting() => isShooting = true;
     protected virtual void StopShooting() => isShooting = false;
 
+    /**
+    * @brief
+    * metoda wywolywana w trakcie strzelania bronia
+    */
     protected virtual void Shooting()
     {
         if (time > attackSpeed)
@@ -78,7 +93,10 @@ public abstract class Weapon : MonoBehaviour
 
     protected virtual void Shoot() { }
 
-
+    /**
+    * @brief
+    * metoda wywolywana w  do animacji strzalu
+    */
     protected virtual IEnumerator ShootAnimation()
     {
         animator.SetBool("shoot", true);

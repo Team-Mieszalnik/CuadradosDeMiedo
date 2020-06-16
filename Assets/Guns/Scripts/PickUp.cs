@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+    * @brief
+    * klasa odpowiadajaca za podnoszenie broni w trakcie rozgrywki
+*/
 public class PickUp : MonoBehaviour
 {
     public GameObject weapon;

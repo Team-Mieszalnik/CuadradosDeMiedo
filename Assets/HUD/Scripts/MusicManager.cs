@@ -5,9 +5,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+
+/**
+ * @brief Singleton zarządzający muzyką na mapach oraz w menu
+ */
 public class MusicManager : MonoBehaviour
 {
-    //Singleton
     private static MusicManager _instance;
     public static MusicManager Instance
     {
@@ -23,25 +26,38 @@ public class MusicManager : MonoBehaviour
     // 2 Hex bells
     public AudioClip audioClip_MainMenu;
     public AudioClip audioClip_Death;
-    public AudioClip[] audioClips_Primavera;    //map 1
-    public AudioClip[] audioClips_Invierno;    //map 2
+    public AudioClip[] audioClips_Primavera;
+    public AudioClip[] audioClips_Invierno;
     public AudioClip[] audioClips_Arena;
     public AudioClip[] audioClips_Vesuvio;
     public AudioClip[] audioClips_Cueva;
-
+    private string currentMapName;
+    /**
+     * number of levels completed by player
+     */
     private int bigLevel;
 
     private bool isPlaying = true;
 
-    private string currentMapName;
+    /**
+     * @brief Sets next music track and stops the music
+     * Called only on LoadingScreen
+     * @param newMapName name of map to be loaded
+     */
     public void LoadingScreen(string newMapName = "UNDEFINED")
     {
         currentMapName = newMapName;
         StopMusic();
     }
+
+    /**
+     * @brief Starts music on map
+     */
     public static void StartMap() => Instance.PlayMusic();
 
-    // Start is called before the first frame update
+    /**
+     * @brief Initializes all parameters, sets music to MainMenu
+     */
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -53,6 +69,9 @@ public class MusicManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    /**
+     * @brief Starts or stops music - called from MusicManagerInterface
+     */
     public void StartStopFunction()
     {
         Text buttonText = EventSystem.current.currentSelectedGameObject.GetComponentInChildren<Text>();
@@ -89,6 +108,9 @@ public class MusicManager : MonoBehaviour
         Instance.PlayMusic();
     }
 
+    /**
+     * @brief called by static PlayMusic, plays music depending on current map
+     */
     private void PlayMusic()
     {
         isPlaying = true;
@@ -98,11 +120,11 @@ public class MusicManager : MonoBehaviour
         {
             case "MainMenu":
                 audioSource.clip = audioClip_MainMenu;
-                bigLevel=0;
+                bigLevel = 0;
                 break;
             case "Death":
                 audioSource.clip = audioClip_Death;
-                bigLevel=0;
+                bigLevel = 0;
                 break;
 
             case "Primavera":
@@ -130,9 +152,7 @@ public class MusicManager : MonoBehaviour
                 break;
         }
         audioSource.Play();
-        //StartCoroutine("WaitForMusicEnd");
     }
-
     public void NextClip()
     {
         if (++bigLevel > audioClips_Primavera.Length - 1) bigLevel = 0;
@@ -143,10 +163,4 @@ public class MusicManager : MonoBehaviour
         if (--bigLevel < 0) bigLevel = audioClips_Primavera.Length - 1;
         if (isPlaying) PlayMusic();
     }
-
-    //IEnumerator WaitForMusicEnd()
-    //{
-    //    while (audioSource.isPlaying) yield return null;
-    //    NextClip();
-    //}
 }
