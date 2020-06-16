@@ -4,7 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
-
+/**
+    * @brief
+    * klasa zarzadzajaca menu pausy w tym zarzadzanie paskami glosnosci, wyswietlaniem ekranu mapy i ekranem smierci
+*/
 public class UserInterface : MonoBehaviour
 {
     public GameObject hud;

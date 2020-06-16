@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Shotgun : Weapon
 {
+    /**
+    * @brief
+    * metoda odpowiadajaca za instancjonowanie prefaba pocisku/ów i ustawienie kierunku w jakim ma byc wystrzelony
+    */
     protected override void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation * Quaternion.Euler(0, 0, 15f));

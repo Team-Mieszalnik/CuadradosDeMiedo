@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+/**
+    * @brief
+    * klasa odpowiadajaca za wyswietlania nazwy poziomu numeru poziomu i obrazka mapy na ekranie ładowania
+*/
 public class LoadingMenu : MonoBehaviour
 {
 

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+    * @brief
+    * klasa pocisku na starcie zostaje ustalona predkosc, pocisk leci w kierunku wystrzelenia i usuwa sie kiedy osiagnie okreslona odleglosc albo uderzy w przeszkode
+*/
 public class Bullet : MonoBehaviour
 {
     public int damage;
@@ -33,6 +37,10 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
+    /**
+    * @brief
+    * sprawdzanie kolizji komu ma zadac obrazenia i kiedy ma sie zniszczyc a kiedy ma pominc kolizje
+    */
     protected void OnTriggerEnter2D(Collider2D collision)
     {
         IGetDamaged target = collision.GetComponent<IGetDamaged>();

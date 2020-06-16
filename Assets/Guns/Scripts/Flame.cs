@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+* @brief
+* mklasa do aktywowania particle systemu w miotaczu ognia
+*/
 public class Flame : MonoBehaviour
 {
     private ParticleSystem PSystem;

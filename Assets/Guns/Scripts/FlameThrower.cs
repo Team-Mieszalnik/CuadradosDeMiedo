@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class FlameThrower : CastWeapons
 {
+    /**
+    * @brief
+    * metoda wywolywana na poczatku uzywania broni
+    */
     protected override void StartShooting()
     {
         base.StartShooting();
@@ -12,7 +16,10 @@ public class FlameThrower : CastWeapons
         audioSource.loop = false;
         GetComponent<PolygonCollider2D>().enabled = true;
     }
-
+    /**
+    * @brief
+    * metoda wywolywana na koncu uzywania broni
+    */
     protected override void StopShooting()
     {
         base.StopShooting();

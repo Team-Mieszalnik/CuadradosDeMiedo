@@ -7,6 +7,10 @@ public class MachineGun : Weapon
     public int bulletPerSalvo;
     public float timeBetweenBullets;
 
+    /**
+    * @brief
+    * metoda odpowiadajaca za instancjonowanie prefaba pocisku/ów i ustawienie kierunku w jakim ma byc wystrzelony
+    */
     protected override void Shoot()
     {
         StartCoroutine(Salvo());

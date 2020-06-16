@@ -4,6 +4,10 @@ using UnityEngine;
 
 using UnityEngine.Experimental.Rendering.Universal;
 
+/**
+* @brief
+* klasa odpowiadajaca za wybuch np granatu i zadanie obrazen w danym obszarze przecinwkiom
+*/
 public class Explosion : MonoBehaviour
 {
     Light2D light2D;

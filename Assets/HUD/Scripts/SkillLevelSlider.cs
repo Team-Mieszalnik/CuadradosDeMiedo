@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/**
+    * @brief
+    * klasa zarzadzajaca paskami poziomu uleszpszenia umiejetnosci 
+*/
 public class SkillLevelSlider : MonoBehaviour
 {
 

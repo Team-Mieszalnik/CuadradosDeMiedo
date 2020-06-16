@@ -4,7 +4,10 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
-
+/**
+    * @brief
+    * klasa odpowiadajaca za zarzadzanie ustawieniami gry: rozdzielczoscia fullscreenem i glosnoscia poszczegolnych elementow
+*/
 public class OptionsMenu : MonoBehaviour
 {
     Resolution[] resolutions;
